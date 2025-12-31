@@ -1,8 +1,9 @@
 "use client";
 
+import WhatsappIcon from "@/components/ui/whatsapp-icon";
 import { CONTACT_INFO } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { InstagramIcon, MailIcon, MessageCircleIcon } from "lucide-react";
+import { InstagramIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -51,7 +52,7 @@ const ContactInfo = (): React.ReactElement => {
 
       <ContactItem
         href={CONTACT_INFO.whatsapp}
-        icon={<MessageCircleIcon className="size-6" />}
+        icon={<WhatsappIcon className="size-6" />}
         label="Message us"
         value={CONTACT_INFO.phone}
         external

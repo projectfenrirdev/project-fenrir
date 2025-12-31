@@ -2,9 +2,10 @@
 
 import { CONTACT_INFO } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { InstagramIcon, MailIcon, Phone } from "lucide-react";
+import { InstagramIcon, MailIcon } from "lucide-react";
 import Link from "next/link";
 import { itemVariants, socialIconVariants } from "./animation-variants";
+import WhatsappIcon from "@/components/ui/whatsapp-icon";
 
 export const HeroSocialLinks = () => {
   return (
@@ -32,11 +33,7 @@ export const HeroSocialLinks = () => {
             className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 focus:outline-none"
             aria-label="Chat with us on WhatsApp"
           >
-            <Phone
-              className="group-hover:text-forge-secondary size-5 text-neutral-300 transition-all"
-              role="img"
-              aria-label="WhatsApp chat"
-            />
+            <WhatsappIcon className="group-hover:text-forge-secondary size-5 text-neutral-300 transition-all" />
           </Link>
         </motion.div>
         <motion.div

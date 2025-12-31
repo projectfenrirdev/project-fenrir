@@ -3,8 +3,9 @@
 import Logo from "@/components/ui/navbar/logo";
 import { CONTACT_INFO } from "@/lib/constants";
 import { motion } from "framer-motion";
-import { InstagramIcon, MailIcon, MessageCircleIcon } from "lucide-react";
+import { InstagramIcon, MailIcon } from "lucide-react";
 import { iconHoverVariants, itemVariants } from "./animation-variants";
+import WhatsappIcon from "@/components/ui/whatsapp-icon";
 
 export const FooterAbout = () => {
   return (
@@ -28,7 +29,7 @@ export const FooterAbout = () => {
           variants={iconHoverVariants}
           whileHover="hover"
         >
-          <MessageCircleIcon className="h-5 w-5" />
+          <WhatsappIcon className="size-5" />
         </motion.a>
         <motion.a
           href={CONTACT_INFO.instagram}

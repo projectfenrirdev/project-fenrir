@@ -1,4 +1,5 @@
 import { type Metadata } from "next";
+import { CONTACT_INFO } from "./constants";
 
 export const baseUrl = "https://www.projectfenrir.com";
 
@@ -10,7 +11,7 @@ export const organizationSchema = {
   url: baseUrl,
   logo: `${baseUrl}/images/logo.png`,
   sameAs: [
-    "https://www.instagram.com/projectfenrir/",
+    "https://www.instagram.com/projectfenrir.dev/",
     // Add other social profiles here
   ],
   address: {
@@ -21,8 +22,8 @@ export const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+40727892022",
-    email: "projectfenrir@yahoo.com",
+    telephone: CONTACT_INFO.phone,
+    email: CONTACT_INFO.email,
     contactType: "customer service",
   },
   description:
@@ -37,7 +38,8 @@ export const professionalServiceSchema = {
   image: `${baseUrl}/images/logo.png`,
   "@id": baseUrl,
   url: baseUrl,
-  telephone: "+40727892022",
+  telephone: CONTACT_INFO.phone,
+  email: CONTACT_INFO.email,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sibiu",
@@ -56,7 +58,7 @@ export const professionalServiceSchema = {
     closes: "18:00",
   },
   sameAs: [
-    "https://www.instagram.com/projectfenrir/",
+    "https://www.instagram.com/projectfenrir.dev/",
     // Add other social profiles here
   ],
   priceRange: "$$",
@@ -124,8 +126,8 @@ export const localBusinessSchema = {
   image: `${baseUrl}/images/logo.png`,
   "@id": baseUrl,
   url: baseUrl,
-  telephone: "+40727892022",
-  email: "projectfenrir@yahoo.com",
+  telephone: CONTACT_INFO.phone,
+  email: CONTACT_INFO.email,
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sibiu",

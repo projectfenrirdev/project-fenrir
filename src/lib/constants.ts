@@ -3,7 +3,7 @@ import type { FAQType, ProjectType, ServiceType } from "@/data/types";
 export const CONTACT_INFO = {
   phone: "+40727892022",
   email: "projectfenrir@yahoo.com",
-  instagram: "https://www.instagram.com/projectfenrir/",
+  instagram: "https://www.instagram.com/projectfenrir.dev/",
   whatsapp: "https://wa.me/40727892022",
 };
 

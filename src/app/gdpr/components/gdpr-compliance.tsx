@@ -1,5 +1,6 @@
 "use client";
 
+import { CONTACT_INFO } from "@/lib/constants";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -103,11 +104,11 @@ const GDPRCompliance = () => {
             </li>
             <li>
               <strong className="text-forge-primary">Email:</strong>{" "}
-              projectfenrir@yahoo.com
+              {CONTACT_INFO.email}
             </li>
             <li>
-              <strong className="text-forge-primary">Phone:</strong> +40 727 892
-              022
+              <strong className="text-forge-primary">Phone:</strong>{" "}
+              {CONTACT_INFO.phone}
             </li>
           </ul>
         </div>
@@ -486,19 +487,19 @@ const GDPRCompliance = () => {
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               <Link
-                href="mailto:projectfenrir@yahoo.com"
+                href={`mailto:${CONTACT_INFO.email}`}
                 className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                projectfenrir@yahoo.com
+                {CONTACT_INFO.email}
               </Link>
             </p>
             <p className="flex items-center">
               <span className="mr-2">📱</span>
               <Link
-                href="tel:+40727892022"
+                href={`tel:${CONTACT_INFO.phone}`}
                 className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                +40 727 892 022
+                {CONTACT_INFO.phone}
               </Link>
             </p>
           </div>

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import CookiePreferences from "./cookie-preferences";
+import { CONTACT_INFO } from "@/lib/constants";
 
 const CookiePolicy = () => {
   // Animation variants
@@ -474,19 +475,19 @@ const CookiePolicy = () => {
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               <Link
-                href="mailto:projectfenrir@yahoo.com"
+                href={`mailto:${CONTACT_INFO.email}`}
                 className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                projectfenrir@yahoo.com
+                {CONTACT_INFO.email}
               </Link>
             </p>
             <p className="flex items-center">
               <span className="mr-2">📱</span>
               <Link
-                href="tel:+40727892022"
+                href={`tel:${CONTACT_INFO.phone}`}
                 className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                +40 727 892 022
+                {CONTACT_INFO.phone}
               </Link>
             </p>
           </div>
