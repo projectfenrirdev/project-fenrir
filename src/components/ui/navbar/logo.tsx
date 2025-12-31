@@ -30,7 +30,7 @@ const Logo = ({ variants, onClick }: Props) => {
         aria-label="Project Fenrir - Home"
         onClick={onClick}
       >
-        <div className="from-forge-secondary/80 flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br to-purple-500/80 shadow-lg">
+        <div className="from-forge-accent/80 flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br to-forge-accent-DEFAULT/80 shadow-lg">
           <CodeIcon className="h-4 w-4 text-white" />
         </div>
         <span className="bg-linear-to-r from-white to-neutral-400 bg-clip-text text-xl font-bold text-transparent">

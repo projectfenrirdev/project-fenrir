@@ -19,7 +19,7 @@ export const AboutValues = () => {
           Software Development or Digital Business Growth, we are your trusted
           partner for reliable, high-quality results.
         </p>
-        <div className="from-forge-secondary/80 mt-4 h-px w-24 bg-linear-to-r to-transparent"></div>
+        <div className="from-forge-accent/80 mt-4 h-px w-24 bg-linear-to-r to-transparent"></div>
       </motion.div>
 
       <motion.div
@@ -36,7 +36,7 @@ export const AboutValues = () => {
           reliability, security, and scalable solutions tailored to your
           expectations.
         </p>
-        <div className="from-forge-secondary/80 mt-4 h-px w-24 bg-linear-to-r to-transparent"></div>
+        <div className="from-forge-accent/80 mt-4 h-px w-24 bg-linear-to-r to-transparent"></div>
       </motion.div>
     </div>
   );

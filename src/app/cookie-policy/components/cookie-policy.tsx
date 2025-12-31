@@ -51,7 +51,7 @@ const CookiePolicy = () => {
     >
       {/* Header */}
       <motion.div variants={{ itemVariants }} className="mb-10 text-center">
-        <h1 className="from-forge-primary to-forge-secondary mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
+        <h1 className="from-forge-primary to-forge-accent-DEFAULT mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           Cookie Policy
         </h1>
         <p className="text-gray-400">Last updated: June 15, 2024</p>
@@ -461,7 +461,7 @@ const CookiePolicy = () => {
       {/* Contact Section */}
       <motion.section
         variants={{ sectionVariants }}
-        className="border-forge-primary/20 from-forge-primary/10 to-forge-secondary/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
+        className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Contact Us
@@ -476,7 +476,7 @@ const CookiePolicy = () => {
               <span className="mr-2">📧</span>
               <Link
                 href={`mailto:${CONTACT_INFO.email}`}
-                className="text-forge-primary hover:text-forge-secondary transition-colors"
+                className="text-forge-primary hover:text-forge-accent transition-colors"
               >
                 {CONTACT_INFO.email}
               </Link>
@@ -485,7 +485,7 @@ const CookiePolicy = () => {
               <span className="mr-2">📱</span>
               <Link
                 href={`tel:${CONTACT_INFO.phone}`}
-                className="text-forge-primary hover:text-forge-secondary transition-colors"
+                className="text-forge-primary hover:text-forge-accent transition-colors"
               >
                 {CONTACT_INFO.phone}
               </Link>
@@ -503,7 +503,7 @@ const CookiePolicy = () => {
       >
         <Link
           href="/"
-          className="from-forge-primary focus:ring-forge-primary/50 to-forge-secondary inline-flex items-center justify-center rounded-lg bg-linear-to-r px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:outline-none"
+          className="from-forge-primary focus:ring-forge-primary/50 to-forge-accent-DEFAULT inline-flex items-center justify-center rounded-lg bg-linear-to-r px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:outline-none"
         >
           ← Return to Home
         </Link>

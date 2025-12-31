@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { itemVariants, linkHoverVariants } from "./animation-variants";
+import { SERVICES } from "@/lib/constants";
 
 export const FooterServices = () => {
   return (
@@ -11,51 +12,41 @@ export const FooterServices = () => {
       <ul className="space-y-3">
         <li>
           <Link
-            href="/#services"
+            href={SERVICES[0].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
             <motion.div variants={linkHoverVariants} whileHover="hover">
-              Website Development
+              {SERVICES[0].text}
             </motion.div>
           </Link>
         </li>
         <li>
           <Link
-            href="/#services"
+            href={SERVICES[1].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
             <motion.div variants={linkHoverVariants} whileHover="hover">
-              E-commerce Solutions
+              {SERVICES[1].text}
             </motion.div>
           </Link>
         </li>
         <li>
           <Link
-            href="/#services"
+            href={SERVICES[2].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
             <motion.div variants={linkHoverVariants} whileHover="hover">
-              Application Development
+              {SERVICES[2].text}
             </motion.div>
           </Link>
         </li>
         <li>
           <Link
-            href="/#services"
+            href={SERVICES[3].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
             <motion.div variants={linkHoverVariants} whileHover="hover">
-              UI/UX Design
-            </motion.div>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/#services"
-            className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
-          >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
-              Maintenance & Support
+              {SERVICES[3].text}
             </motion.div>
           </Link>
         </li>

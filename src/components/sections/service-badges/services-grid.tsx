@@ -26,15 +26,15 @@ export const ServicesGrid = () => {
           }}
         >
           <Link href={item.link}>
-            <div className="hover:border-forge-secondary/30 relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/8 hover:shadow-lg">
+            <div className="hover:border-forge-accent/30 relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/8 hover:shadow-lg">
               {/* Animated gradient accent on hover */}
-              <div className="from-forge-secondary absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r to-blue-500 transition-all duration-500 group-hover:w-full"></div>
+              <div className="from-forge-accent absolute bottom-0 left-0 h-1 w-0 bg-gradient-to-r to-forge-accent-DEFAULT transition-all duration-500 group-hover:w-full"></div>
 
               <div className="flex items-start gap-4">
-                <div className="from-forge-secondary/20 group-hover:from-forge-secondary/40 flex size-12 items-center justify-center rounded-lg bg-gradient-to-br to-blue-600/20 transition-all duration-300 group-hover:to-blue-600/40 group-hover:shadow-md">
+                <div className="from-forge-accent/20 group-hover:from-forge-accent/40 flex size-12 items-center justify-center rounded-lg bg-gradient-to-br to-forge-accent-dark/20 transition-all duration-300 group-hover:to-forge-accent-dark/40 group-hover:shadow-md">
                   <DynamicIcon
                     name={item.icon}
-                    className="group-hover:text-forge-secondary size-6 text-white transition-all duration-300"
+                    className="group-hover:text-forge-accent size-6 text-white transition-all duration-300"
                     aria-hidden="true"
                     focusable="false"
                   />

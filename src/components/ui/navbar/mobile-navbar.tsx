@@ -53,7 +53,7 @@ const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
           animate="visible"
           exit="hidden"
           variants={mobileMenuVariants}
-          className="fixed inset-0 h-screen w-screen bg-gradient-to-b from-black/90 to-purple-950/90 backdrop-blur-md lg:hidden"
+          className="fixed inset-0 h-screen w-screen bg-gradient-to-b from-black/90 to-forge-accent-darker/90 backdrop-blur-md lg:hidden"
           aria-hidden={!isMenuOpen}
           onClick={toggleMenu}
         >
@@ -77,7 +77,7 @@ const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
                   {link.text}
                 </NavbarLink>
                 <motion.div
-                  className="bg-forge-secondary absolute -bottom-2 left-1/2 h-px w-0 -translate-x-1/2"
+                  className="bg-forge-accent absolute -bottom-2 left-1/2 h-px w-0 -translate-x-1/2"
                   whileHover={{ width: "80%" }}
                 />
               </motion.div>

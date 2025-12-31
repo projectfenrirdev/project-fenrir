@@ -26,7 +26,7 @@ const ContactButton = ({ variants }: Props) => {
       <Button
         type="button"
         asChild
-        className="from-forge-secondary shadow-forge-secondary/20 hover:shadow-forge-secondary/40 relative border-none bg-linear-to-r to-blue-600 py-5 text-base text-white shadow-lg"
+        className="from-forge-accent shadow-forge-accent/20 hover:shadow-forge-accent/40 relative border-none bg-linear-to-r to-forge-accent-DEFAULT py-5 text-base text-white shadow-lg"
       >
         <Link
           href="/#contact"

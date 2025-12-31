@@ -34,7 +34,7 @@ export const HeroCtaButtons = () => {
             <FoldersIcon
               className="ml-2 size-5"
               role="img"
-              aria-label="Portfolio icon"
+              aria-label="Services icon"
             />
           </Button>
         </Link>

@@ -12,7 +12,7 @@ export const AboutHeader = () => {
       transition={{ duration: 0.8 }}
     >
       <motion.span
-        className="text-forge-secondary text-sm font-medium tracking-wider uppercase"
+        className="text-forge-accent text-sm font-medium tracking-wider uppercase"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
@@ -46,7 +46,7 @@ export const AboutHeader = () => {
             transition={{ duration: 0.6, delay: 0.4, ease: "circOut" }}
           >
             At{" "}
-            <span className="text-forge-secondary font-medium">
+            <span className="text-forge-accent font-medium">
               Project Fenrir
             </span>
             , we specialize in delivering top-tier services designed to meet the

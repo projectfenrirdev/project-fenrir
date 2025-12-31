@@ -33,7 +33,7 @@ export const HeroSocialLinks = () => {
             className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm transition-all hover:bg-white/10 focus:outline-none"
             aria-label="Chat with us on WhatsApp"
           >
-            <WhatsappIcon className="group-hover:text-forge-secondary size-5 text-neutral-300 transition-all" />
+            <WhatsappIcon className="group-hover:text-forge-accent size-5 text-neutral-300 transition-all" />
           </Link>
         </motion.div>
         <motion.div
@@ -48,7 +48,7 @@ export const HeroSocialLinks = () => {
             aria-label="Email us"
           >
             <MailIcon
-              className="group-hover:text-forge-secondary size-5 text-neutral-300 transition-all"
+              className="group-hover:text-forge-accent size-5 text-neutral-300 transition-all"
               role="img"
               aria-label="Email"
             />
@@ -69,7 +69,7 @@ export const HeroSocialLinks = () => {
             aria-label="Visit our Instagram"
           >
             <InstagramIcon
-              className="group-hover:text-forge-secondary size-5 text-neutral-300 transition-all"
+              className="group-hover:text-forge-accent size-5 text-neutral-300 transition-all"
               role="img"
               aria-label="Instagram"
             />

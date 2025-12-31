@@ -243,7 +243,7 @@ const CookiePreferences = () => {
           variant="default"
           size="sm"
           onClick={handleAcceptAll}
-          className="from-forge-secondary to-forge-primary bg-linear-to-r text-white"
+          className="from-forge-accent-DEFAULT to-forge-accent bg-linear-to-r text-white"
         >
           Accept All
         </Button>

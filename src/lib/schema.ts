@@ -184,11 +184,6 @@ export const navigationSchema = {
     },
     {
       "@type": "SiteNavigationElement",
-      name: "Portfolio",
-      url: `${baseUrl}/#portfolio`,
-    },
-    {
-      "@type": "SiteNavigationElement",
       name: "FAQ",
       url: `${baseUrl}/faq`,
     },

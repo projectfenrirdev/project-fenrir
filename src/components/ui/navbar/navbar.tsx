@@ -91,8 +91,8 @@ const Navbar = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SiteNavigationElement",
-            name: ["Home", "About", "Services", "Portfolio", "Contact"],
-            url: ["/", "/#about", "/#services", "/#portfolio", "/#contact"],
+            name: ["Home", "About", "Services", "Contact"],
+            url: ["/", "/#about", "/#services", "/#contact"],
           }),
         }}
       />
@@ -120,7 +120,7 @@ const Navbar = () => {
             animate={{
               opacity: isElevated ? 1 : 0,
               background: isElevated
-                ? "linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(13, 6, 30, 0.75))"
+                ? "linear-gradient(to right, rgba(28, 27, 27, 0.95), rgba(37, 36, 36, 0.95))"
                 : "transparent",
             }}
             transition={{ duration: 0.5 }}
@@ -128,7 +128,7 @@ const Navbar = () => {
 
           {/* Accent line */}
           <motion.div
-            className="from-forge-secondary/70 absolute bottom-0 left-0 h-[1px] bg-linear-to-r via-blue-500/50 to-transparent"
+            className="from-forge-accent/70 via-forge-accent-DEFAULT/50 absolute bottom-0 left-0 h-[1px] bg-linear-to-r to-transparent"
             animate={{
               width: isElevated ? "100%" : "0%",
             }}

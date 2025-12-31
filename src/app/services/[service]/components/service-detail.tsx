@@ -46,10 +46,10 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
         className="mb-12"
       >
         <div className="mb-6 flex items-center gap-4">
-          <div className="from-forge-secondary/20 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br to-blue-600/20 shadow-lg">
+          <div className="from-forge-accent/20 to-forge-accent-dark/20 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg">
             <DynamicIcon
               name={service.icon}
-              className="text-forge-secondary size-8"
+              className="text-forge-accent size-8"
               aria-hidden="true"
               focusable="false"
             />
@@ -101,7 +101,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 className="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4 backdrop-blur-sm"
               >
-                <div className="from-forge-secondary flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br to-blue-600">
+                <div className="from-forge-accent to-forge-accent-DEFAULT flex size-6 shrink-0 items-center justify-center rounded-full bg-gradient-to-br">
                   <CheckIcon className="size-4 text-white" />
                 </div>
                 <p className="text-gray-300">{feature}</p>
@@ -127,7 +127,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="hover:border-forge-secondary/30 rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/8"
+                className="hover:border-forge-accent/30 rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/8"
               >
                 <p className="text-gray-300">{useCase}</p>
               </motion.div>
@@ -141,7 +141,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.6 }}
-        className="border-forge-secondary/30 rounded-xl border bg-gradient-to-br from-white/10 to-white/5 p-8 text-center backdrop-blur-sm"
+        className="border-forge-accent/30 rounded-xl border bg-gradient-to-br from-white/10 to-white/5 p-8 text-center backdrop-blur-sm"
       >
         <h2 className="mb-4 text-2xl font-bold text-white">
           Ready to Get Started?
@@ -164,7 +164,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
           <a href={`tel:${CONTACT_INFO.phone}`}>
             <Button
               variant="outline"
-              className="border-forge-primary hover:border-forge-primary/20 w-full border-2 py-5 text-base font-medium text-white transition-all duration-300 hover:border-white/40 hover:bg-white/10 hover:text-white sm:w-auto"
+              className="border-forge-primary bg-forge-primary/10 hover:bg-forge-primary/20 w-full border-2 py-5 text-base font-medium text-white transition-all duration-300 hover:border-white/40 hover:text-white sm:w-auto"
             >
               Call Us
             </Button>

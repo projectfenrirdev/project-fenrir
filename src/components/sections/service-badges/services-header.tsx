@@ -12,7 +12,7 @@ export const ServicesHeader = () => {
       transition={{ duration: 0.6 }}
     >
       <motion.span
-        className="border-forge-secondary/30 bg-forge-secondary/10 text-forge-secondary mx-auto flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-medium tracking-wider uppercase"
+        className="border-forge-accent/30 bg-forge-accent/10 text-forge-accent mx-auto flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-medium tracking-wider uppercase"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.1 }}

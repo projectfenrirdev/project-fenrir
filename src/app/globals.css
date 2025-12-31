@@ -111,11 +111,26 @@
 }
 
 @theme custom {
-  --color-forge-primary: #9345ff;
-  --color-forge-secondary: #b121d6;
-  --color-forge-base: #0e0b11;
-  --color-forge-muted: #f1f1f1;
-  --color-forge-gradient: linear-gradient(to right, #9345ff, #b121d6);
+  /* Accent colors (Orange) */
+  --color-forge-accent: #f78228;
+  --color-forge-accent-light: #f78228;
+  --color-forge-accent-DEFAULT: #eb6f1e;
+  --color-forge-accent-dark: #a9531a;
+  --color-forge-accent-darker: #753813;
+
+  /* Secondary colors (White/Gray) */
+  --color-forge-secondary: #fefeff;
+  --color-forge-secondary-muted: #b2b2b3;
+
+  /* Primary/Background colors (Dark) */
+  --color-forge-base: #111;
+  --color-forge-surface: #252424;
+  --color-forge-surface-light: #3c3e41;
+  --color-forge-muted: #3c3e41;
+
+  /* Legacy aliases for backwards compatibility */
+  --color-forge-primary: #f78228;
+  --color-forge-gradient: linear-gradient(to right, #f78228, #eb6f1e);
 }
 
 @layer base {

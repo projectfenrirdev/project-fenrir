@@ -184,10 +184,6 @@ export const NAVBAR_LINKS = [
     text: "Services",
     href: "/#services",
   },
-  {
-    text: "Portfolio",
-    href: "/#portfolio",
-  },
 ];
 
 export const CONSENT_KEY = "projectfenrir-cookie-consent";

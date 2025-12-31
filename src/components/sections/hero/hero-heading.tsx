@@ -7,13 +7,13 @@ export const HeroHeading = () => {
   return (
     <>
       <motion.div
-        className="border-forge-secondary/30 bg-forge-secondary/10 mb-6 inline-flex items-center gap-x-2 rounded-full border px-3 py-1"
+        className="border-forge-accent/30 bg-forge-accent/10 mb-6 inline-flex items-center gap-x-2 rounded-full border px-3 py-1"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
       >
-        <SparklesIcon className="text-forge-secondary h-4 w-4" />
-        <span className="text-forge-secondary text-sm font-medium">
+        <SparklesIcon className="text-forge-accent h-4 w-4" />
+        <span className="text-forge-accent text-sm font-medium">
           Crafting Digital Excellence
         </span>
       </motion.div>
@@ -28,7 +28,7 @@ export const HeroHeading = () => {
         <span className="block">Software Development</span>
         <span className="mt-2 block">
           We{" "}
-          <span className="from-forge-secondary bg-linear-to-r to-blue-400 bg-clip-text text-transparent">
+          <span className="from-forge-accent bg-linear-to-r to-forge-accent-DEFAULT bg-clip-text text-transparent">
             Get It Right
           </span>
         </span>

@@ -25,7 +25,7 @@ export const ContactContent = () => {
           viewport={{ once: true }}
           variants={formContainerVariants}
         >
-          <div className="from-forge-secondary/5 absolute inset-0 -z-10 rounded-2xl bg-gradient-to-tr to-blue-600/5"></div>
+          <div className="from-forge-accent/5 absolute inset-0 -z-10 rounded-2xl bg-gradient-to-tr to-forge-accent-dark/5"></div>
           <ContactForm />
         </motion.div>
       </div>
@@ -37,7 +37,7 @@ export const ContactContent = () => {
         viewport={{ once: true }}
         variants={infoContainerVariants}
       >
-        <div className="to-forge-secondary/5 absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-blue-600/5"></div>
+        <div className="to-forge-accent/5 absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-forge-accent-dark/5"></div>
         <ContactInfo />
       </motion.div>
     </motion.div>
