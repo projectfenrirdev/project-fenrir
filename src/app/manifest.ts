@@ -2,10 +2,10 @@ import { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Forging Dev - Professional Web & Application Development",
-    short_name: "Forging Dev",
+    name: "Project Fenrir - Professional Web Development",
+    short_name: "Project Fenrir",
     description:
-      "Transform your business with custom web development, online stores & applications. Serving clients worldwide.",
+      "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
     start_url: "/",
     display: "standalone",
     background_color: "#000000",

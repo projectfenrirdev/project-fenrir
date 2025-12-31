@@ -27,7 +27,7 @@ const ContactItem = ({
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       className={cn(
-        "group flex items-center gap-4 overflow-hidden rounded-lg py-4 break-words transition-all",
+        "group flex items-center gap-4 overflow-hidden rounded-lg px-2 py-4 break-words transition-all",
         "hover:bg-forge-primary/5 focus:ring-forge-primary/50 focus:ring-2 focus:outline-none",
       )}
     >
@@ -68,7 +68,7 @@ const ContactInfo = (): React.ReactElement => {
         href={CONTACT_INFO.instagram}
         icon={<InstagramIcon className="size-6" />}
         label="Follow us"
-        value="@forging_dev"
+        value="@projectfenrir"
         external
       />
     </div>

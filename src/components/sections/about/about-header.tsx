@@ -24,7 +24,7 @@ export const AboutHeader = () => {
       <div className="flex flex-col gap-6 md:flex-row md:justify-between">
         <motion.h2
           id="about-heading"
-          className="max-w-md bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-5xl"
+          className="max-w-md bg-linear-to-r from-white to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-5xl"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -47,7 +47,7 @@ export const AboutHeader = () => {
           >
             At{" "}
             <span className="text-forge-secondary font-medium">
-              Forging Dev
+              Project Fenrir
             </span>
             , we specialize in delivering top-tier services designed to meet the
             unique needs of our clients. With years of industry expertise, we

@@ -27,14 +27,14 @@ const Logo = ({ variants, onClick }: Props) => {
       <Link
         href="/"
         className="flex items-center gap-2"
-        aria-label="Forging Dev - Home"
+        aria-label="Project Fenrir - Home"
         onClick={onClick}
       >
         <div className="from-forge-secondary/80 flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br to-purple-500/80 shadow-lg">
           <CodeIcon className="h-4 w-4 text-white" />
         </div>
-        <span className="bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-xl font-bold text-transparent">
-          Forging Dev
+        <span className="bg-linear-to-r from-white to-neutral-400 bg-clip-text text-xl font-bold text-transparent">
+          Project Fenrir
         </span>
       </Link>
     </motion.div>

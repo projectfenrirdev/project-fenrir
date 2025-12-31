@@ -48,21 +48,21 @@ const PrivacyPolicy = () => {
       variants={containerVariants}
     >
       {/* Header */}
-      <motion.div variants={itemVariants} className="mb-10 text-center">
-        <h1 className="mb-4 bg-gradient-to-r from-[#9345ff] to-[#b121d6] bg-clip-text text-4xl font-bold text-transparent">
+      <motion.div variants={{ itemVariants }} className="mb-10 text-center">
+        <h1 className="from-forge-primary to-forge-secondary mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           Privacy Policy
         </h1>
         <p className="text-gray-400">Last updated: June 15, 2024</p>
       </motion.div>
 
       {/* Introduction */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           1. Introduction
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            At Forging Dev, we respect your privacy and are committed to
+            At Project Fenrir, we respect your privacy and are committed to
             protecting your personal data. This Privacy Policy explains how we
             collect, use, and safeguard your information when you visit our
             website or use our services.
@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
 
       {/* Data Collection */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -93,7 +93,9 @@ const PrivacyPolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Personal Information:</strong>{" "}
+              <strong className="text-forge-primary">
+                Personal Information:
+              </strong>{" "}
               Name, email address, phone number, and other similar contact data
               you provide through our contact forms or email communications.
             </motion.li>
@@ -102,7 +104,7 @@ const PrivacyPolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Usage Data:</strong>{" "}
+              <strong className="text-forge-primary">Usage Data:</strong>{" "}
               Information about how you interact with our website, including the
               pages you visit, the time spent on each page, the links clicked,
               and other similar metrics.
@@ -112,7 +114,7 @@ const PrivacyPolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Technical Data:</strong> IP
+              <strong className="text-forge-primary">Technical Data:</strong> IP
               address, browser type and version, time zone setting, browser
               plug-in types and versions, operating system, and platform.
             </motion.li>
@@ -121,7 +123,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* How We Use Data */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           3. How We Use Your Information
         </h2>
@@ -144,7 +146,7 @@ const PrivacyPolicy = () => {
 
       {/* Data Sharing */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -169,7 +171,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* Data Security */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Data Security
         </h2>
@@ -196,7 +198,7 @@ const PrivacyPolicy = () => {
 
       {/* Cookie Policy */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -227,7 +229,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* Your Rights */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           7. Your Rights
         </h2>
@@ -258,7 +260,7 @@ const PrivacyPolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Access
               </h3>
               <p className="text-gray-300">
@@ -272,7 +274,7 @@ const PrivacyPolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Rectification
               </h3>
               <p className="text-gray-300">
@@ -286,7 +288,7 @@ const PrivacyPolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Erasure
               </h3>
               <p className="text-gray-300">
@@ -300,7 +302,7 @@ const PrivacyPolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Restriction
               </h3>
               <p className="text-gray-300">
@@ -316,7 +318,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* Changes to Policy */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           8. Changes to This Privacy Policy
         </h2>
@@ -336,8 +338,8 @@ const PrivacyPolicy = () => {
 
       {/* Contact Section */}
       <motion.section
-        variants={sectionVariants}
-        className="mb-10 rounded-xl border border-[#9345ff]/20 bg-gradient-to-br from-[#9345ff]/10 to-[#b121d6]/10 p-8"
+        variants={{ sectionVariants }}
+        className="border-forge-primary/20 from-forge-primary/10 to-forge-secondary/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           9. Contact Us
@@ -351,17 +353,17 @@ const PrivacyPolicy = () => {
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               <Link
-                href="mailto:forgingdev37@outlook.com"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                href="mailto:projectfenrir@yahoo.com"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                forgingdev37@outlook.com
+                projectfenrir@yahoo.com
               </Link>
             </p>
             <p className="flex items-center">
               <span className="mr-2">📱</span>
               <Link
                 href="tel:+40727892022"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
                 +40 727 892 022
               </Link>
@@ -379,7 +381,7 @@ const PrivacyPolicy = () => {
       >
         <Link
           href="/"
-          className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#9345ff] to-[#b121d6] px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:ring-[#9345ff]/50 focus:outline-none"
+          className="from-forge-primary focus:ring-forge-primary/50 to-forge-secondary inline-flex items-center justify-center rounded-lg bg-linear-to-r px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:outline-none"
         >
           ← Return to Home
         </Link>

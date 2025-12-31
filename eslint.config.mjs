@@ -1,3 +1,5 @@
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 import { FlatCompat } from "@eslint/eslintrc";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -10,17 +12,15 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends(
-    "next/core-web-vitals",
-    "next/typescript",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
-    "plugin:react/jsx-runtime",
-    "prettier",
-  ),
+  ...nextCoreWebVitals,
+  ...nextTypescript,
+  ...compat.extends("plugin:react/recommended"),
+  ...compat.extends("plugin:react-hooks/recommended"),
+  ...compat.extends("plugin:jsx-a11y/recommended"),
+  ...compat.extends("plugin:import/recommended"),
+  ...compat.extends("plugin:import/typescript"),
+  ...compat.extends("plugin:react/jsx-runtime"),
+  ...compat.extends("prettier"),
   {
     languageOptions: {
       ecmaVersion: "latest",
@@ -79,6 +79,9 @@ const eslintConfig = [
     },
     files: ["*.ts", "*.tsx"],
   },
+  {
+    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]
+  }
 ];
 
 export default eslintConfig;

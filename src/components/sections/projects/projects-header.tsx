@@ -24,7 +24,7 @@ export const ProjectsHeader = () => {
       <div className="flex flex-col gap-6 md:flex-row md:justify-between">
         <motion.h2
           id="portfolio-heading"
-          className="max-w-2xl bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-3xl font-semibold text-transparent md:text-5xl"
+          className="max-w-2xl bg-linear-to-r from-white to-neutral-400 bg-clip-text text-3xl font-semibold text-transparent md:text-5xl"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}

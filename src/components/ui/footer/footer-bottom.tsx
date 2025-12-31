@@ -15,7 +15,7 @@ export const FooterBottom = () => {
         viewport={{ once: true }}
       >
         <div className="text-center text-sm text-gray-400 md:text-left">
-          &copy; {new Date().getFullYear()} Forging Dev. All rights reserved.
+          &copy; {new Date().getFullYear()} Project Fenrir. All rights reserved.
         </div>
         <div className="flex gap-6 text-xs text-gray-400">
           <motion.div

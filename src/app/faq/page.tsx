@@ -9,24 +9,24 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQs | Forging Dev | Web & App Development Studio",
+  title: "FAQs | Project Fenrir | Professional Web Development",
   description:
-    "Find answers to frequently asked questions about our web development, e-commerce, and application development services at Forging Dev.",
+    "Find answers to frequently asked questions about our web development, e-commerce, and application development services at Project Fenrir.",
   alternates: {
-    canonical: "https://www.forging-dev.com/faq",
+    canonical: "https://www.projectfenrir.com/faq",
   },
   openGraph: {
-    title: "Frequently Asked Questions | Forging Dev",
+    title: "Frequently Asked Questions | Project Fenrir",
     description:
       "Get answers to common questions about our web development, e-commerce, and application services.",
-    url: "https://www.forging-dev.com/faq",
-    siteName: "Forging Dev",
+    url: "https://www.projectfenrir.com/faq",
+    siteName: "Project Fenrir",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Forging Dev - Software Development Studio",
+        alt: "Project Fenrir - Professional Web Development",
       },
     ],
     locale: "en_US",

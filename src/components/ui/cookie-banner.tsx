@@ -113,7 +113,7 @@ const CookieBanner = () => {
         initial="hidden"
         animate="visible"
         exit="exit"
-        variants={containerVariants}
+        variants={{ containerVariants }}
         className="bg-forge-base/80 fixed right-0 bottom-0 left-0 z-50 border-t border-white/10 shadow-lg backdrop-blur-md"
       >
         {/* Background gradients */}
@@ -211,7 +211,7 @@ const CookieBanner = () => {
                       checked={preferences.essential}
                       disabled
                       className="h-5 w-5 cursor-not-allowed rounded border-gray-600 bg-white/10 opacity-70"
-                      variants={checkboxVariants}
+                      variants={{ checkboxVariants }}
                       animate={preferences.essential ? "checked" : "unchecked"}
                     />
                   </div>
@@ -238,7 +238,7 @@ const CookieBanner = () => {
                       checked={preferences.analytics}
                       onChange={() => handlePreferenceChange("analytics")}
                       className="h-5 w-5 cursor-pointer rounded border-gray-600 bg-white/10"
-                      variants={checkboxVariants}
+                      variants={{ checkboxVariants }}
                       animate={preferences.analytics ? "checked" : "unchecked"}
                     />
                   </div>
@@ -265,7 +265,7 @@ const CookieBanner = () => {
                       checked={preferences.functional}
                       onChange={() => handlePreferenceChange("functional")}
                       className="h-5 w-5 cursor-pointer rounded border-gray-600 bg-white/10"
-                      variants={checkboxVariants}
+                      variants={{ checkboxVariants }}
                       animate={preferences.functional ? "checked" : "unchecked"}
                     />
                   </div>
@@ -292,7 +292,7 @@ const CookieBanner = () => {
                       checked={preferences.targeting}
                       onChange={() => handlePreferenceChange("targeting")}
                       className="h-5 w-5 cursor-pointer rounded border-gray-600 bg-white/10"
-                      variants={checkboxVariants}
+                      variants={{ checkboxVariants }}
                       animate={preferences.targeting ? "checked" : "unchecked"}
                     />
                   </div>

@@ -18,25 +18,25 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Forging Dev | Professional Web & Application Development Studio",
+  title: "Project Fenrir | Professional Web Development",
   description:
-    "Transform your business with custom web development, online stores & applications. Serving clients worldwide with innovative digital solutions.",
-  metadataBase: new URL("https://www.forging-dev.com"),
+    "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+  metadataBase: new URL("https://www.projectfenrir.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Forging Dev | Professional Web & Application Development",
+    title: "Project Fenrir | Professional Web Development",
     description:
-      "Transform your business with custom web development, online stores & applications. Serving clients worldwide.",
-    url: "https://www.forging-dev.com",
-    siteName: "Forging Dev",
+      "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+    url: "https://www.projectfenrir.com",
+    siteName: "Project Fenrir",
     images: [
       {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Forging Dev - Software Development Studio",
+        alt: "Project Fenrir - Professional Web Development",
       },
     ],
     locale: "en_US",
@@ -44,9 +44,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Forging Dev | Web & App Development Studio",
+    title: "Project Fenrir | Professional Web Development",
     description:
-      "Transform your business with custom web development, online stores & applications.",
+      "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
     images: ["/images/twitter-image.jpg"],
   },
   robots: {
@@ -69,13 +69,14 @@ export const metadata: Metadata = {
     "online stores",
     "e-commerce",
     "custom software",
-    "Romania",
-    "Sibiu",
     "digital transformation",
-    "software development Sibiu",
-    "website design Romania",
+    "software development",
+    "website design",
     "mobile app development",
     "custom web solutions",
+    "professional web development",
+    "eCommerce development",
+    "custom software development",
   ],
   other: {
     "google-site-verification": "your-google-verification-code",

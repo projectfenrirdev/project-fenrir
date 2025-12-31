@@ -8,7 +8,10 @@ import { iconHoverVariants, itemVariants } from "./animation-variants";
 
 export const FooterAbout = () => {
   return (
-    <motion.div className="mb-8 flex flex-col gap-4" variants={itemVariants}>
+    <motion.div
+      className="mb-8 flex flex-col gap-4"
+      variants={{ itemVariants }}
+    >
       <Logo variants={itemVariants} />
       <p className="mb-2 text-sm text-gray-300">
         Transform your business with custom web development, online stores &

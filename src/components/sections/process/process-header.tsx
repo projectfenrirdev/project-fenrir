@@ -24,7 +24,7 @@ export const ProcessHeader = () => {
       <div className="flex flex-col gap-6 md:flex-row md:justify-between">
         <motion.h2
           id="process-heading"
-          className="max-w-md bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-3xl font-semibold text-transparent md:text-5xl"
+          className="max-w-md bg-linear-to-r from-white to-neutral-400 bg-clip-text text-3xl font-semibold text-transparent md:text-5xl"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -45,7 +45,7 @@ export const ProcessHeader = () => {
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           We follow a structured approach to ensure every project is delivered
-          with excellence and meets your specific needs.
+          with transparency, efficiency and quality.
         </motion.p>
       </div>
     </motion.div>

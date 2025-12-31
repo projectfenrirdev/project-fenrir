@@ -12,8 +12,8 @@ export const ServicesBackground = () => {
       <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5"></div>
 
       {/* Frosted dividers */}
-      <div className="absolute top-0 right-0 left-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
-      <div className="absolute right-0 bottom-0 left-0 h-px bg-gradient-to-r from-transparent via-white/15 to-transparent"></div>
+      <div className="absolute top-0 right-0 left-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent"></div>
+      <div className="absolute right-0 bottom-0 left-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent"></div>
     </>
   );
 };

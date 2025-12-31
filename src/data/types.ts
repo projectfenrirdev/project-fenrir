@@ -4,6 +4,11 @@ export type ServiceType = {
   text: string;
   link: string;
   icon: IconName;
+  slug: string; // URL-friendly identifier
+  description?: string; // Short description
+  longDescription?: string; // Detailed description for service page
+  features?: string[]; // List of features/benefits
+  useCases?: string[]; // Common use cases
 };
 
 export type ProjectType = {

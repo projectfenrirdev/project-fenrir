@@ -38,7 +38,7 @@ const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
       y: 0,
       transition: {
         duration: 0.4,
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
       },
     },

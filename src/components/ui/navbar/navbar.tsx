@@ -128,7 +128,7 @@ const Navbar = () => {
 
           {/* Accent line */}
           <motion.div
-            className="from-forge-secondary/70 absolute bottom-0 left-0 h-[1px] bg-gradient-to-r via-blue-500/50 to-transparent"
+            className="from-forge-secondary/70 absolute bottom-0 left-0 h-[1px] bg-linear-to-r via-blue-500/50 to-transparent"
             animate={{
               width: isElevated ? "100%" : "0%",
             }}

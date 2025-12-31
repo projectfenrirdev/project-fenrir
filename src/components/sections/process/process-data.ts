@@ -2,6 +2,7 @@ import {
   GitGraphIcon,
   LightbulbIcon,
   NotebookPenIcon,
+  ShieldCheckIcon,
   UsersIcon,
 } from "lucide-react";
 
@@ -29,5 +30,11 @@ export const processSteps = [
     title: "Review & Feedback",
     description:
       "After delivery, we review the results all together, analyze the feedback and make any necessary adjustments for continuous improvement.",
+  },
+  {
+    icon: ShieldCheckIcon,
+    title: "Ongoing Support & Maintenance",
+    description:
+      "We provide ongoing support and maintenance to ensure your solution remains secure, up-to-date, and functioning optimally.",
   },
 ];

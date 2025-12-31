@@ -20,7 +20,7 @@ export const ProjectCard = ({ project, index }: ProjectProps) => {
   return (
     <motion.div
       custom={index}
-      variants={projectVariants}
+      variants={{ projectVariants }}
       className={`${index % 3 === 1 ? "md:mt-12" : index % 3 === 2 ? "md:mt-24" : ""}`}
     >
       <Link

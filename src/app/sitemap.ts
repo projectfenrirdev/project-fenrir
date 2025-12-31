@@ -1,7 +1,8 @@
+import { SERVICES } from "@/lib/constants";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.forging-dev.com";
+  const baseUrl = "https://www.projectfenrir.com";
   const date = new Date();
 
   // Main page with highest priority
@@ -12,6 +13,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 1.0,
   };
 
+  // Service pages with high priority
+  const servicePages = SERVICES.map((service) => ({
+    url: `${baseUrl}${service.link}`,
+    lastModified: date,
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
+
   // Any additional standalone pages (like privacy policy, terms, etc.)
   const additionalPages = [
     "/faq",
@@ -19,7 +28,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/terms-of-service",
     "/cookie-policy",
     "/gdpr",
-    // Add actual pages here if you create them in the future
   ].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: date,
@@ -27,5 +35,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [mainPage, ...additionalPages];
+  return [mainPage, ...servicePages, ...additionalPages];
 }

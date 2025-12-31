@@ -2,7 +2,6 @@ import About from "@/components/sections/about/about";
 import Contact from "@/components/sections/contact/contact";
 import Hero from "@/components/sections/hero/hero";
 import Process from "@/components/sections/process/process";
-import Projects from "@/components/sections/projects/projects";
 import ServiceBadges from "@/components/sections/service-badges/service-badges";
 import {
   generatePageMetadata,
@@ -25,7 +24,7 @@ const Homepage = () => {
       <ServiceBadges />
       <About />
       <Process />
-      <Projects />
+      {/* <Projects /> */}
       <Contact />
     </main>
   );

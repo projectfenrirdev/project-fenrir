@@ -49,21 +49,21 @@ const CookiePolicy = () => {
       variants={containerVariants}
     >
       {/* Header */}
-      <motion.div variants={itemVariants} className="mb-10 text-center">
-        <h1 className="mb-4 bg-gradient-to-r from-[#9345ff] to-[#b121d6] bg-clip-text text-4xl font-bold text-transparent">
+      <motion.div variants={{ itemVariants }} className="mb-10 text-center">
+        <h1 className="from-forge-primary to-forge-secondary mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           Cookie Policy
         </h1>
         <p className="text-gray-400">Last updated: June 15, 2024</p>
       </motion.div>
 
       {/* Introduction */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           1. Introduction
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            This Cookie Policy explains what cookies are and how Forging Dev
+            This Cookie Policy explains what cookies are and how Project Fenrir
             (&quot;we&quot;, &quot;us&quot;, or &quot;our&quot;) uses them on
             our website. We encourage you to read this policy in order to
             understand what cookies are, how we use them, the types of cookies
@@ -80,7 +80,7 @@ const CookiePolicy = () => {
 
       {/* What Are Cookies */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -100,7 +100,7 @@ const CookiePolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Authentication:</strong>{" "}
+              <strong className="text-forge-primary">Authentication:</strong>{" "}
               Recognizing you when you return to our website
             </motion.li>
             <motion.li
@@ -108,15 +108,15 @@ const CookiePolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Security:</strong> Supporting
-              security features and detecting malicious activity
+              <strong className="text-forge-primary">Security:</strong>{" "}
+              Supporting security features and detecting malicious activity
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Functionality:</strong>{" "}
+              <strong className="text-forge-primary">Functionality:</strong>{" "}
               Remembering your preferences and settings
             </motion.li>
             <motion.li
@@ -124,15 +124,15 @@ const CookiePolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Analytics:</strong> Helping us
-              understand how visitors interact with our website
+              <strong className="text-forge-primary">Analytics:</strong> Helping
+              us understand how visitors interact with our website
             </motion.li>
           </ul>
         </div>
       </motion.section>
 
       {/* Types of Cookies We Use */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           3. Types of Cookies We Use
         </h2>
@@ -161,7 +161,7 @@ const CookiePolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Essential Cookies
               </h3>
               <p className="text-gray-300">
@@ -179,7 +179,7 @@ const CookiePolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Performance Cookies
               </h3>
               <p className="text-gray-300">
@@ -196,7 +196,7 @@ const CookiePolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Functionality Cookies
               </h3>
               <p className="text-gray-300">
@@ -213,7 +213,7 @@ const CookiePolicy = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Targeting Cookies
               </h3>
               <p className="text-gray-300">
@@ -229,7 +229,7 @@ const CookiePolicy = () => {
 
       {/* Specific Cookies We Use */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -302,7 +302,7 @@ const CookiePolicy = () => {
       </motion.section>
 
       {/* Add Cookie Preferences Component */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Manage Your Cookie Preferences
         </h2>
@@ -317,7 +317,7 @@ const CookiePolicy = () => {
       </motion.section>
 
       {/* Third-Party Cookies */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           6. Third-Party Cookies
         </h2>
@@ -365,7 +365,7 @@ const CookiePolicy = () => {
 
       {/* Managing Cookies */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -392,7 +392,7 @@ const CookiePolicy = () => {
 
           <div className="mt-6 space-y-4">
             <div>
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Managing Cookies in Common Browsers
               </h3>
               <ul className="space-y-2 text-gray-300">
@@ -419,7 +419,7 @@ const CookiePolicy = () => {
       </motion.section>
 
       {/* Cookie Consent */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           8. Cookie Consent
         </h2>
@@ -438,7 +438,7 @@ const CookiePolicy = () => {
 
       {/* Updates to Policy */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -459,8 +459,8 @@ const CookiePolicy = () => {
 
       {/* Contact Section */}
       <motion.section
-        variants={sectionVariants}
-        className="mb-10 rounded-xl border border-[#9345ff]/20 bg-gradient-to-br from-[#9345ff]/10 to-[#b121d6]/10 p-8"
+        variants={{ sectionVariants }}
+        className="border-forge-primary/20 from-forge-primary/10 to-forge-secondary/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Contact Us
@@ -474,17 +474,17 @@ const CookiePolicy = () => {
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               <Link
-                href="mailto:forgingdev37@outlook.com"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                href="mailto:projectfenrir@yahoo.com"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                forgingdev37@outlook.com
+                projectfenrir@yahoo.com
               </Link>
             </p>
             <p className="flex items-center">
               <span className="mr-2">📱</span>
               <Link
                 href="tel:+40727892022"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
                 +40 727 892 022
               </Link>
@@ -502,7 +502,7 @@ const CookiePolicy = () => {
       >
         <Link
           href="/"
-          className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#9345ff] to-[#b121d6] px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:ring-[#9345ff]/50 focus:outline-none"
+          className="from-forge-primary focus:ring-forge-primary/50 to-forge-secondary inline-flex items-center justify-center rounded-lg bg-linear-to-r px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:outline-none"
         >
           ← Return to Home
         </Link>

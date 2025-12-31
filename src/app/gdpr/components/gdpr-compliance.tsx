@@ -48,24 +48,24 @@ const GDPRCompliance = () => {
       variants={containerVariants}
     >
       {/* Header */}
-      <motion.div variants={itemVariants} className="mb-10 text-center">
-        <h1 className="mb-4 bg-gradient-to-r from-[#9345ff] to-[#b121d6] bg-clip-text text-4xl font-bold text-transparent">
+      <motion.div variants={{ itemVariants }} className="mb-10 text-center">
+        <h1 className="from-forge-primary to-forge-secondary mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           GDPR Compliance
         </h1>
         <p className="text-gray-400">Last updated: June 15, 2024</p>
       </motion.div>
 
       {/* Introduction */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           1. Introduction
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            At Forging Dev, we are committed to protecting and respecting your
-            privacy in compliance with the EU General Data Protection Regulation
-            (GDPR). This GDPR Compliance Policy outlines how we collect, use,
-            and protect your personal data.
+            At Project Fenrir, we are committed to protecting and respecting
+            your privacy in compliance with the EU General Data Protection
+            Regulation (GDPR). This GDPR Compliance Policy outlines how we
+            collect, use, and protect your personal data.
           </p>
           <p>
             We have implemented appropriate technical and organizational
@@ -78,7 +78,7 @@ const GDPRCompliance = () => {
 
       {/* Data Controller */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -86,33 +86,35 @@ const GDPRCompliance = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Forging Dev acts as the Data Controller for personal data collected
-            through our website and services. As the Data Controller, we
-            determine the purposes and means of processing your personal data.
+            Project Fenrir acts as the Data Controller for personal data
+            collected through our website and services. As the Data Controller,
+            we determine the purposes and means of processing your personal
+            data.
           </p>
           <p className="mt-4">Our contact details are:</p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <strong className="text-[#9345ff]">Company Name:</strong> Forging
-              Dev
+              <strong className="text-forge-primary">Company Name:</strong>{" "}
+              Project Fenrir
             </li>
             <li>
-              <strong className="text-[#9345ff]">Address:</strong> Sibiu,
+              <strong className="text-forge-primary">Address:</strong>
               Romania
             </li>
             <li>
-              <strong className="text-[#9345ff]">Email:</strong>{" "}
-              forgingdev37@outlook.com
+              <strong className="text-forge-primary">Email:</strong>{" "}
+              projectfenrir@yahoo.com
             </li>
             <li>
-              <strong className="text-[#9345ff]">Phone:</strong> +40 727 892 022
+              <strong className="text-forge-primary">Phone:</strong> +40 727 892
+              022
             </li>
           </ul>
         </div>
       </motion.section>
 
       {/* Personal Data We Collect */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           3. Personal Data We Collect
         </h2>
@@ -127,23 +129,23 @@ const GDPRCompliance = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Identity Data:</strong> First
-              name, last name, username, or similar identifier
+              <strong className="text-forge-primary">Identity Data:</strong>{" "}
+              First name, last name, username, or similar identifier
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Contact Data:</strong> Email
-              address, telephone numbers, postal address
+              <strong className="text-forge-primary">Contact Data:</strong>{" "}
+              Email address, telephone numbers, postal address
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Technical Data:</strong> IP
+              <strong className="text-forge-primary">Technical Data:</strong> IP
               address, browser type and version, time zone setting, operating
               system, and platform
             </motion.li>
@@ -152,7 +154,7 @@ const GDPRCompliance = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Usage Data:</strong>{" "}
+              <strong className="text-forge-primary">Usage Data:</strong>{" "}
               Information about how you use our website and services
             </motion.li>
           </ul>
@@ -161,7 +163,7 @@ const GDPRCompliance = () => {
 
       {/* Purpose and Legal Basis */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -175,7 +177,7 @@ const GDPRCompliance = () => {
 
           <div className="mt-4 space-y-4">
             <div>
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Contract Performance
               </h3>
               <p>
@@ -191,7 +193,7 @@ const GDPRCompliance = () => {
             </div>
 
             <div>
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Legitimate Interests
               </h3>
               <p>
@@ -210,7 +212,7 @@ const GDPRCompliance = () => {
             </div>
 
             <div>
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Consent
               </h3>
               <p>Processing based on your consent:</p>
@@ -221,7 +223,7 @@ const GDPRCompliance = () => {
             </div>
 
             <div>
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Legal Obligation
               </h3>
               <p>Processing necessary to comply with our legal obligations:</p>
@@ -235,7 +237,7 @@ const GDPRCompliance = () => {
       </motion.section>
 
       {/* Your Rights */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Your Rights Under GDPR
         </h2>
@@ -267,7 +269,7 @@ const GDPRCompliance = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Right to Access
               </h3>
               <p className="text-gray-300">
@@ -282,7 +284,7 @@ const GDPRCompliance = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Right to Rectification
               </h3>
               <p className="text-gray-300">
@@ -298,7 +300,7 @@ const GDPRCompliance = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Right to Erasure
               </h3>
               <p className="text-gray-300">
@@ -314,7 +316,7 @@ const GDPRCompliance = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Right to Restriction
               </h3>
               <p className="text-gray-300">
@@ -330,7 +332,7 @@ const GDPRCompliance = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Right to Data Portability
               </h3>
               <p className="text-gray-300">
@@ -346,7 +348,7 @@ const GDPRCompliance = () => {
                 visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
               }}
             >
-              <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+              <h3 className="text-forge-primary mb-2 text-lg font-medium">
                 Right to Object
               </h3>
               <p className="text-gray-300">
@@ -368,7 +370,7 @@ const GDPRCompliance = () => {
 
       {/* Data Security */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -399,7 +401,7 @@ const GDPRCompliance = () => {
       </motion.section>
 
       {/* International Transfers */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           7. International Transfers
         </h2>
@@ -432,7 +434,7 @@ const GDPRCompliance = () => {
 
       {/* Data Retention */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -468,8 +470,8 @@ const GDPRCompliance = () => {
 
       {/* Contact Section */}
       <motion.section
-        variants={sectionVariants}
-        className="mb-10 rounded-xl border border-[#9345ff]/20 bg-gradient-to-br from-[#9345ff]/10 to-[#b121d6]/10 p-8"
+        variants={{ sectionVariants }}
+        className="border-forge-primary/20 from-forge-primary/10 to-forge-secondary/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           9. Contact Us
@@ -484,17 +486,17 @@ const GDPRCompliance = () => {
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               <Link
-                href="mailto:forgingdev37@outlook.com"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                href="mailto:projectfenrir@yahoo.com"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                forgingdev37@outlook.com
+                projectfenrir@yahoo.com
               </Link>
             </p>
             <p className="flex items-center">
               <span className="mr-2">📱</span>
               <Link
                 href="tel:+40727892022"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
                 +40 727 892 022
               </Link>
@@ -504,7 +506,7 @@ const GDPRCompliance = () => {
       </motion.section>
 
       {/* Complaints */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Complaints
         </h2>
@@ -521,7 +523,7 @@ const GDPRCompliance = () => {
           </p>
           <div className="mt-4">
             <p>
-              <strong className="text-[#9345ff]">
+              <strong className="text-forge-primary">
                 National Authority for the Supervision of Personal Data
                 Processing
               </strong>
@@ -532,7 +534,7 @@ const GDPRCompliance = () => {
               <Link
                 href="https://www.dataprotection.ro/"
                 target="_blank"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
                 www.dataprotection.ro
               </Link>
@@ -550,7 +552,7 @@ const GDPRCompliance = () => {
       >
         <Link
           href="/"
-          className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#9345ff] to-[#b121d6] px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:ring-[#9345ff]/50 focus:outline-none"
+          className="from-forge-primary focus:ring-forge-primary/50 to-forge-secondary inline-flex items-center justify-center rounded-lg bg-linear-to-r px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:outline-none"
         >
           ← Return to Home
         </Link>

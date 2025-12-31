@@ -22,13 +22,13 @@ export const HeroHeading = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl"
+        className="text-5xl font-bold tracking-tight md:text-6xl"
         id="hero-title"
       >
         <span className="block">Software Development</span>
         <span className="mt-2 block">
           We{" "}
-          <span className="from-forge-secondary bg-gradient-to-r to-blue-400 bg-clip-text text-transparent">
+          <span className="from-forge-secondary bg-linear-to-r to-blue-400 bg-clip-text text-transparent">
             Get It Right
           </span>
         </span>

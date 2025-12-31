@@ -5,7 +5,7 @@ import { statItemVariants } from "./animation-variants";
 
 export const AboutStats = () => {
   const stats = [
-    { value: "4+", label: "Years of Experience" },
+    { value: "5+", label: "Years of Experience" },
     { value: "6+", label: "Happy Clients" },
     { value: "10+", label: "Projects Completed" },
   ];
@@ -23,9 +23,9 @@ export const AboutStats = () => {
         <motion.div
           key={index}
           className="flex flex-col items-center rounded-xl border border-white/10 bg-gradient-to-br from-white/10 to-transparent p-6 backdrop-blur-sm"
-          variants={statItemVariants}
+          variants={{ statItemVariants }}
         >
-          <dt className="from-forge-secondary bg-gradient-to-r to-white bg-clip-text text-5xl font-bold text-transparent">
+          <dt className="from-forge-secondary bg-linear-to-r to-white bg-clip-text text-5xl font-bold text-transparent">
             {stat.value}
           </dt>
           <dd className="mt-2 text-center text-neutral-400">{stat.label}</dd>

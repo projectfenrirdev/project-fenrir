@@ -6,7 +6,7 @@ import { itemVariants, linkHoverVariants } from "./animation-variants";
 
 export const FooterServices = () => {
   return (
-    <motion.div className="mb-8" variants={itemVariants}>
+    <motion.div className="mb-8" variants={{ itemVariants }}>
       <h3 className="mb-6 text-lg font-semibold text-white">Services</h3>
       <ul className="space-y-3">
         <li>

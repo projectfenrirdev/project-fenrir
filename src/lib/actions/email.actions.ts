@@ -24,8 +24,8 @@ export async function sendContactEmail(formData: ContactFormValues) {
 
     // Send the email
     const result = await resend.emails.send({
-      from: `Contact Form <"no-reply@forgingdev.com">`,
-      to: process.env.CONTACT_EMAIL_TO || "forgingdev37@outlook.com",
+      from: `Contact Form <"no-reply@projectfenrir.com">`,
+      to: process.env.CONTACT_EMAIL_TO || "projectfenrir@yahoo.com",
       subject: `New contact form submission from ${fullName}`,
       replyTo: data.email,
       text: `

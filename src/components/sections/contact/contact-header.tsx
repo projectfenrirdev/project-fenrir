@@ -24,7 +24,7 @@ export const ContactHeader = () => {
       <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <motion.h2
           id="contact-heading"
-          className="max-w-md bg-gradient-to-r from-white to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-5xl"
+          className="max-w-md bg-linear-to-r from-white to-neutral-400 bg-clip-text text-3xl font-bold text-transparent md:text-5xl"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.3 }}

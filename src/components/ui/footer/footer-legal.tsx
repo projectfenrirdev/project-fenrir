@@ -7,11 +7,11 @@ import { itemVariants, linkHoverVariants } from "./animation-variants";
 
 export const FooterLegal = () => {
   return (
-    <motion.div className="mb-8" variants={itemVariants}>
+    <motion.div className="mb-8" variants={{ itemVariants }}>
       <h3 className="mb-6 text-lg font-semibold text-white">Legal</h3>
       <ul className="mb-6 space-y-3">
         <li>
-          <motion.div variants={linkHoverVariants} whileHover="hover">
+          <motion.div variants={{ linkHoverVariants }} whileHover="hover">
             <Link
               href="/privacy-policy"
               className="hover:text-forge-accent inline-block text-gray-300 transition-colors"

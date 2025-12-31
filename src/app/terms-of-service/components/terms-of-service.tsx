@@ -45,27 +45,27 @@ const TermsOfService = () => {
       className="mx-auto max-w-4xl px-4"
       initial="hidden"
       animate="visible"
-      variants={containerVariants}
+      variants={{ containerVariants }}
     >
       {/* Header */}
-      <motion.div variants={itemVariants} className="mb-10 text-center">
-        <h1 className="mb-4 bg-gradient-to-r from-[#9345ff] to-[#b121d6] bg-clip-text text-4xl font-bold text-transparent">
+      <motion.div variants={{ itemVariants }} className="mb-10 text-center">
+        <h1 className="from-forge-primary to-forge-secondary mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           Terms of Service
         </h1>
         <p className="text-gray-400">Last updated: June 15, 2024</p>
       </motion.div>
 
       {/* Introduction */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           1. Introduction and Acceptance
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Welcome to Forging Dev. These Terms of Service (&quot;Terms&quot;)
-            govern your use of our website, services, and products. By accessing
-            or using our services, you agree to be bound by these Terms and our
-            Privacy Policy.
+            Welcome to Project Fenrir. These Terms of Service
+            (&quot;Terms&quot;) govern your use of our website, services, and
+            products. By accessing or using our services, you agree to be bound
+            by these Terms and our Privacy Policy.
           </p>
           <p>
             Please read these Terms carefully before using our services. If you
@@ -77,7 +77,7 @@ const TermsOfService = () => {
 
       {/* Definitions */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -90,49 +90,50 @@ const TermsOfService = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Company/We/Us:</strong> Refers
-              to Forging Dev, our employees, contractors, and representatives.
+              <strong className="text-forge-primary">Company/We/Us:</strong>{" "}
+              Refers to Project Fenrir, our employees, contractors, and
+              representatives.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Services:</strong> Refers to
-              any services provided by Forging Dev, including but not limited to
-              web development, application development, e-commerce solutions,
-              consultation, and maintenance.
+              <strong className="text-forge-primary">Services:</strong> Refers
+              to any services provided by Project Fenrir, including but not
+              limited to web development, application development, e-commerce
+              solutions, consultation, and maintenance.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Client/You:</strong> Refers to
-              individuals, businesses, or entities that engage our services or
-              use our website.
+              <strong className="text-forge-primary">Client/You:</strong> Refers
+              to individuals, businesses, or entities that engage our services
+              or use our website.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <strong className="text-[#9345ff]">Deliverables:</strong> Refers
-              to the products, services, designs, code, or other materials
-              developed by us for you as part of our services.
+              <strong className="text-forge-primary">Deliverables:</strong>{" "}
+              Refers to the products, services, designs, code, or other
+              materials developed by us for you as part of our services.
             </motion.li>
           </ul>
         </div>
       </motion.section>
 
       {/* Service Description */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           3. Description of Services
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Forging Dev provides professional web and application development
+            Project Fenrir provides professional web and application development
             services, including but not limited to:
           </p>
           <ul className="space-y-2 text-gray-300">
@@ -145,22 +146,22 @@ const TermsOfService = () => {
           </ul>
           <p className="mt-4">
             The specific services to be provided will be detailed in a written
-            agreement or contract between you and Forging Dev. These Terms apply
-            in addition to any specific agreement.
+            agreement or contract between you and Project Fenrir. These Terms
+            apply in addition to any specific agreement.
           </p>
         </div>
       </motion.section>
 
       {/* Client Responsibilities */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           4. Client Responsibilities
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
-          <p>As a client of Forging Dev, you agree to:</p>
+          <p>As a client of Project Fenrir, you agree to:</p>
           <ul className="space-y-2 text-gray-300">
             <li>
               Provide accurate and timely information as required for the
@@ -171,7 +172,7 @@ const TermsOfService = () => {
               timeframes
             </li>
             <li>
-              Pay all fees as set forth in your agreement with Forging Dev
+              Pay all fees as set forth in your agreement with Project Fenrir
             </li>
             <li>
               Obtain and maintain any necessary licenses, permissions, or
@@ -187,7 +188,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Intellectual Property */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Intellectual Property Rights
         </h2>
@@ -199,16 +200,16 @@ const TermsOfService = () => {
               deliverables specifically created for you
             </li>
             <li>
-              Forging Dev retains ownership of all pre-existing materials,
+              Project Fenrir retains ownership of all pre-existing materials,
               proprietary tools, methods, and processes used to create the
               deliverables
             </li>
             <li>
-              Forging Dev may use general knowledge, skills, and experience
+              Project Fenrir may use general knowledge, skills, and experience
               acquired during the provision of services for other clients
             </li>
             <li>
-              Forging Dev reserves the right to display and link to completed
+              Project Fenrir reserves the right to display and link to completed
               projects as part of our portfolio and promotional materials
             </li>
           </ul>
@@ -222,7 +223,7 @@ const TermsOfService = () => {
 
       {/* Payment Terms */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -262,7 +263,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Limitation of Liability */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           7. Limitation of Liability
         </h2>
@@ -270,7 +271,7 @@ const TermsOfService = () => {
           <p>To the maximum extent permitted by law:</p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              Forging Dev will not be liable for any indirect, incidental,
+              Project Fenrir will not be liable for any indirect, incidental,
               special, consequential, or punitive damages resulting from your
               use of our services
             </li>
@@ -297,7 +298,7 @@ const TermsOfService = () => {
 
       {/* Termination */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -338,7 +339,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Governing Law */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           9. Governing Law and Dispute Resolution
         </h2>
@@ -352,15 +353,14 @@ const TermsOfService = () => {
             Any dispute arising out of or relating to these Terms or our
             services shall first be attempted to be resolved through good faith
             negotiations. If such negotiations fail, both parties agree to
-            submit to the exclusive jurisdiction of the courts in Sibiu,
-            Romania.
+            submit to the exclusive jurisdiction of the courts in Romania.
           </p>
         </div>
       </motion.section>
 
       {/* Modifications */}
       <motion.section
-        variants={sectionVariants}
+        variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
@@ -368,9 +368,9 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Forging Dev reserves the right to modify these Terms at any time. We
-            will provide notice of significant changes by updating the date at
-            the top of these Terms and potentially by other means, such as
+            Project Fenrir reserves the right to modify these Terms at any time.
+            We will provide notice of significant changes by updating the date
+            at the top of these Terms and potentially by other means, such as
             email.
           </p>
           <p className="mt-4">
@@ -382,7 +382,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Miscellaneous */}
-      <motion.section variants={sectionVariants} className="mb-10">
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           11. Miscellaneous Provisions
         </h2>
@@ -408,7 +408,7 @@ const TermsOfService = () => {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+            <h3 className="text-forge-primary mb-2 text-lg font-medium">
               Severability
             </h3>
             <p className="text-gray-300">
@@ -423,7 +423,7 @@ const TermsOfService = () => {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+            <h3 className="text-forge-primary mb-2 text-lg font-medium">
               No Waiver
             </h3>
             <p className="text-gray-300">
@@ -438,7 +438,7 @@ const TermsOfService = () => {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+            <h3 className="text-forge-primary mb-2 text-lg font-medium">
               Assignment
             </h3>
             <p className="text-gray-300">
@@ -453,7 +453,7 @@ const TermsOfService = () => {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            <h3 className="mb-2 text-lg font-medium text-[#9345ff]">
+            <h3 className="text-forge-primary mb-2 text-lg font-medium">
               Force Majeure
             </h3>
             <p className="text-gray-300">
@@ -466,8 +466,8 @@ const TermsOfService = () => {
 
       {/* Contact Section */}
       <motion.section
-        variants={sectionVariants}
-        className="mb-10 rounded-xl border border-[#9345ff]/20 bg-gradient-to-br from-[#9345ff]/10 to-[#b121d6]/10 p-8"
+        variants={{ sectionVariants }}
+        className="border-forge-primary/20 from-forge-primary/10 to-forge-secondary/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           12. Contact Us
@@ -481,17 +481,17 @@ const TermsOfService = () => {
             <p className="flex items-center">
               <span className="mr-2">📧</span>
               <Link
-                href="mailto:forgingdev37@outlook.com"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                href="mailto:projectfenrir@yahoo.com"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
-                forgingdev37@outlook.com
+                projectfenrir@yahoo.com
               </Link>
             </p>
             <p className="flex items-center">
               <span className="mr-2">📱</span>
               <Link
                 href="tel:+40727892022"
-                className="text-[#9345ff] transition-colors hover:text-[#b121d6]"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
               >
                 +40 727 892 022
               </Link>
@@ -509,7 +509,7 @@ const TermsOfService = () => {
       >
         <Link
           href="/"
-          className="inline-flex items-center justify-center rounded-lg bg-gradient-to-r from-[#9345ff] to-[#b121d6] px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:ring-[#9345ff]/50 focus:outline-none"
+          className="from-forge-primary focus:ring-forge-primary/50 to-forge-secondary inline-flex items-center justify-center rounded-lg bg-linear-to-r px-6 py-3 font-medium text-white transition-transform hover:scale-105 focus:ring-2 focus:outline-none"
         >
           ← Return to Home
         </Link>

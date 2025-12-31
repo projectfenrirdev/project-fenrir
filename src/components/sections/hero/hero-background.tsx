@@ -46,7 +46,7 @@ export const HeroBackground = () => {
       {/* Floating code elements */}
       <motion.div
         className="text-forge-secondary/40 absolute top-[5%] right-[15%] hidden lg:block"
-        variants={floatingIconVariants}
+        variants={{ floatingIconVariants }}
         animate="animate"
       >
         <CodeIcon size={50} />

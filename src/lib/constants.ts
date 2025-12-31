@@ -2,41 +2,102 @@ import type { FAQType, ProjectType, ServiceType } from "@/data/types";
 
 export const CONTACT_INFO = {
   phone: "+40727892022",
-  email: "forgingdev37@outlook.com",
-  instagram: "https://www.instagram.com/forging_dev/",
+  email: "projectfenrir@yahoo.com",
+  instagram: "https://www.instagram.com/projectfenrir/",
   whatsapp: "https://wa.me/40727892022",
 };
 
 export const SERVICES: ServiceType[] = [
   {
-    text: "Website Development",
-    link: "/#services",
+    text: "Web Development",
+    slug: "web-development",
+    link: "/services/web-development",
     icon: "laptop",
+    description: "Custom websites built with modern technologies",
+    longDescription:
+      "Transform your online presence with our custom web development services. We create responsive, fast, and SEO-optimized websites tailored to your business needs. From simple landing pages to complex web applications, we deliver solutions that drive results.",
+    features: [
+      "Responsive design for all devices",
+      "SEO optimization and best practices",
+      "Fast loading times and performance optimization",
+      "Focus on user experience and accessibility",
+      "Security and legal compliance",
+      "Ongoing maintenance and support",
+      "Hosting and domain registration",
+      "Integration with third-party services",
+    ],
+    useCases: [
+      "Business websites and landing pages",
+      "Corporate portals and intranets",
+      "Web applications and dashboards",
+      "Portfolio websites",
+      "Blogs and content management systems",
+    ],
   },
   {
     text: "E-Commerce Solutions",
-    link: "/#services",
+    slug: "e-commerce-solutions",
+    link: "/services/e-commerce-solutions",
     icon: "shopping-cart",
+    description: "Complete online store solutions",
+    longDescription:
+      "Launch and grow your online business with our comprehensive e-commerce solutions. We build secure, scalable, and user-friendly online stores that convert visitors into customers. From product catalogs to payment integration, we handle everything.",
+    features: [
+      "Custom e-commerce platforms",
+      "Payment gateway integration",
+      "Inventory management systems",
+      "Shopping cart and checkout optimization",
+      "Multi-currency and multi-language support",
+      "Order tracking and management",
+    ],
+    useCases: [
+      "Online retail stores",
+      "Digital product sales",
+      "Marketplace platforms",
+      "Subscription-based businesses",
+      "B2B e-commerce portals",
+    ],
   },
   {
-    text: "Personalized SaaS",
-    link: "/#services",
-    icon: "cloud",
+    text: "Custom Software",
+    slug: "custom-software",
+    link: "/services/custom-software",
+    icon: "code",
+    description: "Tailored software solutions for your business",
+    longDescription:
+      "Streamline your business operations with custom software designed specifically for your needs. We develop robust applications that automate processes, improve efficiency, and solve unique business challenges. From desktop applications to cloud-based solutions, we deliver software that grows with your business.",
+    features: [
+      "Custom application development",
+      "API integration and development",
+      "Database design and optimization",
+      "Cloud-based solutions",
+      "Automation and workflow systems",
+      "Legacy system modernization",
+    ],
+    useCases: [
+      "Business process automation",
+      "CRM and ERP systems",
+      "Internal tools and dashboards",
+      "Data management systems",
+      "Integration with existing software",
+    ],
   },
   {
-    text: "UI/UX Design",
-    link: "/#services",
-    icon: "pen-tool",
-  },
-  {
-    text: "Strategic SEO",
-    link: "/#services",
-    icon: "search",
-  },
-  {
-    text: "Mobile Apps",
-    link: "/#services",
-    icon: "smartphone",
+    text: "Audit Report",
+    slug: "audit-report",
+    link: "/services/audit-report",
+    icon: "file-text",
+    description: "Comprehensive security and technical audits",
+    longDescription:
+      "Ensure your website is secure, performant, and maintainable with our comprehensive audit services. We analyze your existing projects, identify issues, and provide detailed reports with actionable recommendations. Perfect for code reviews, security assessments, performance optimization and legal compliance verification.",
+    features: [
+      "Security vulnerability assessment",
+      "Performance optimization review",
+      "Legal compliance verification",
+      "Detailed documentation and reports",
+      "Actionable improvement recommendations",
+      "Technical advice and guidance",
+    ],
   },
 ];
 
@@ -59,9 +120,9 @@ export const PROJECTS: ProjectType[] = [
 
 export const FAQS: FAQType[] = [
   {
-    question: "What services does Forging Dev offer?",
+    question: "What services does Project Fenrir offer?",
     answer:
-      "Forging Dev specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
+      "Project Fenrir specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
   },
   {
     question: "How long does it take to develop a website?",
@@ -104,7 +165,7 @@ export const FAQS: FAQType[] = [
       "Yes, while we're based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
   },
   {
-    question: "How can I get started with Forging Dev?",
+    question: "How can I get started with Project Fenrir?",
     answer:
       "Getting started is easy! Simply contact us through our website's contact form, email, or phone. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
   },
@@ -129,8 +190,8 @@ export const NAVBAR_LINKS = [
   },
 ];
 
-export const CONSENT_KEY = "forging-dev-cookie-consent";
-export const CONSENT_STATUS_COOKIE = "forging-dev-cookie-consent-status";
+export const CONSENT_KEY = "projectfenrir-cookie-consent";
+export const CONSENT_STATUS_COOKIE = "projectfenrir-cookie-consent-status";
 export const CONSENT_CATEGORIES_COOKIE =
-  "forging-dev-cookie-consent-categories";
+  "projectfenrir-cookie-consent-categories";
 export const COOKIE_EXPIRY_DAYS = 365; // 1 year

@@ -1,16 +1,16 @@
 import { type Metadata } from "next";
 
-export const baseUrl = "https://www.forging-dev.com";
+export const baseUrl = "https://www.projectfenrir.com";
 
 // Main organization schema
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Forging Dev",
+  name: "Project Fenrir",
   url: baseUrl,
   logo: `${baseUrl}/images/logo.png`,
   sameAs: [
-    "https://www.instagram.com/forging_dev/",
+    "https://www.instagram.com/projectfenrir/",
     // Add other social profiles here
   ],
   address: {
@@ -22,7 +22,7 @@ export const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+40727892022",
-    email: "forgingdev37@outlook.com",
+    email: "projectfenrir@yahoo.com",
     contactType: "customer service",
   },
   description:
@@ -33,7 +33,7 @@ export const organizationSchema = {
 export const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Forging Dev",
+  name: "Project Fenrir",
   image: `${baseUrl}/images/logo.png`,
   "@id": baseUrl,
   url: baseUrl,
@@ -56,7 +56,7 @@ export const professionalServiceSchema = {
     closes: "18:00",
   },
   sameAs: [
-    "https://www.instagram.com/forging_dev/",
+    "https://www.instagram.com/projectfenrir/",
     // Add other social profiles here
   ],
   priceRange: "$$",
@@ -79,7 +79,7 @@ export const servicesSchema = {
           "Elevate your brand with our tailored website solutions, designed to reflect your identity and engage your audience effectively.",
         provider: {
           "@type": "Organization",
-          name: "Forging Dev",
+          name: "Project Fenrir",
         },
       },
     },
@@ -94,7 +94,7 @@ export const servicesSchema = {
           "Step into online retail with our store development, providing intuitive platforms that showcase your products and deliver exceptional shopping experiences.",
         provider: {
           "@type": "Organization",
-          name: "Forging Dev",
+          name: "Project Fenrir",
         },
       },
     },
@@ -109,7 +109,7 @@ export const servicesSchema = {
           "Transform your ideas into reality with our custom application development services, designed to meet your unique requirements.",
         provider: {
           "@type": "Organization",
-          name: "Forging Dev",
+          name: "Project Fenrir",
         },
       },
     },
@@ -120,12 +120,12 @@ export const servicesSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Forging Dev",
+  name: "Project Fenrir",
   image: `${baseUrl}/images/logo.png`,
   "@id": baseUrl,
   url: baseUrl,
   telephone: "+40727892022",
-  email: "forgingdev37@outlook.com",
+  email: "projectfenrir@yahoo.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sibiu",
@@ -150,7 +150,7 @@ export const localBusinessSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Forging Dev",
+  name: "Project Fenrir",
   url: baseUrl,
   potentialAction: {
     "@type": "SearchAction",
@@ -225,10 +225,10 @@ export const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "What services does Forging Dev offer?",
+      name: "What services does Project Fenrir offer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Forging Dev specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
+        text: "Project Fenrir specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
       },
     },
     {
@@ -297,7 +297,7 @@ export const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "How can I get started with Forging Dev?",
+      name: "How can I get started with Project Fenrir?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Getting started is easy! Simply contact us through our website's contact form, email, or phone. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
@@ -310,26 +310,26 @@ export const faqSchema = {
 export const privacyPolicySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Privacy Policy | Forging Dev",
+  name: "Privacy Policy | Project Fenrir",
   description:
-    "Learn how Forging Dev handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.",
+    "Learn how Project Fenrir handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.",
   url: `${baseUrl}/privacy-policy`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     logo: `${baseUrl}/images/logo.png`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Privacy Policy for Forging Dev",
+    mainContentOfPage: "Privacy Policy for Project Fenrir",
   },
 };
 
@@ -337,26 +337,26 @@ export const privacyPolicySchema = {
 export const termsOfServiceSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Terms of Service | Forging Dev",
+  name: "Terms of Service | Project Fenrir",
   description:
-    "Read the terms and conditions governing the use of Forging Dev's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
+    "Read the terms and conditions governing the use of Project Fenrir's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
   url: `${baseUrl}/terms-of-service`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     logo: `${baseUrl}/images/logo.png`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Terms of Service for Forging Dev",
+    mainContentOfPage: "Terms of Service for Project Fenrir",
   },
 };
 
@@ -364,26 +364,26 @@ export const termsOfServiceSchema = {
 export const gdprSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "GDPR Compliance | Forging Dev",
+  name: "GDPR Compliance | Project Fenrir",
   description:
-    "Learn about Forging Dev's GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.",
+    "Learn about Project Fenrir's GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.",
   url: `${baseUrl}/gdpr`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     logo: `${baseUrl}/images/logo.png`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "GDPR Compliance Information for Forging Dev",
+    mainContentOfPage: "GDPR Compliance Information for Project Fenrir",
   },
 };
 
@@ -391,26 +391,26 @@ export const gdprSchema = {
 export const cookiePolicySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Cookie Policy | Forging Dev",
+  name: "Cookie Policy | Project Fenrir",
   description:
-    "Learn about how Forging Dev uses cookies and similar technologies on our website. Understand what cookies we use, why we use them, and how you can control them.",
+    "Learn about how Project Fenrir uses cookies and similar technologies on our website. Understand what cookies we use, why we use them, and how you can control them.",
   url: `${baseUrl}/cookie-policy`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Forging Dev",
+    name: "Project Fenrir",
     logo: `${baseUrl}/images/logo.png`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Cookie Policy for Forging Dev",
+    mainContentOfPage: "Cookie Policy for Project Fenrir",
   },
 };
 
@@ -424,7 +424,7 @@ export function generatePageTitle(
   pageTitle: string,
   includeBrand = true,
 ): string {
-  const brandName = "Forging Dev";
+  const brandName = "Project Fenrir";
   const separator = " | ";
 
   // Clean up the page title
@@ -509,13 +509,13 @@ export function generatePageMetadata(
       description,
       type: "website",
       url: canonicalUrl,
-      siteName: "Forging Dev",
+      siteName: "Project Fenrir",
       images: [
         {
           url: `${baseUrl}/images/og-image.jpg`,
           width: 1200,
           height: 630,
-          alt: "Forging Dev - Custom Web Development",
+          alt: "Project Fenrir - Professional Web Development",
         },
       ],
     },

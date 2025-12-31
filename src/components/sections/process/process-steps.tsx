@@ -22,7 +22,7 @@ export const ProcessSteps = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
-              variants={stepVariants}
+              variants={{ stepVariants }}
             >
               <div className="from-forge-secondary/20 flex h-16 w-16 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br to-transparent shadow-lg backdrop-blur-sm">
                 <IconComponent className="text-forge-secondary size-8" />
@@ -34,7 +34,7 @@ export const ProcessSteps = () => {
               <div className="flex flex-1 flex-col gap-3">
                 <h3 className="text-2xl font-semibold">{step.title}</h3>
                 <p className="max-w-xl text-neutral-400">{step.description}</p>
-                <div className="from-forge-secondary/80 mt-2 h-px w-24 bg-gradient-to-r to-transparent"></div>
+                <div className="from-forge-secondary/80 mt-2 h-px w-24 bg-linear-to-r to-transparent"></div>
               </div>
             </motion.div>
           );

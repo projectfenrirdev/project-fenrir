@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://www.forging-dev.com/sitemap.xml",
+    sitemap: "https://www.projectfenrir.com/sitemap.xml",
   };
 }
