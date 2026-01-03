@@ -2,13 +2,15 @@
 
 import ClosedIcon from "@/components/ui/navbar/closed-icon";
 import DesktopNavbar from "@/components/ui/navbar/desktop-navbar";
-import Logo from "@/components/ui/navbar/logo";
 import MobileNavbar from "@/components/ui/navbar/mobile-navbar";
 import OpenedIcon from "@/components/ui/navbar/opened-icon";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import Script from "next/script";
 import { useCallback, useEffect, useState } from "react";
+import logo from "../../../../public/logo.png";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -91,8 +93,8 @@ const Navbar = () => {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SiteNavigationElement",
-            name: ["Home", "About", "Services", "Contact"],
-            url: ["/", "/#about", "/#services", "/#contact"],
+            name: ["Home", "Services", "About", "Contact"],
+            url: ["/", "/#services", "/#about", "/#contact"],
           }),
         }}
       />
@@ -103,7 +105,7 @@ const Navbar = () => {
           animate="visible"
           variants={navVariants}
           className={cn(
-            "w-full transition-all",
+            "w-full",
             !isMenuOpen && "backdrop-blur-lg",
             isElevated ? "py-3" : "py-5",
           )}
@@ -116,12 +118,9 @@ const Navbar = () => {
           aria-label="Main Navigation"
         >
           <motion.div
-            className="absolute inset-0 -z-10 transition-all"
+            className="absolute inset-0 -z-10"
             animate={{
               opacity: isElevated ? 1 : 0,
-              background: isElevated
-                ? "linear-gradient(to right, rgba(28, 27, 27, 0.95), rgba(37, 36, 36, 0.95))"
-                : "transparent",
             }}
             transition={{ duration: 0.5 }}
           />
@@ -136,7 +135,19 @@ const Navbar = () => {
           />
 
           <div className="container mx-auto flex items-center justify-between px-4">
-            <Logo variants={itemVariants} onClick={handleLogoClick} />
+            <Link href="/" className="flex items-center gap-2">
+              <Image
+                onClick={handleLogoClick}
+                src={logo}
+                alt="Project Fenrir"
+                width={32}
+                height={32}
+                className="h-8 w-12 rounded-sm object-cover object-center"
+              />
+              <span className="to-forge-accent bg-linear-to-r from-white bg-clip-text text-xl font-bold text-transparent">
+                Project Fenrir
+              </span>
+            </Link>
 
             {/* Mobile menu button */}
             <motion.button
@@ -149,7 +160,7 @@ const Navbar = () => {
               aria-controls="mobile-menu"
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md transition-colors hover:bg-white/20">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 backdrop-blur-md hover:bg-white/20">
                 <AnimatePresence mode="wait">
                   {isMenuOpen ? <ClosedIcon /> : <OpenedIcon />}
                 </AnimatePresence>

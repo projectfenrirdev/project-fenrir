@@ -3,7 +3,7 @@
 import WhatsappIcon from "@/components/ui/whatsapp-icon";
 import { CONTACT_INFO } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { InstagramIcon, MailIcon } from "lucide-react";
+import { InstagramIcon, MailIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
@@ -28,11 +28,11 @@ const ContactItem = ({
       target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       className={cn(
-        "group flex items-center gap-4 overflow-hidden rounded-lg px-2 py-4 break-words transition-all",
+        "group flex items-center gap-4 overflow-hidden rounded-lg py-4 break-words sm:px-2",
         "hover:bg-forge-primary/5 focus:ring-forge-primary/50 focus:ring-2 focus:outline-none",
       )}
     >
-      <div className="bg-forge-primary/10 text-forge-primary group-hover:bg-forge-primary/20 flex size-12 flex-shrink-0 items-center justify-center rounded-full transition-all">
+      <div className="bg-forge-primary/10 text-forge-primary group-hover:bg-forge-primary/20 flex size-12 flex-shrink-0 items-center justify-center rounded-full">
         {icon}
       </div>
       <div className="flex flex-col">
@@ -53,7 +53,7 @@ const ContactInfo = (): React.ReactElement => {
       <ContactItem
         href={CONTACT_INFO.whatsapp}
         icon={<WhatsappIcon className="size-6" />}
-        label="Message us"
+        label="Message us at"
         value={CONTACT_INFO.phone}
         external
       />
@@ -61,14 +61,22 @@ const ContactInfo = (): React.ReactElement => {
       <ContactItem
         href={`mailto:${CONTACT_INFO.email}`}
         icon={<MailIcon className="size-6" />}
-        label="Email us"
+        label="Email"
         value={CONTACT_INFO.email}
       />
 
       <ContactItem
         href={CONTACT_INFO.instagram}
         icon={<InstagramIcon className="size-6" />}
-        label="Follow us"
+        label="Our Instagram"
+        value="@projectfenrir.dev"
+        external
+      />
+
+      <ContactItem
+        href={CONTACT_INFO.twitter}
+        icon={<TwitterIcon className="size-6" />}
+        label="Follow on X"
         value="@projectfenrir"
         external
       />

@@ -5,14 +5,15 @@ import { statItemVariants } from "./animation-variants";
 
 export const AboutStats = () => {
   const stats = [
-    { value: "5+", label: "Years of Experience" },
-    { value: "6+", label: "Happy Clients" },
-    { value: "10+", label: "Projects Completed" },
+    { value: "5", label: "Years of Industry Expertise" },
+    { value: "6", label: "Satisfied Clients" },
+    { value: "1", label: "Year on the Market" },
+    { value: "10", label: "Projects Delivered" },
   ];
 
   return (
     <motion.dl
-      className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3"
+      className="mt-20 grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4"
       aria-label="Company Stats"
       initial="hidden"
       whileInView="visible"

@@ -19,9 +19,9 @@ export const ProcessSteps = () => {
               key={index}
               className="flex flex-col gap-8 md:flex-row md:items-start"
               custom={index}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
               variants={{ stepVariants }}
             >
               <div className="from-forge-accent/20 flex h-16 w-16 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br to-transparent shadow-lg backdrop-blur-sm">

@@ -42,7 +42,7 @@
   <text x="210" y="160" font-family="monospace" font-size="14" fill="#E5E7EB" text-anchor="start">=</text>
   <text x="230" y="160" font-family="monospace" font-size="14" fill="#eb6f1e" text-anchor="start">{</text>
 
-  <text x="130" y="190" font-family="monospace" font-size="14" fill="#9CA3AF" text-anchor="start">// Forging Dev configuration</text>
+  <text x="130" y="190" font-family="monospace" font-size="14" fill="#9CA3AF" text-anchor="start">// Project Fenrir configuration</text>
 
   <text x="130" y="220" font-family="monospace" font-size="14" fill="#93C5FD" text-anchor="start">environment</text>
   <text x="230" y="220" font-family="monospace" font-size="14" fill="#E5E7EB" text-anchor="start">:</text>

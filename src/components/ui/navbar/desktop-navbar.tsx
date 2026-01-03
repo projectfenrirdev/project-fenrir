@@ -26,11 +26,9 @@ const DesktopNavbar = ({ itemVariants }: Props) => {
         aria-label="Desktop navigation"
       >
         {NAVBAR_LINKS.map((link) => (
-          <motion.div variants={itemVariants} key={link.href}>
-            <NavbarLink href={link.href} role="menuitem">
-              {link.text}
-            </NavbarLink>
-          </motion.div>
+          <NavbarLink key={link.href} href={link.href} role="menuitem">
+            {link.text}
+          </NavbarLink>
         ))}
       </motion.div>
 

@@ -16,7 +16,7 @@ const NavbarLink = ({
     <Link
       href={href}
       className={cn(
-        "text-neutral-300 transition-all hover:translate-y-[-2px] hover:text-white",
+        "transform text-neutral-300 transition-transform hover:translate-y-[-2px] hover:text-white",
         className,
       )}
       aria-label={children?.toString()}

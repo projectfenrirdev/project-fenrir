@@ -16,7 +16,7 @@ export const HeroCtaButtons = () => {
     >
       <motion.div variants={itemVariants}>
         <Link href="/#contact">
-          <Button className="border-forge-primary bg-forge-primary hover:bg-forge-primary/90 shadow-forge-primary/20 hover:shadow-forge-primary/40 w-full border-2 py-5 text-base font-medium text-white shadow-lg transition-all duration-300 focus:ring-2 focus:outline-none sm:w-auto">
+          <Button className="border-forge-primary bg-forge-primary hover:bg-forge-primary/90 shadow-forge-primary/20 hover:shadow-forge-primary/40 w-full border-2 py-5 text-base font-medium text-white shadow-lg focus:ring-2 focus:outline-none sm:w-auto">
             Get in Touch
             <MessageCircleMoreIcon
               className="ml-2 size-5"
@@ -30,7 +30,7 @@ export const HeroCtaButtons = () => {
       <motion.div variants={itemVariants}>
         <Link href="/#services">
           <Button className="w-full border-2 border-white/20 bg-white/5 py-5 text-base backdrop-blur-sm hover:bg-white/10 focus:ring-2 focus:ring-white/20 focus:outline-none sm:w-auto">
-            Our Services
+            View Services
             <FoldersIcon
               className="ml-2 size-5"
               role="img"

@@ -23,7 +23,7 @@ export const processSteps = [
     icon: GitGraphIcon,
     title: "Execution & Delivery",
     description:
-      "Our team works diligently to implement the solution, ensuring high standards and attention to detail, while keeping you in the loop every step of the way.",
+      "We execute every project with high standards and meticulous attention to detail, maintaining clear and consistent communication at every step.",
   },
   {
     icon: UsersIcon,

@@ -27,7 +27,7 @@ export const ServicesHeader = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        Our Specialized Services
+        Services focused on performance, UX, and results
       </motion.h2>
 
       <motion.p
@@ -36,8 +36,8 @@ export const ServicesHeader = () => {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        We deliver cutting-edge solutions tailored to your specific needs. Our
-        expertise spans across multiple domains to help your business succeed.
+        You focus on the business. We take care of the website, from planning to
+        a reliable, high-performance launch and ongoing support.
       </motion.p>
     </motion.div>
   );

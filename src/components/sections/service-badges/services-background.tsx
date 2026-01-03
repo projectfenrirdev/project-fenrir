@@ -5,11 +5,11 @@ export const ServicesBackground = () => {
     <>
       {/* Background elements */}
       <div className="via-forge-accent/5 absolute inset-0 -z-10 bg-gradient-to-b from-transparent to-transparent"></div>
-      <div className="absolute top-1/2 -left-20 h-64 w-64 -translate-y-1/2 rounded-full bg-gradient-to-tr from-forge-accent-dark/10 to-transparent blur-3xl"></div>
+      <div className="from-forge-accent-dark/10 absolute top-1/2 -left-20 h-64 w-64 -translate-y-1/2 rounded-full bg-gradient-to-tr to-transparent blur-3xl"></div>
       <div className="from-forge-accent/10 absolute top-1/3 -right-20 h-72 w-72 rounded-full bg-gradient-to-bl to-transparent blur-3xl"></div>
 
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5"></div>
+      <div className="absolute inset-0 -z-1 bg-[url('/grid-pattern.svg')] bg-repeat opacity-50"></div>
 
       {/* Frosted dividers */}
       <div className="absolute top-0 right-0 left-0 h-px bg-linear-to-r from-transparent via-white/15 to-transparent"></div>

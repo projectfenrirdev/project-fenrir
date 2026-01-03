@@ -127,7 +127,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                className="hover:border-forge-accent/30 rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/8"
+                className="hover:border-forge-accent/30 rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm hover:bg-white/8"
               >
                 <p className="text-gray-300">{useCase}</p>
               </motion.div>
@@ -152,7 +152,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
         </p>
         <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
           <Link href={{ pathname: "/", hash: "#contact" }}>
-            <Button className="border-forge-primary bg-forge-primary hover:bg-forge-primary/90 shadow-forge-primary/20 hover:shadow-forge-primary/40 w-full border-2 py-5 text-base font-medium text-white shadow-lg transition-all duration-300 focus:ring-2 focus:outline-none sm:w-auto">
+            <Button className="border-forge-primary bg-forge-primary hover:bg-forge-primary/90 shadow-forge-primary/20 hover:shadow-forge-primary/40 w-full border-2 py-5 text-base font-medium text-white shadow-lg focus:ring-2 focus:outline-none sm:w-auto">
               Get in Touch
               <MessageCircleMoreIcon
                 className="ml-2 size-5"
@@ -164,7 +164,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
           <a href={`tel:${CONTACT_INFO.phone}`}>
             <Button
               variant="outline"
-              className="border-forge-primary bg-forge-primary/10 hover:bg-forge-primary/20 w-full border-2 py-5 text-base font-medium text-white transition-all duration-300 hover:border-white/40 hover:text-white sm:w-auto"
+              className="border-forge-primary bg-forge-primary/10 hover:bg-forge-primary/20 w-full border-2 py-5 text-base font-medium text-white hover:border-white/40 hover:text-white sm:w-auto"
             >
               Call Us
             </Button>

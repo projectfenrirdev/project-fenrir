@@ -1,37 +1,37 @@
-import type { FAQType, ProjectType, ServiceType } from "@/data/types";
+import type { FAQType, ServiceType } from "@/data/types";
 
 export const CONTACT_INFO = {
-  phone: "+40727892022",
+  phone: "+40 727 892 022",
   email: "projectfenrir@yahoo.com",
   instagram: "https://www.instagram.com/projectfenrir.dev/",
   whatsapp: "https://wa.me/40727892022",
+  twitter: "https://x.com/projectfenrirdv",
 };
 
 export const SERVICES: ServiceType[] = [
   {
-    text: "Web Development",
-    slug: "web-development",
-    link: "/services/web-development",
+    text: "Website design & development",
+    slug: "website-design-development",
+    link: "/services/website-design-development",
     icon: "laptop",
-    description: "Custom websites built with modern technologies",
+    description:
+      "High-performance websites built for conversion, UX, and long-term reliability.",
     longDescription:
-      "Transform your online presence with our custom web development services. We create responsive, fast, and SEO-optimized websites tailored to your business needs. From simple landing pages to complex web applications, we deliver solutions that drive results.",
+      "We design and build custom websites for businesses that treat their website as a revenue-critical asset. Every project focuses on clean architecture, fast load times, and conversion-focused UX — ensuring the website is easy to maintain, scales with your business, and performs reliably in production.",
     features: [
       "Responsive design for all devices",
-      "SEO optimization and best practices",
       "Fast loading times and performance optimization",
-      "Focus on user experience and accessibility",
-      "Security and legal compliance",
+      "Conversion-focused user experience",
+      "Scalable architecture for growth",
+      "Reliable hosting and domain management",
       "Ongoing maintenance and support",
-      "Hosting and domain registration",
-      "Integration with third-party services",
     ],
     useCases: [
-      "Business websites and landing pages",
-      "Corporate portals and intranets",
-      "Web applications and dashboards",
-      "Portfolio websites",
-      "Blogs and content management systems",
+      "Starting a new business website from scratch",
+      "Rebuilding a slow or outdated website",
+      "Improving conversion on an existing website",
+      "Scaling an eCommerce storefront",
+      "Building a SaaS product website",
     ],
   },
   {
@@ -39,9 +39,9 @@ export const SERVICES: ServiceType[] = [
     slug: "e-commerce-solutions",
     link: "/services/e-commerce-solutions",
     icon: "shopping-cart",
-    description: "Complete online store solutions",
+    description: "Complete online store solutions — built to sell and scale",
     longDescription:
-      "Launch and grow your online business with our comprehensive e-commerce solutions. We build secure, scalable, and user-friendly online stores that convert visitors into customers. From product catalogs to payment integration, we handle everything.",
+      "Launch and grow your online business with end-to-end e-commerce solutions designed for performance and conversion. We build secure, scalable, and easy-to-manage online stores that turn visitors into customers. From product catalogs and checkout flows to payments and integrations, everything is handled — so you can focus on growth, not technical complexity.",
     features: [
       "Custom e-commerce platforms",
       "Payment gateway integration",
@@ -51,11 +51,11 @@ export const SERVICES: ServiceType[] = [
       "Order tracking and management",
     ],
     useCases: [
-      "Online retail stores",
-      "Digital product sales",
-      "Marketplace platforms",
-      "Subscription-based businesses",
-      "B2B e-commerce portals",
+      "Launching a new online store",
+      "Rebuilding an underperforming store",
+      "Scaling an existing e-commerce business",
+      "Customizing beyond platform limits",
+      "Outgrowing WordPress or Shopify",
     ],
   },
   {
@@ -63,9 +63,9 @@ export const SERVICES: ServiceType[] = [
     slug: "custom-software",
     link: "/services/custom-software",
     icon: "code",
-    description: "Tailored software solutions for your business",
+    description: "Tailored software solutions that streamline your business",
     longDescription:
-      "Streamline your business operations with custom software designed specifically for your needs. We develop robust applications that automate processes, improve efficiency, and solve unique business challenges. From desktop applications to cloud-based solutions, we deliver software that grows with your business.",
+      "We develop custom software designed to solve your business's unique challenges and improve operational efficiency. Every solution is built for reliability, scalability, and long-term maintainability, so it grows alongside your business. From desktop applications to cloud-based tools, we automate processes, reduce manual work, and enable teams to focus on what matters most — driving results.",
     features: [
       "Custom application development",
       "API integration and development",
@@ -75,11 +75,11 @@ export const SERVICES: ServiceType[] = [
       "Legacy system modernization",
     ],
     useCases: [
-      "Business process automation",
-      "CRM and ERP systems",
+      "Automating repetitive tasks",
+      "CRM, ERP, and other business systems",
       "Internal tools and dashboards",
       "Data management systems",
-      "Integration with existing software",
+      "Business process optimization",
     ],
   },
   {
@@ -87,9 +87,10 @@ export const SERVICES: ServiceType[] = [
     slug: "audit-report",
     link: "/services/audit-report",
     icon: "file-text",
-    description: "Comprehensive security and technical audits",
+    description:
+      "Comprehensive website audits for performance, security, and maintainability",
     longDescription:
-      "Ensure your website is secure, performant, and maintainable with our comprehensive audit services. We analyze your existing projects, identify issues, and provide detailed reports with actionable recommendations. Perfect for code reviews, security assessments, performance optimization and legal compliance verification.",
+      "Project Fenrir evaluates your website or application through in-depth audits designed to ensure it is secure, high-performing, and maintainable. We review code quality, architecture, security, performance metrics, and compliance, then deliver clear, actionable recommendations to improve reliability and user experience.",
     features: [
       "Security vulnerability assessment",
       "Performance optimization review",
@@ -98,23 +99,13 @@ export const SERVICES: ServiceType[] = [
       "Actionable improvement recommendations",
       "Technical advice and guidance",
     ],
-  },
-];
-
-export const PROJECTS: ProjectType[] = [
-  {
-    title: "Liquid Money",
-    description: "Online Pawn Shop",
-    image: "/projects/liquid_money.webp",
-    link: "https://magazin.liquidmoney.ro/",
-    tags: ["E-Commerce", "Finance"],
-  },
-  {
-    title: "Diamantenklotz",
-    description: "Jewelry E-Commerce",
-    image: "/projects/diamantenklotz.webp",
-    link: "https://diamantenklotz.de/",
-    tags: ["Jewelry", "E-Commerce"],
+    useCases: [
+      "Pre-launch audit",
+      "Performance & UX assessment",
+      "Security & compliance check",
+      "Technical debt review",
+      "Assistance on technical decisions",
+    ],
   },
 ];
 
@@ -122,22 +113,22 @@ export const FAQS: FAQType[] = [
   {
     question: "What services does Project Fenrir offer?",
     answer:
-      "Project Fenrir specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
+      "Project Fenrir provides custom web development, e-commerce solutions, and software applications designed to meet the unique needs of SaaS and e-commerce businesses. We deliver high-performance, scalable, and reliable digital solutions that enhance online presence, streamline operations, and support long-term growth.",
   },
   {
     question: "How long does it take to develop a website?",
     answer:
-      "The timeline varies depending on the complexity of the project. A simple informational website can take 2-4 weeks, while complex e-commerce platforms or custom applications might take 2-6 months. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements.",
+      "The timeline depends on the project’s complexity and scope. Typical websites take 3–6 weeks from initial planning to launch, while larger or custom projects may require more time to ensure performance, scalability, and long-term maintainability. Throughout the process, we provide regular updates and milestones so you’re always informed.",
   },
   {
     question: "What is your development process?",
     answer:
-      "Our development process includes: 1) Discovery & Requirements Gathering, 2) Planning & Design, 3) Development, 4) Testing & Quality Assurance, 5) Deployment, and 6) Ongoing Support & Maintenance. We maintain transparent communication throughout the entire process.",
+      "Our development process includes: 1) Consultation & Discovery, 2) Planning & Strategy, 3) Execution & Delivery, 4) Review & Feedback, and 5) Ongoing Support & Maintenance. We maintain transparent communication throughout the entire process.",
   },
   {
     question: "Do you provide ongoing maintenance and support?",
     answer:
-      "Yes, we offer ongoing maintenance and support packages to ensure your website or application remains secure, up-to-date, and functioning optimally. These packages can be customized based on your specific needs and budget.",
+      "Yes. Project Fenrir offers ongoing maintenance and support to ensure your website or software remains secure, up-to-date, and high-performing. We provide regular updates, performance monitoring, and troubleshooting, giving you peace of mind and allowing your team to focus on growth while we handle the technical upkeep.",
   },
   {
     question: "How do you handle website security?",
@@ -145,17 +136,17 @@ export const FAQS: FAQType[] = [
       "Security is a top priority for us. We implement industry best practices including HTTPS encryption, regular security updates, secure coding practices, data encryption, and protection against common vulnerabilities like SQL injection and XSS attacks. We also offer ongoing security monitoring for our maintenance clients.",
   },
   {
-    question: "Can you help with SEO and digital marketing?",
+    question: "Are your websites SEO-friendly?",
     answer:
-      "Absolutely! We build websites with SEO best practices in mind, including proper semantic HTML, schema markup, optimized page speed, and mobile responsiveness. We can also provide guidance on content strategy and integrate analytics tools to help you track and improve your online performance.",
+      "Absolutely! Our websites are built with SEO best practices in mind, including semantic HTML, structured data, optimized page speed, and mobile-first responsive design. We also provide guidance on content strategy and integrate analytics tools to help you track and improve your online performance.",
   },
   {
     question: "What technologies do you use for development?",
     answer:
-      "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We're technology-agnostic and choose the best tools for each specific project.",
+      "We work with modern technologies proven to deliver high-performance and scalable solutions like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, and various SQL database technologies depending on project requirements.",
   },
   {
-    question: "How much does a website or application cost?",
+    question: "How much does a website or software cost?",
     answer:
       "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We're transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
   },
@@ -165,9 +156,14 @@ export const FAQS: FAQType[] = [
       "Yes, while we're based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
   },
   {
+    question: "Why custom software instead of Shopify or WordPress?",
+    answer:
+      "While Shopify and WordPress are popular platforms, they often limit customization and scalability. We build custom software that is tailored to your business’s unique needs, providing full control over design, functionality, and future growth. Our solutions are built for reliability, performance, and long-term maintainability, ensuring your business can scale as it grows. No vendor lock-in, no hidden fees, no surprises or security risks.",
+  },
+  {
     question: "How can I get started with Project Fenrir?",
     answer:
-      "Getting started is easy! Simply contact us through our website's contact form, email, or phone. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
+      "Getting started is easy! Simply contact us through our website's contact form, email, or WhatsApp. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
   },
 ];
 
@@ -177,12 +173,12 @@ export const NAVBAR_LINKS = [
     href: "/",
   },
   {
-    text: "About",
-    href: "/#about",
-  },
-  {
     text: "Services",
     href: "/#services",
+  },
+  {
+    text: "About",
+    href: "/#about",
   },
 ];
 

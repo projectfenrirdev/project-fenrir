@@ -19,16 +19,9 @@ const Footer = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
         >
-          {/* Column 1 - About */}
           <FooterAbout />
-
-          {/* Column 2 - Services */}
           <FooterServices />
-
-          {/* Column 3 - Company */}
           <FooterCompany />
-
-          {/* Column 4 - Legal & Contact */}
           <FooterLegal />
         </motion.div>
 

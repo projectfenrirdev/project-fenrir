@@ -53,12 +53,12 @@ const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
           animate="visible"
           exit="hidden"
           variants={mobileMenuVariants}
-          className="fixed inset-0 h-screen w-screen bg-gradient-to-b from-black/90 to-forge-accent-darker/90 backdrop-blur-md lg:hidden"
+          className="to-forge-accent-darker/50 fixed inset-0 h-screen w-screen bg-gradient-to-b from-black/90 backdrop-blur-md lg:hidden"
           aria-hidden={!isMenuOpen}
           onClick={toggleMenu}
         >
           <motion.div
-            className="flex h-full flex-col items-center justify-center gap-8 p-6"
+            className="flex h-full flex-col items-center justify-center gap-10 p-6"
             role="menu"
             aria-label="Mobile navigation"
           >

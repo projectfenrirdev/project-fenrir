@@ -2,6 +2,7 @@
 
 import { ProcessBackground } from "@/components/sections/process/process-background";
 import { ProcessHeader } from "@/components/sections/process/process-header";
+import { ProcessIllustration } from "@/components/sections/process/process-illustration";
 import { ProcessSteps } from "@/components/sections/process/process-steps";
 import { motion } from "framer-motion";
 
@@ -17,9 +18,14 @@ const Process = () => {
     >
       <ProcessBackground />
 
-      <div className="relative">
+      <div className="relative mx-auto">
         <ProcessHeader />
-        <ProcessSteps />
+        <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-2">
+          <ProcessSteps />
+          <div className="sticky top-32 hidden lg:block">
+            <ProcessIllustration />
+          </div>
+        </div>
       </div>
     </motion.section>
   );

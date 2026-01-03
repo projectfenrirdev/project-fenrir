@@ -22,14 +22,15 @@ export const HeroHeading = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-5xl font-bold tracking-tight md:text-6xl"
+        className="text-4xl font-bold tracking-tight md:text-6xl"
         id="hero-title"
       >
-        <span className="block">Software Development</span>
+        <span className="block">
+          Premium websites, <br /> software and eCommerce
+        </span>
         <span className="mt-2 block">
-          We{" "}
-          <span className="from-forge-accent bg-linear-to-r to-forge-accent-DEFAULT bg-clip-text text-transparent">
-            Get It Right
+          <span className="from-forge-accent to-forge-accent-DEFAULT bg-linear-to-r bg-clip-text text-transparent">
+            For your business
           </span>
         </span>
       </motion.h1>
@@ -40,9 +41,9 @@ export const HeroHeading = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="mt-6 max-w-xl leading-relaxed text-neutral-300 sm:text-lg"
       >
-        We help businesses evolve with modern, high-performance software that
-        enhances user experience, boosts productivity, and drives growth.
-        Innovation meets execution, all in one place.
+        Bring your business to the next level with modern, high-performance
+        software that enhances user experience, and drives growth. Your success
+        is our mission.
       </motion.p>
     </>
   );

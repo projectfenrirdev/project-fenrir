@@ -49,9 +49,10 @@ export const AboutHeader = () => {
             <span className="text-forge-accent font-medium">
               Project Fenrir
             </span>
-            , we specialize in delivering top-tier services designed to meet the
-            unique needs of our clients. With years of industry expertise, we
-            offer tailored solutions that drive success and growth.
+            , we create high-performance, custom software and websites tailored
+            to the unique needs of businesses and e-commerce stores. We deliver
+            solutions that combine technical excellence, reliability, and
+            measurable business impact.
           </motion.p>
         </div>
       </div>
