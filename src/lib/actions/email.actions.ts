@@ -24,7 +24,7 @@ export async function sendContactEmail(formData: ContactFormValues) {
 
     // Send the email
     const result = await resend.emails.send({
-      from: `Contact Form <"no-reply@projectfenrir.com">`,
+      from: `Project Fenrir <onboarding@resend.dev>`,
       to: process.env.CONTACT_EMAIL_TO || "projectfenrir@yahoo.com",
       subject: `New contact form submission from ${fullName}`,
       replyTo: data.email,
@@ -37,6 +37,13 @@ Message:
 ${data.message}
       `,
     });
+
+    if (result.error) {
+      return {
+        success: false,
+        error: result.error.message,
+      };
+    }
 
     // Return the success response
     return { success: true, data: result };
