@@ -9,6 +9,7 @@ import { Poppins } from "next/font/google";
 import { Suspense, type ReactNode } from "react";
 import "./globals.css";
 import { Loader2Icon } from "lucide-react";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -90,22 +91,29 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager
-        gtmId="GTM-M6RBPP2J
-"
+      <GoogleTagManager gtmId="GTM-M6RBPP2J" />
+      <Script
+        id="google-analytics-script"
+        strategy="beforeInteractive"
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-5LQ6L8L54J"
       />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-5LQ6L8L54J');
+      `,
+        }}
+      ></Script>
+
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
-        <noscript>
-          <iframe
-            title="Google Tag Manager"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-M6RBPP2J"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
         <GoogleConsentScript />
         <Navbar />
         <div className="container mx-auto py-6 pt-24">{children}</div>
