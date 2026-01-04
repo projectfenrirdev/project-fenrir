@@ -1,15 +1,14 @@
-"use client";
-
 import Logo from "@/components/ui/navbar/logo";
 import { CONTACT_INFO } from "@/lib/constants";
-import { motion } from "framer-motion";
 import { InstagramIcon, MailIcon, TwitterIcon } from "lucide-react";
 import { iconHoverVariants, itemVariants } from "./animation-variants";
 import WhatsappIcon from "@/components/ui/whatsapp-icon";
+import { MotionDiv } from "@/components/motion/motion-tags";
+import { MotionLink } from "@/components/motion/motion-tags";
 
 export const FooterAbout = () => {
   return (
-    <motion.div
+    <MotionDiv
       className="mb-8 flex flex-col gap-4"
       variants={{ itemVariants }}
       initial={{ opacity: 0, y: 20 }}
@@ -22,7 +21,7 @@ export const FooterAbout = () => {
         & custom software.
       </p>
       <div className="flex space-x-4">
-        <motion.a
+        <MotionLink
           href={CONTACT_INFO.whatsapp}
           target="_blank"
           rel="noopener noreferrer"
@@ -32,8 +31,8 @@ export const FooterAbout = () => {
           whileHover="hover"
         >
           <WhatsappIcon className="size-5" />
-        </motion.a>
-        <motion.a
+        </MotionLink>
+        <MotionLink
           href={`mailto:${CONTACT_INFO.email}`}
           target="_blank"
           rel="noopener noreferrer"
@@ -43,8 +42,8 @@ export const FooterAbout = () => {
           whileHover="hover"
         >
           <MailIcon className="size-5" />
-        </motion.a>
-        <motion.a
+        </MotionLink>
+        <MotionLink
           href={CONTACT_INFO.instagram}
           target="_blank"
           rel="noopener noreferrer"
@@ -54,8 +53,8 @@ export const FooterAbout = () => {
           whileHover="hover"
         >
           <InstagramIcon className="size-5" />
-        </motion.a>
-        <motion.a
+        </MotionLink>
+        <MotionLink
           href={CONTACT_INFO.twitter}
           target="_blank"
           rel="noopener noreferrer"
@@ -65,8 +64,8 @@ export const FooterAbout = () => {
           whileHover="hover"
         >
           <TwitterIcon className="size-5" />
-        </motion.a>
+        </MotionLink>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 };

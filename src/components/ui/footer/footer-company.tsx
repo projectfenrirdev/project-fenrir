@@ -1,12 +1,10 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { itemVariants, linkHoverVariants } from "./animation-variants";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const FooterCompany = () => {
   return (
-    <motion.div
+    <MotionDiv
       className="mb-8"
       variants={{ itemVariants }}
       initial={{ opacity: 0, y: 20 }}
@@ -20,9 +18,9 @@ export const FooterCompany = () => {
             href="/#about"
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               About Us
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -30,9 +28,9 @@ export const FooterCompany = () => {
             href="/faq"
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               FAQ
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -40,12 +38,12 @@ export const FooterCompany = () => {
             href="/#contact"
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               Contact Us
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
       </ul>
-    </motion.div>
+    </MotionDiv>
   );
 };

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/motion/motion-tags";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../../public/logo.png";
@@ -19,7 +19,7 @@ type Props = {
 
 const Logo = ({ variants, onClick }: Props) => {
   return (
-    <motion.div variants={variants} className="z-50 flex items-center gap-2">
+    <MotionDiv variants={variants} className="z-50 flex items-center gap-2">
       <Link
         href="/"
         className="flex items-center gap-2"
@@ -39,7 +39,7 @@ const Logo = ({ variants, onClick }: Props) => {
           Project Fenrir
         </span>
       </Link>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

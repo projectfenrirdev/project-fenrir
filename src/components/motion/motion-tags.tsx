@@ -10,6 +10,10 @@ export const MotionSpan = (props: HTMLMotionProps<"span">) => {
   return <motion.span {...props}>{props.children}</motion.span>;
 };
 
+export const MotionLink = (props: HTMLMotionProps<"a">) => {
+  return <motion.a {...props}>{props.children}</motion.a>;
+};
+
 export const MotionH1 = (props: HTMLMotionProps<"h1">) => {
   return <motion.h1 {...props}>{props.children}</motion.h1>;
 };
@@ -24,4 +28,8 @@ export const MotionP = (props: HTMLMotionProps<"p">) => {
 
 export const MotionSection = (props: HTMLMotionProps<"section">) => {
   return <motion.section {...props}>{props.children}</motion.section>;
+};
+
+export const MotionLi = (props: HTMLMotionProps<"li">) => {
+  return <motion.li {...props}>{props.children}</motion.li>;
 };

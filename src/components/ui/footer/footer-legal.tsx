@@ -1,13 +1,11 @@
-"use client";
-
 import { CONTACT_INFO } from "@/lib/constants";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { itemVariants, linkHoverVariants } from "./animation-variants";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const FooterLegal = () => {
   return (
-    <motion.div
+    <MotionDiv
       className="mb-8"
       variants={{ itemVariants }}
       initial={{ opacity: 0, y: 20 }}
@@ -17,23 +15,23 @@ export const FooterLegal = () => {
       <h3 className="mb-6 text-lg font-semibold text-white">Legal</h3>
       <ul className="mb-6 space-y-3">
         <li>
-          <motion.div variants={linkHoverVariants} whileHover="hover">
+          <MotionDiv variants={linkHoverVariants} whileHover="hover">
             <Link
               href="/privacy-policy"
               className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
             >
               Privacy Policy
             </Link>
-          </motion.div>
+          </MotionDiv>
         </li>
         <li>
           <Link
             href="/terms-of-service"
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               Terms of Service
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -41,9 +39,9 @@ export const FooterLegal = () => {
             href="/cookie-policy"
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               Cookie Policy
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -51,9 +49,9 @@ export const FooterLegal = () => {
             href="/gdpr"
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               GDPR Compliance
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
       </ul>
@@ -63,19 +61,19 @@ export const FooterLegal = () => {
           href={CONTACT_INFO.whatsapp}
           className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
         >
-          <motion.div variants={linkHoverVariants} whileHover="hover">
+          <MotionDiv variants={linkHoverVariants} whileHover="hover">
             {CONTACT_INFO.phone}
-          </motion.div>
+          </MotionDiv>
         </Link>
         <Link
           href={`mailto:${CONTACT_INFO.email}`}
           className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
         >
-          <motion.div variants={linkHoverVariants} whileHover="hover">
+          <MotionDiv variants={linkHoverVariants} whileHover="hover">
             {CONTACT_INFO.email}
-          </motion.div>
+          </MotionDiv>
         </Link>
       </address>
-    </motion.div>
+    </MotionDiv>
   );
 };

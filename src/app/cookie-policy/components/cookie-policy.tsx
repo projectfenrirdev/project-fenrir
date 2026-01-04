@@ -1,9 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import CookiePreferences from "./cookie-preferences";
 import { CONTACT_INFO } from "@/lib/constants";
+import {
+  MotionDiv,
+  MotionLi,
+  MotionSection,
+} from "@/components/motion/motion-tags";
 
 const CookiePolicy = () => {
   // Animation variants
@@ -43,22 +45,22 @@ const CookiePolicy = () => {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       className="mx-auto max-w-4xl px-4"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
       {/* Header */}
-      <motion.div variants={{ itemVariants }} className="mb-10 text-center">
+      <MotionDiv variants={{ itemVariants }} className="mb-10 text-center">
         <h1 className="from-forge-primary to-forge-accent-DEFAULT mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           Cookie Policy
         </h1>
         <p className="text-gray-400">Last updated: June 15, 2024</p>
-      </motion.div>
+      </MotionDiv>
 
       {/* Introduction */}
-      <motion.section variants={{ sectionVariants }} className="mb-10">
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           1. Introduction
         </h2>
@@ -77,10 +79,10 @@ const CookiePolicy = () => {
             use our website.
           </p>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* What Are Cookies */}
-      <motion.section
+      <MotionSection
         variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
@@ -96,51 +98,51 @@ const CookiePolicy = () => {
           </p>
           <p className="mt-4">Cookies serve various functions, including:</p>
           <ul className="space-y-2 text-gray-300">
-            <motion.li
+            <MotionLi
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
               <strong className="text-forge-primary">Authentication:</strong>{" "}
               Recognizing you when you return to our website
-            </motion.li>
-            <motion.li
+            </MotionLi>
+            <MotionLi
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <strong className="text-forge-primary">Security:</strong>{" "}
               Supporting security features and detecting malicious activity
-            </motion.li>
-            <motion.li
+            </MotionLi>
+            <MotionLi
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
               <strong className="text-forge-primary">Functionality:</strong>{" "}
               Remembering your preferences and settings
-            </motion.li>
-            <motion.li
+            </MotionLi>
+            <MotionLi
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
               <strong className="text-forge-primary">Analytics:</strong> Helping
               us understand how visitors interact with our website
-            </motion.li>
+            </MotionLi>
           </ul>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Types of Cookies We Use */}
-      <motion.section variants={{ sectionVariants }} className="mb-10">
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           3. Types of Cookies We Use
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>We use the following types of cookies on our website:</p>
 
-          <motion.div
+          <MotionDiv
             className="mt-6 grid gap-4 md:grid-cols-2"
             initial="hidden"
             whileInView="visible"
@@ -155,7 +157,7 @@ const CookiePolicy = () => {
               },
             }}
           >
-            <motion.div
+            <MotionDiv
               className="bg-forge-surface/30 border-forge-accent/5 rounded-lg border p-4"
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -171,9 +173,9 @@ const CookiePolicy = () => {
                 network management, and account access. You cannot opt out of
                 these cookies.
               </p>
-            </motion.div>
+            </MotionDiv>
 
-            <motion.div
+            <MotionDiv
               className="bg-forge-surface/30 border-forge-accent/5 rounded-lg border p-4"
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -188,9 +190,9 @@ const CookiePolicy = () => {
                 website by collecting and reporting information anonymously.
                 They help us improve the way our website works.
               </p>
-            </motion.div>
+            </MotionDiv>
 
-            <motion.div
+            <MotionDiv
               className="bg-forge-surface/30 border-forge-accent/5 rounded-lg border p-4"
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -205,9 +207,9 @@ const CookiePolicy = () => {
                 such as videos and live chat. They may be set by us or by
                 third-party providers whose services we have added to our pages.
               </p>
-            </motion.div>
+            </MotionDiv>
 
-            <motion.div
+            <MotionDiv
               className="bg-forge-surface/30 border-forge-accent/5 rounded-lg border p-4"
               variants={{
                 hidden: { opacity: 0, y: 20 },
@@ -223,13 +225,13 @@ const CookiePolicy = () => {
                 of your interests and show you relevant advertisements on other
                 sites.
               </p>
-            </motion.div>
-          </motion.div>
+            </MotionDiv>
+          </MotionDiv>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Specific Cookies We Use */}
-      <motion.section
+      <MotionSection
         variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
@@ -300,10 +302,10 @@ const CookiePolicy = () => {
             </table>
           </div>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Add Cookie Preferences Component */}
-      <motion.section variants={{ sectionVariants }} className="mb-10">
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Manage Your Cookie Preferences
         </h2>
@@ -315,10 +317,10 @@ const CookiePolicy = () => {
           </p>
         </div>
         <CookiePreferences />
-      </motion.section>
+      </MotionSection>
 
       {/* Third-Party Cookies */}
-      <motion.section variants={{ sectionVariants }} className="mb-10">
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           6. Third-Party Cookies
         </h2>
@@ -362,10 +364,10 @@ const CookiePolicy = () => {
             </li>
           </ul>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Managing Cookies */}
-      <motion.section
+      <MotionSection
         variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
@@ -417,10 +419,10 @@ const CookiePolicy = () => {
             </div>
           </div>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Cookie Consent */}
-      <motion.section variants={{ sectionVariants }} className="mb-10">
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           8. Cookie Consent
         </h2>
@@ -435,10 +437,10 @@ const CookiePolicy = () => {
             the &quot;Cookie Settings&quot; link in the footer of our website.
           </p>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Updates to Policy */}
-      <motion.section
+      <MotionSection
         variants={{ sectionVariants }}
         className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
       >
@@ -456,10 +458,10 @@ const CookiePolicy = () => {
             informed about how we are using cookies.
           </p>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Contact Section */}
-      <motion.section
+      <MotionSection
         variants={{ sectionVariants }}
         className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
@@ -492,10 +494,10 @@ const CookiePolicy = () => {
             </p>
           </div>
         </div>
-      </motion.section>
+      </MotionSection>
 
       {/* Back to Home button */}
-      <motion.div
+      <MotionDiv
         className="mb-10 text-center"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -507,8 +509,8 @@ const CookiePolicy = () => {
         >
           ← Return to Home
         </Link>
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   );
 };
 

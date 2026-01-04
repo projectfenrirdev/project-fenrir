@@ -1,13 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { bottomVariants } from "./animation-variants";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const FooterBottom = () => {
   return (
     <div className="border-forge-accent/10 mt-12 py-8">
-      <motion.div
+      <MotionDiv
         className="flex flex-col items-center justify-between gap-6 md:flex-row"
         variants={bottomVariants}
         initial="hidden"
@@ -18,7 +18,7 @@ export const FooterBottom = () => {
           &copy; {new Date().getFullYear()} Project Fenrir. All rights reserved.
         </div>
         <div className="flex gap-6 text-xs text-gray-400">
-          <motion.div
+          <MotionDiv
             whileHover={{
               textDecoration: "underline",
               textUnderlineOffset: "2px",
@@ -30,8 +30,8 @@ export const FooterBottom = () => {
             >
               Sitemap
             </Link>
-          </motion.div>
-          <motion.div
+          </MotionDiv>
+          <MotionDiv
             whileHover={{
               textDecoration: "underline",
               textUnderlineOffset: "2px",
@@ -43,9 +43,9 @@ export const FooterBottom = () => {
             >
               Privacy Policy
             </Link>
-          </motion.div>
+          </MotionDiv>
         </div>
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 };

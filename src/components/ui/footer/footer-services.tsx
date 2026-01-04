@@ -1,13 +1,11 @@
-"use client";
-
-import { motion } from "framer-motion";
 import Link from "next/link";
 import { itemVariants, linkHoverVariants } from "./animation-variants";
 import { SERVICES } from "@/lib/constants";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const FooterServices = () => {
   return (
-    <motion.div
+    <MotionDiv
       className="mb-8"
       variants={{ itemVariants }}
       initial={{ opacity: 0, y: 20 }}
@@ -21,9 +19,9 @@ export const FooterServices = () => {
             href={SERVICES[0].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               {SERVICES[0].text}
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -31,9 +29,9 @@ export const FooterServices = () => {
             href={SERVICES[1].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               {SERVICES[1].text}
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -41,9 +39,9 @@ export const FooterServices = () => {
             href={SERVICES[2].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               {SERVICES[2].text}
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
         <li>
@@ -51,12 +49,12 @@ export const FooterServices = () => {
             href={SERVICES[3].link}
             className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
           >
-            <motion.div variants={linkHoverVariants} whileHover="hover">
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
               {SERVICES[3].text}
-            </motion.div>
+            </MotionDiv>
           </Link>
         </li>
       </ul>
-    </motion.div>
+    </MotionDiv>
   );
 };
