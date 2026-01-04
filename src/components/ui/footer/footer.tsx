@@ -7,6 +7,8 @@ import { FooterLegal } from "@/components/ui/footer/footer-legal";
 import { FooterServices } from "@/components/ui/footer/footer-services";
 import { motion } from "framer-motion";
 import { containerVariants } from "./animation-variants";
+import { Suspense } from "react";
+import { Loader2Icon } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -26,7 +28,9 @@ const Footer = () => {
         </motion.div>
 
         {/* Bottom section - Copyright and links */}
-        <FooterBottom />
+        <Suspense fallback={<Loader2Icon className="size-4 animate-spin" />}>
+          <FooterBottom />
+        </Suspense>
       </div>
     </footer>
   );

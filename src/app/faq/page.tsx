@@ -6,7 +6,9 @@ import {
   organizationSchema,
   websiteSchema,
 } from "@/lib/schema";
+import { Loader2Icon } from "lucide-react";
 import { Metadata } from "next";
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "FAQs | Project Fenrir | Professional Web Development",
@@ -41,7 +43,15 @@ export const metadata: Metadata = {
 };
 
 const FAQPage = () => {
-  return <FAQ />;
+  return (
+    <Suspense
+      fallback={
+        <Loader2Icon className="text-forge-accent size-4 animate-spin" />
+      }
+    >
+      <FAQ />
+    </Suspense>
+  );
 };
 
 export default FAQPage;

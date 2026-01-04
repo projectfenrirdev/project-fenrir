@@ -7,8 +7,9 @@ import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { type ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import "./globals.css";
+import { Loader2Icon } from "lucide-react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -109,7 +110,13 @@ export default function RootLayout({
         <div className="container mx-auto py-6 pt-24">{children}</div>
         <Footer />
         <CookieBanner />
-        <AnalyticsScripts />
+        <Suspense
+          fallback={
+            <Loader2Icon className="text-forge-accent size-4 animate-spin" />
+          }
+        >
+          <AnalyticsScripts />
+        </Suspense>
       </body>
       <GoogleAnalytics gaId="G-KJ79CHCSHZ" />
     </html>
