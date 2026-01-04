@@ -4,7 +4,6 @@ import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Suspense, type ReactNode } from "react";
@@ -91,21 +90,23 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-NG97TR3N" />
+      <GoogleTagManager
+        gtmId="GTM-M6RBPP2J
+"
+      />
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
         <noscript>
           <iframe
             title="Google Tag Manager"
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NG97TR3N"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-M6RBPP2J"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
         <GoogleConsentScript />
-        <SpeedInsights />
         <Navbar />
         <div className="container mx-auto py-6 pt-24">{children}</div>
         <Footer />
