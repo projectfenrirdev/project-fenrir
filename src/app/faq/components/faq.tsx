@@ -1,29 +1,19 @@
-"use client";
-
-import { FAQItem } from "@/app/faq/components/faq-item";
+import FAQList from "@/app/faq/components/faq-list";
 import { Button } from "@/components/ui/button";
-import { FAQS } from "@/lib/constants";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/motion/motion-tags";
 import { MessageCircleMoreIcon } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className="px-4 pb-12 sm:px-6 lg:px-8"
     >
       <div className="mx-auto max-w-4xl">
-        <motion.div
+        <MotionDiv
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
@@ -35,21 +25,11 @@ const FAQ = () => {
           <p className="text-xl text-gray-300">
             Find answers to common questions about our services and process
           </p>
-        </motion.div>
+        </MotionDiv>
 
-        <div className="space-y-8">
-          {FAQS.map((faq, index) => (
-            <FAQItem
-              key={index}
-              faq={faq}
-              index={index}
-              isOpen={openIndex === index}
-              toggle={toggleFAQ}
-            />
-          ))}
-        </div>
+        <FAQList />
 
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -59,7 +39,7 @@ const FAQ = () => {
           <p className="mb-8 text-gray-300">
             Contact us and we&apos;ll get back to you as soon as possible
           </p>
-          <motion.div
+          <MotionDiv
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.05 }}
@@ -78,10 +58,10 @@ const FAQ = () => {
                 />
               </Button>
             </Link>
-          </motion.div>
-        </motion.div>
+          </MotionDiv>
+        </MotionDiv>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

@@ -1,13 +1,11 @@
-"use client";
-
 import { ServicesBackground } from "@/components/sections/service-badges/services-background";
 import { ServicesGrid } from "@/components/sections/service-badges/services-grid";
 import { ServicesHeader } from "@/components/sections/service-badges/services-header";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/components/motion/motion-tags";
 
 const ServiceBadges = () => {
   return (
-    <motion.section
+    <MotionSection
       id="services"
       aria-label="Our Services"
       className="relative scroll-mt-24 overflow-hidden py-20 xl:overflow-visible"
@@ -21,7 +19,7 @@ const ServiceBadges = () => {
         <ServicesHeader />
         <ServicesGrid />
       </div>
-    </motion.section>
+    </MotionSection>
   );
 };
 

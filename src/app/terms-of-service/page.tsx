@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   description:
     "Read the terms and conditions governing the use of Project Fenrir's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
   alternates: {
-    canonical: "https://www.projectfenrir.com/terms-of-service",
+    canonical: "https://www.projectfenrir.dev/terms-of-service",
   },
   openGraph: {
     title: "Terms of Service | Project Fenrir",
     description:
       "Read the terms and conditions governing the use of Project Fenrir's services.",
-    url: "https://www.projectfenrir.com/terms-of-service",
+    url: "https://www.projectfenrir.dev/terms-of-service",
     siteName: "Project Fenrir",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Project Fenrir - Professional Web Development",

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/motion/motion-tags";
 import { stepVariants } from "./animation-variants";
 import { processSteps } from "./process-data";
 
@@ -15,7 +15,7 @@ export const ProcessSteps = () => {
           const IconComponent = step.icon;
 
           return (
-            <motion.div
+            <MotionDiv
               key={index}
               className="flex flex-col gap-8 md:flex-row md:items-start"
               custom={index}
@@ -36,7 +36,7 @@ export const ProcessSteps = () => {
                 <p className="max-w-xl text-neutral-400">{step.description}</p>
                 <div className="from-forge-accent/80 mt-2 h-px w-24 bg-linear-to-r to-transparent"></div>
               </div>
-            </motion.div>
+            </MotionDiv>
           );
         })}
       </div>

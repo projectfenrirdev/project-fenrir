@@ -1,7 +1,7 @@
 import { type Metadata } from "next";
-import { CONTACT_INFO } from "./constants";
+import { CONTACT_INFO, FAQS, SERVICES } from "./constants";
 
-export const baseUrl = "https://www.projectfenrir.com";
+export const baseUrl = "https://www.projectfenrir.dev";
 
 // Main organization schema
 export const organizationSchema = {
@@ -9,11 +9,8 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "Project Fenrir",
   url: baseUrl,
-  logo: `${baseUrl}/images/logo.png`,
-  sameAs: [
-    "https://www.instagram.com/projectfenrir.dev/",
-    // Add other social profiles here
-  ],
+  logo: `${baseUrl}/favicon.ico`,
+  sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
   address: {
     "@type": "PostalAddress",
     addressLocality: "Sibiu",
@@ -27,7 +24,7 @@ export const organizationSchema = {
     contactType: "customer service",
   },
   description:
-    "Transform your business with custom web development, online stores & applications. Based in Romania, serving clients worldwide with innovative digital solutions.",
+    "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
 };
 
 // Professional service schema
@@ -35,7 +32,7 @@ export const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: "Project Fenrir",
-  image: `${baseUrl}/images/logo.png`,
+  image: `${baseUrl}/favicon.ico`,
   "@id": baseUrl,
   url: baseUrl,
   telephone: CONTACT_INFO.phone,
@@ -57,10 +54,7 @@ export const professionalServiceSchema = {
     opens: "09:00",
     closes: "18:00",
   },
-  sameAs: [
-    "https://www.instagram.com/projectfenrir.dev/",
-    // Add other social profiles here
-  ],
+  sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
   priceRange: "$$",
   servesCuisine: "Digital Services",
 };
@@ -69,53 +63,20 @@ export const professionalServiceSchema = {
 export const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  itemListElement: [
-    {
-      "@type": "ListItem",
-      position: 1,
-      item: {
-        "@type": "Service",
-        name: "Website Development",
-        url: `${baseUrl}/#services`,
-        description:
-          "Elevate your brand with our tailored website solutions, designed to reflect your identity and engage your audience effectively.",
-        provider: {
-          "@type": "Organization",
-          name: "Project Fenrir",
-        },
+  itemListElement: SERVICES.map((service, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Service",
+      name: service.text,
+      url: `${baseUrl}${service.link}`,
+      description: service.description,
+      provider: {
+        "@type": "Organization",
+        name: "Project Fenrir",
       },
     },
-    {
-      "@type": "ListItem",
-      position: 2,
-      item: {
-        "@type": "Service",
-        name: "Online Store Development",
-        url: `${baseUrl}/#services`,
-        description:
-          "Step into online retail with our store development, providing intuitive platforms that showcase your products and deliver exceptional shopping experiences.",
-        provider: {
-          "@type": "Organization",
-          name: "Project Fenrir",
-        },
-      },
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      item: {
-        "@type": "Service",
-        name: "Application Development",
-        url: `${baseUrl}/#services`,
-        description:
-          "Transform your ideas into reality with our custom application development services, designed to meet your unique requirements.",
-        provider: {
-          "@type": "Organization",
-          name: "Project Fenrir",
-        },
-      },
-    },
-  ],
+  })),
 };
 
 // Local business schema
@@ -123,7 +84,7 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Project Fenrir",
-  image: `${baseUrl}/images/logo.png`,
+  image: `${baseUrl}/favicon.ico`,
   "@id": baseUrl,
   url: baseUrl,
   telephone: CONTACT_INFO.phone,
@@ -145,6 +106,7 @@ export const localBusinessSchema = {
     opens: "09:00",
     closes: "18:00",
   },
+  sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
   priceRange: "$$",
 };
 
@@ -159,6 +121,7 @@ export const websiteSchema = {
     target: `${baseUrl}/?s={search_term_string}`,
     "query-input": "required name=search_term_string",
   },
+  sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
 };
 
 // Navigation schema for single-page sections
@@ -212,6 +175,11 @@ export const navigationSchema = {
       name: "GDPR Compliance",
       url: `${baseUrl}/gdpr`,
     },
+    ...SERVICES.map((service) => ({
+      "@type": "SiteNavigationElement",
+      name: service.text,
+      url: `${baseUrl}${service.link}`,
+    })),
   ],
 };
 
@@ -220,87 +188,16 @@ export const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   mainEntity: [
-    {
+    ...FAQS.map((faq) => ({
       "@type": "Question",
-      name: "What services does Project Fenrir offer?",
+      name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Project Fenrir specializes in custom web development, e-commerce solutions, and application development. We create tailored digital solutions to help businesses establish their online presence, automate processes, and grow their digital footprint.",
+        text: faq.answer,
       },
-    },
-    {
-      "@type": "Question",
-      name: "How long does it take to develop a website?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "The timeline varies depending on the complexity of the project. A simple informational website can take 2-4 weeks, while complex e-commerce platforms or custom applications might take 2-6 months. During our initial consultation, we'll provide a more accurate timeline based on your specific requirements.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What is your development process?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Our development process includes: 1) Discovery & Requirements Gathering, 2) Planning & Design, 3) Development, 4) Testing & Quality Assurance, 5) Deployment, and 6) Ongoing Support & Maintenance. We maintain transparent communication throughout the entire process.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you provide ongoing maintenance and support?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, we offer ongoing maintenance and support packages to ensure your website or application remains secure, up-to-date, and functioning optimally. These packages can be customized based on your specific needs and budget.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How do you handle website security?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Security is a top priority for us. We implement industry best practices including HTTPS encryption, regular security updates, secure coding practices, data encryption, and protection against common vulnerabilities like SQL injection and XSS attacks. We also offer ongoing security monitoring for our maintenance clients.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Can you help with SEO and digital marketing?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Absolutely! We build websites with SEO best practices in mind, including proper semantic HTML, schema markup, optimized page speed, and mobile responsiveness. We can also provide guidance on content strategy and integrate analytics tools to help you track and improve your online performance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "What technologies do you use for development?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "We work with modern technologies like React, Next.js, TypeScript, and Tailwind CSS for frontend development. For backend solutions, we utilize Node.js, Express, and various database technologies depending on project requirements. We're technology-agnostic and choose the best tools for each specific project.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How much does a website or application cost?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Every project is unique, and pricing depends on complexity, features, timeline, and specific requirements. We provide detailed quotes after our initial consultation. We're transparent about costs and work to find solutions that fit your budget while meeting your business objectives.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "Do you work with clients internationally?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Yes, while we're based in Romania, we work with clients worldwide. We use modern communication tools and project management software to ensure smooth collaboration regardless of location or time zone differences.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "How can I get started with Project Fenrir?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Getting started is easy! Simply contact us through our website's contact form, email, or phone. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
-      },
-    },
+    })),
   ],
+  sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
 };
 
 // Privacy policy schema
@@ -322,7 +219,7 @@ export const privacyPolicySchema = {
   publisher: {
     "@type": "Organization",
     name: "Project Fenrir",
-    logo: `${baseUrl}/images/logo.png`,
+    logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
@@ -349,7 +246,7 @@ export const termsOfServiceSchema = {
   publisher: {
     "@type": "Organization",
     name: "Project Fenrir",
-    logo: `${baseUrl}/images/logo.png`,
+    logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
@@ -376,7 +273,7 @@ export const gdprSchema = {
   publisher: {
     "@type": "Organization",
     name: "Project Fenrir",
-    logo: `${baseUrl}/images/logo.png`,
+    logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
@@ -403,7 +300,7 @@ export const cookiePolicySchema = {
   publisher: {
     "@type": "Organization",
     name: "Project Fenrir",
-    logo: `${baseUrl}/images/logo.png`,
+    logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
@@ -509,7 +406,7 @@ export function generatePageMetadata(
       siteName: "Project Fenrir",
       images: [
         {
-          url: `${baseUrl}/images/og-image.jpg`,
+          url: `${baseUrl}/favicon.ico`,
           width: 1200,
           height: 630,
           alt: "Project Fenrir - Professional Web Development",
@@ -520,7 +417,7 @@ export function generatePageMetadata(
       card: "summary_large_image",
       title: optimizedTitle,
       description,
-      images: [`${baseUrl}/images/og-image.jpg`],
+      images: [`${baseUrl}/favicon.ico`],
     },
   };
 }

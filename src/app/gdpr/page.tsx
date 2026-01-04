@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   description:
     "Learn about Project Fenrir's GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.",
   alternates: {
-    canonical: "https://www.projectfenrir.com/gdpr",
+    canonical: "https://www.projectfenrir.dev/gdpr",
   },
   openGraph: {
     title: "GDPR Compliance | Project Fenrir",
     description:
       "Learn about Project Fenrir's GDPR compliance measures and how we protect your personal data.",
-    url: "https://www.projectfenrir.com/gdpr",
+    url: "https://www.projectfenrir.dev/gdpr",
     siteName: "Project Fenrir",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Project Fenrir - Professional Web Development",

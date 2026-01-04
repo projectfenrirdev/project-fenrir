@@ -1,14 +1,12 @@
-"use client";
-
 import { AboutBackground } from "@/components/sections/about/about-background";
 import { AboutHeader } from "@/components/sections/about/about-header";
 import { AboutStats } from "@/components/sections/about/about-stats";
 import { AboutValues } from "@/components/sections/about/about-values";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/components/motion/motion-tags";
 
 const About = () => {
   return (
-    <motion.section
+    <MotionSection
       id="about"
       aria-labelledby="about-heading"
       className="relative scroll-mt-24 overflow-hidden px-4 py-20 xl:overflow-visible"
@@ -24,7 +22,7 @@ const About = () => {
         <AboutValues />
         <AboutStats />
       </div>
-    </motion.section>
+    </MotionSection>
   );
 };
 

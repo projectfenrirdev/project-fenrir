@@ -2,7 +2,7 @@ import { SERVICES } from "@/lib/constants";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.projectfenrir.com";
+  const baseUrl = "https://www.projectfenrir.dev";
   const date = new Date();
 
   // Main page with highest priority

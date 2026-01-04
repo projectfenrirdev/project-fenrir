@@ -1,12 +1,10 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv, MotionH1, MotionH2 } from "@/components/motion/motion-tags";
 import { SparklesIcon } from "lucide-react";
 
 export const HeroHeading = () => {
   return (
     <>
-      <motion.div
+      <MotionDiv
         className="border-forge-accent/30 bg-forge-accent/10 mb-6 inline-flex items-center gap-x-2 rounded-full border px-3 py-1"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -16,9 +14,9 @@ export const HeroHeading = () => {
         <span className="text-forge-accent text-sm font-medium">
           Crafting Digital Excellence
         </span>
-      </motion.div>
+      </MotionDiv>
 
-      <motion.h1
+      <MotionH1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
@@ -33,9 +31,9 @@ export const HeroHeading = () => {
             For your business
           </span>
         </span>
-      </motion.h1>
+      </MotionH1>
 
-      <motion.p
+      <MotionH2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.4 }}
@@ -44,7 +42,7 @@ export const HeroHeading = () => {
         Bring your business to the next level with modern, high-performance
         software that enhances user experience, and drives growth. Your success
         is our mission.
-      </motion.p>
+      </MotionH2>
     </>
   );
 };

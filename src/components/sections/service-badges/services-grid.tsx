@@ -1,7 +1,5 @@
-"use client";
-
 import { SERVICES } from "@/lib/constants";
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/motion/motion-tags";
 import { DynamicIcon } from "lucide-react/dynamic";
 import Link from "next/link";
 import { itemVariants } from "./animation-variants";
@@ -9,9 +7,9 @@ import { ArrowRightIcon } from "lucide-react";
 
 export const ServicesGrid = () => {
   return (
-    <motion.div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+    <MotionDiv className="grid grid-cols-1 gap-4 sm:grid-cols-2">
       {SERVICES.map((item, index: number) => (
-        <motion.div
+        <MotionDiv
           key={`${item.text}-${index}`}
           className="group"
           variants={{ itemVariants }}
@@ -57,8 +55,8 @@ export const ServicesGrid = () => {
               </div>
             </div>
           </Link>
-        </motion.div>
+        </MotionDiv>
       ))}
-    </motion.div>
+    </MotionDiv>
   );
 };

@@ -1,15 +1,13 @@
-"use client";
-
 import { CONTACT_INFO } from "@/lib/constants";
-import { motion } from "framer-motion";
 import { InstagramIcon, MailIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 import { itemVariants, socialIconVariants } from "./animation-variants";
 import WhatsappIcon from "@/components/ui/whatsapp-icon";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const HeroSocialLinks = () => {
   return (
-    <motion.div
+    <MotionDiv
       variants={socialIconVariants}
       initial="hidden"
       animate="visible"
@@ -20,7 +18,7 @@ export const HeroSocialLinks = () => {
       </span>
 
       <div className="flex gap-2 sm:gap-3">
-        <motion.div
+        <MotionDiv
           variants={itemVariants}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
@@ -34,8 +32,8 @@ export const HeroSocialLinks = () => {
           >
             <WhatsappIcon className="group-hover:text-forge-accent size-5 text-neutral-300" />
           </Link>
-        </motion.div>
-        <motion.div
+        </MotionDiv>
+        <MotionDiv
           variants={itemVariants}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
@@ -51,9 +49,9 @@ export const HeroSocialLinks = () => {
               aria-label="Email"
             />
           </Link>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.div
+        <MotionDiv
           variants={itemVariants}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
@@ -71,9 +69,9 @@ export const HeroSocialLinks = () => {
               aria-label="Instagram"
             />
           </Link>
-        </motion.div>
+        </MotionDiv>
 
-        <motion.div
+        <MotionDiv
           variants={itemVariants}
           whileHover={{ scale: 1.1, y: -5 }}
           whileTap={{ scale: 0.95 }}
@@ -91,8 +89,8 @@ export const HeroSocialLinks = () => {
               aria-label="Twitter"
             />
           </Link>
-        </motion.div>
+        </MotionDiv>
       </div>
-    </motion.div>
+    </MotionDiv>
   );
 };

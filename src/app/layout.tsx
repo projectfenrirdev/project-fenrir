@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   title: "Project Fenrir | Professional Web Development",
   description:
     "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
-  metadataBase: new URL("https://www.projectfenrir.com"),
+  metadataBase: new URL("https://www.projectfenrir.dev"),
   alternates: {
     canonical: "/",
   },
@@ -30,11 +30,11 @@ export const metadata: Metadata = {
     title: "Project Fenrir | Professional Web Development",
     description:
       "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
-    url: "https://www.projectfenrir.com",
+    url: "https://www.projectfenrir.dev",
     siteName: "Project Fenrir",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Project Fenrir - Professional Web Development",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "Project Fenrir | Professional Web Development",
     description:
       "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
-    images: ["/images/twitter-image.jpg"],
+    images: ["/favicon.ico"],
   },
   robots: {
     index: true,

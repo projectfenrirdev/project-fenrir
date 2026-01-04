@@ -1,12 +1,10 @@
-"use client";
-
-import { motion } from "framer-motion";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const AboutBackground = () => {
   return (
     <div className="pointer-events-none absolute inset-0 overflow-hidden">
       {/* Animated Gradient Orbs */}
-      <motion.div
+      <MotionDiv
         className="bg-forge-accent/10 absolute top-0 -left-32 h-96 w-96 rounded-full blur-[100px]"
         animate={{
           scale: [1, 1.2, 1],
@@ -19,7 +17,7 @@ export const AboutBackground = () => {
           ease: "easeInOut",
         }}
       />
-      <motion.div
+      <MotionDiv
         className="absolute -right-32 bottom-0 h-120 w-120 rounded-full bg-blue-500/5 blur-[100px]"
         animate={{
           scale: [1, 1.1, 1],

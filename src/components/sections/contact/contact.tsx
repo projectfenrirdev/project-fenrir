@@ -1,14 +1,12 @@
-"use client";
-
 import { ContactBackground } from "@/components/sections/contact/contact-background";
 import { ContactContent } from "@/components/sections/contact/contact-content";
 import { ContactHeader } from "@/components/sections/contact/contact-header";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/components/motion/motion-tags";
 import React from "react";
 
 const Contact = (): React.ReactElement => {
   return (
-    <motion.section
+    <MotionSection
       aria-labelledby="contact-heading"
       id="contact"
       className="relative scroll-mt-28 overflow-hidden px-4 py-20 xl:overflow-visible"
@@ -23,7 +21,7 @@ const Contact = (): React.ReactElement => {
         <ContactHeader />
         <ContactContent />
       </div>
-    </motion.section>
+    </MotionSection>
   );
 };
 

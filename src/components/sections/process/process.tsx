@@ -1,14 +1,12 @@
-"use client";
-
 import { ProcessBackground } from "@/components/sections/process/process-background";
 import { ProcessHeader } from "@/components/sections/process/process-header";
 import { ProcessIllustration } from "@/components/sections/process/process-illustration";
 import { ProcessSteps } from "@/components/sections/process/process-steps";
-import { motion } from "framer-motion";
+import { MotionSection } from "@/components/motion/motion-tags";
 
 const Process = () => {
   return (
-    <motion.section
+    <MotionSection
       aria-labelledby="process-heading"
       className="relative overflow-hidden px-4 py-20 xl:overflow-visible"
       initial={{ opacity: 0, y: 100 }}
@@ -27,7 +25,7 @@ const Process = () => {
           </div>
         </div>
       </div>
-    </motion.section>
+    </MotionSection>
   );
 };
 

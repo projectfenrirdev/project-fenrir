@@ -6,26 +6,24 @@ import {
   organizationSchema,
   websiteSchema,
 } from "@/lib/schema";
-import { Loader2Icon } from "lucide-react";
 import { Metadata } from "next";
-import { Suspense } from "react";
 
 export const metadata: Metadata = {
   title: "FAQs | Project Fenrir | Professional Web Development",
   description:
-    "Find answers to frequently asked questions about our web development, e-commerce, and application development services at Project Fenrir.",
+    "Find answers to frequently asked questions about our web development, e-commerce, and software development services at Project Fenrir.",
   alternates: {
-    canonical: "https://www.projectfenrir.com/faq",
+    canonical: "https://www.projectfenrir.dev/faq",
   },
   openGraph: {
     title: "Frequently Asked Questions | Project Fenrir",
     description:
-      "Get answers to common questions about our web development, e-commerce, and application services.",
-    url: "https://www.projectfenrir.com/faq",
+      "Get answers to common questions about our web development, e-commerce, and software development services.",
+    url: "https://www.projectfenrir.dev/faq",
     siteName: "Project Fenrir",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/favicon.ico",
         width: 1200,
         height: 630,
         alt: "Project Fenrir - Professional Web Development",
@@ -43,15 +41,7 @@ export const metadata: Metadata = {
 };
 
 const FAQPage = () => {
-  return (
-    <Suspense
-      fallback={
-        <Loader2Icon className="text-forge-accent size-4 animate-spin" />
-      }
-    >
-      <FAQ />
-    </Suspense>
-  );
+  return <FAQ />;
 };
 
 export default FAQPage;
