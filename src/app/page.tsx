@@ -11,8 +11,8 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = generatePageMetadata(
-  "Project Fenrir | Custom Web Development & Digital Solutions",
-  "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+  "Project Fenrir | Professional Web Development",
+  "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
   [organizationSchema, websiteSchema],
   "/",
 );

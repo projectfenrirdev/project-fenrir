@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "Project Fenrir - Professional Web Development",
     short_name: "Project Fenrir",
     description:
-      "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+      "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
     start_url: "/",
     display: "standalone",
     background_color: "#000000",

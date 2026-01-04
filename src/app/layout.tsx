@@ -21,7 +21,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Project Fenrir | Professional Web Development",
   description:
-    "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+    "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
   metadataBase: new URL("https://www.projectfenrir.dev"),
   alternates: {
     canonical: "/",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Project Fenrir | Professional Web Development",
     description:
-      "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+      "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
     url: "https://www.projectfenrir.dev",
     siteName: "Project Fenrir",
     images: [
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Project Fenrir | Professional Web Development",
     description:
-      "Transform your business with professional web development, eCommerce & custom software. Serving clients worldwide with innovative digital solutions.",
+      "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
     images: ["/favicon.ico"],
   },
   robots: {
