@@ -118,7 +118,7 @@ const CookieBanner = () => {
       >
         {/* Background gradients */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute right-1/4 bottom-0 h-32 w-32 rounded-full bg-forge-accent-dark/20 blur-[80px]"></div>
+          <div className="bg-forge-accent-dark/20 absolute right-1/4 bottom-0 h-32 w-32 rounded-full blur-[80px]"></div>
           <div className="bg-forge-accent/20 absolute bottom-0 left-1/3 h-40 w-40 rounded-full blur-[100px]"></div>
           {/* Grid pattern overlay */}
           <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] bg-repeat opacity-5"></div>
@@ -140,7 +140,7 @@ const CookieBanner = () => {
                     href="/cookie-policy"
                     className="text-forge-primary hover:text-forge-accent underline transition-colors"
                   >
-                    Learn more
+                    See our Cookie Policy
                   </Link>
                 </p>
               </div>
