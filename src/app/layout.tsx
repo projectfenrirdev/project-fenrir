@@ -1,5 +1,6 @@
 import { AnalyticsScripts } from "@/components/analytics-script";
 import { ClarityScript } from "@/components/clarity-script";
+import { GoogleConsentInit } from "@/components/google-consent-init";
 import { GoogleConsentScript } from "@/components/google-consent-script";
 import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
@@ -93,6 +94,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      {/* Initialize Consent Mode BEFORE GTM loads - critical for Consent Mode v2 */}
+      <GoogleConsentInit />
       {/* GTM handles all tracking - GA4 should be configured inside GTM */}
       <GoogleTagManager gtmId={gtmId} />
       <body

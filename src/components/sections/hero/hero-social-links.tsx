@@ -1,4 +1,11 @@
+"use client";
+
 import { CONTACT_INFO } from "@/lib/constants";
+import {
+  trackEmailClick,
+  trackOutboundClick,
+  trackPhoneClick,
+} from "@/lib/gtm";
 import { InstagramIcon, MailIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
 import { itemVariants, socialIconVariants } from "./animation-variants";
@@ -6,6 +13,21 @@ import WhatsappIcon from "@/components/ui/whatsapp-icon";
 import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const HeroSocialLinks = () => {
+  const handleWhatsAppClick = () => {
+    trackPhoneClick(CONTACT_INFO.phone);
+  };
+
+  const handleEmailClick = () => {
+    trackEmailClick(CONTACT_INFO.email);
+  };
+
+  const handleInstagramClick = () => {
+    trackOutboundClick(CONTACT_INFO.instagram, "Instagram");
+  };
+
+  const handleTwitterClick = () => {
+    trackOutboundClick(CONTACT_INFO.twitter, "Twitter");
+  };
   return (
     <MotionDiv
       variants={socialIconVariants}
@@ -29,6 +51,7 @@ export const HeroSocialLinks = () => {
             rel="noopener noreferrer"
             className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 focus:outline-none"
             aria-label="Chat with us on WhatsApp"
+            onClick={handleWhatsAppClick}
           >
             <WhatsappIcon className="group-hover:text-forge-accent size-5 text-neutral-300" />
           </Link>
@@ -42,6 +65,7 @@ export const HeroSocialLinks = () => {
             href={`mailto:${CONTACT_INFO.email}`}
             className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 focus:outline-none"
             aria-label="Email us"
+            onClick={handleEmailClick}
           >
             <MailIcon
               className="group-hover:text-forge-accent size-5 text-neutral-300"
@@ -62,6 +86,7 @@ export const HeroSocialLinks = () => {
             rel="noopener noreferrer"
             className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 focus:outline-none"
             aria-label="Visit our Instagram"
+            onClick={handleInstagramClick}
           >
             <InstagramIcon
               className="group-hover:text-forge-accent size-5 text-neutral-300"
@@ -82,6 +107,7 @@ export const HeroSocialLinks = () => {
             rel="noopener noreferrer"
             className="group flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-sm hover:bg-white/10 focus:outline-none"
             aria-label="Visit our Twitter"
+            onClick={handleTwitterClick}
           >
             <TwitterIcon
               className="group-hover:text-forge-accent size-5 text-neutral-300"

@@ -1,6 +1,7 @@
 "use client";
 
 import { CONTACT_INFO } from "@/lib/constants";
+import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import { motion } from "framer-motion";
 import Link from "next/link";
 
@@ -489,6 +490,7 @@ const GDPRCompliance = () => {
               <Link
                 href={`mailto:${CONTACT_INFO.email}`}
                 className="text-forge-primary hover:text-forge-secondary transition-colors"
+                onClick={() => trackEmailClick(CONTACT_INFO.email)}
               >
                 {CONTACT_INFO.email}
               </Link>
@@ -498,6 +500,7 @@ const GDPRCompliance = () => {
               <Link
                 href={`tel:${CONTACT_INFO.phone}`}
                 className="text-forge-primary hover:text-forge-secondary transition-colors"
+                onClick={() => trackPhoneClick(CONTACT_INFO.phone)}
               >
                 {CONTACT_INFO.phone}
               </Link>

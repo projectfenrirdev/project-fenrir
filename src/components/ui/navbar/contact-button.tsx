@@ -1,4 +1,7 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import { trackCTAClick } from "@/lib/gtm";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "lucide-react";
 import Link from "next/link";
@@ -17,6 +20,10 @@ type Props = {
 };
 
 const ContactButton = ({ variants }: Props) => {
+  const handleClick = () => {
+    trackCTAClick("Let's Talk", "navbar", "/#contact");
+  };
+
   return (
     <motion.div
       variants={variants}
@@ -33,6 +40,7 @@ const ContactButton = ({ variants }: Props) => {
           role="menuitem"
           aria-label="Contact us"
           className="relative z-10 flex items-center"
+          onClick={handleClick}
         >
           Let&apos;s Talk{" "}
           <ArrowRightIcon className="ml-2 size-4" aria-hidden="true" />

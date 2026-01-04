@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import CookiePreferences from "./cookie-preferences";
 import { CONTACT_INFO } from "@/lib/constants";
+import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import {
   MotionDiv,
   MotionLi,
@@ -479,6 +482,7 @@ const CookiePolicy = () => {
               <Link
                 href={`mailto:${CONTACT_INFO.email}`}
                 className="text-forge-primary hover:text-forge-accent transition-colors"
+                onClick={() => trackEmailClick(CONTACT_INFO.email)}
               >
                 {CONTACT_INFO.email}
               </Link>
@@ -488,6 +492,7 @@ const CookiePolicy = () => {
               <Link
                 href={`tel:${CONTACT_INFO.phone}`}
                 className="text-forge-primary hover:text-forge-accent transition-colors"
+                onClick={() => trackPhoneClick(CONTACT_INFO.phone)}
               >
                 {CONTACT_INFO.phone}
               </Link>

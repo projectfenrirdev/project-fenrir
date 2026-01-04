@@ -5,6 +5,7 @@ import { FormLabel } from "@/components/ui/form-label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { sendContactEmail } from "@/lib/actions/email.actions";
+import { trackFormSubmit } from "@/lib/gtm";
 import {
   contactFormSchema,
   type ContactFormValues,
@@ -42,6 +43,11 @@ const ContactForm = (): React.ReactElement => {
 
       if (result.success) {
         setSubmitSuccess(true);
+        // Track successful form submission
+        trackFormSubmit("contact", "contact-page", {
+          has_phone: !!data.phone,
+          form_type: "contact",
+        });
         reset();
       } else {
         setSubmitError(

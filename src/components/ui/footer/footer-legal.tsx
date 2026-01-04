@@ -1,9 +1,19 @@
+"use client";
+
 import { CONTACT_INFO } from "@/lib/constants";
+import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import Link from "next/link";
 import { itemVariants, linkHoverVariants } from "./animation-variants";
 import { MotionDiv } from "@/components/motion/motion-tags";
 
 export const FooterLegal = () => {
+  const handlePhoneClick = () => {
+    trackPhoneClick(CONTACT_INFO.phone);
+  };
+
+  const handleEmailClick = () => {
+    trackEmailClick(CONTACT_INFO.email);
+  };
   return (
     <MotionDiv
       className="mb-8"
@@ -60,6 +70,7 @@ export const FooterLegal = () => {
         <Link
           href={CONTACT_INFO.whatsapp}
           className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
+          onClick={handlePhoneClick}
         >
           <MotionDiv variants={linkHoverVariants} whileHover="hover">
             {CONTACT_INFO.phone}
@@ -68,6 +79,7 @@ export const FooterLegal = () => {
         <Link
           href={`mailto:${CONTACT_INFO.email}`}
           className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
+          onClick={handleEmailClick}
         >
           <MotionDiv variants={linkHoverVariants} whileHover="hover">
             {CONTACT_INFO.email}

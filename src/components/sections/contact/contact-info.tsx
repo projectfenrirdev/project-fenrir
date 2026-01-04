@@ -2,6 +2,11 @@
 
 import WhatsappIcon from "@/components/ui/whatsapp-icon";
 import { CONTACT_INFO } from "@/lib/constants";
+import {
+  trackEmailClick,
+  trackOutboundClick,
+  trackPhoneClick,
+} from "@/lib/gtm";
 import { cn } from "@/lib/utils";
 import { InstagramIcon, MailIcon, TwitterIcon } from "lucide-react";
 import Link from "next/link";
@@ -22,6 +27,16 @@ const ContactItem = ({
   value,
   external = false,
 }: ContactItemProps): React.ReactElement => {
+  const handleClick = () => {
+    if (href.startsWith("mailto:")) {
+      trackEmailClick(value);
+    } else if (href.startsWith("tel:") || href.includes("wa.me")) {
+      trackPhoneClick(value);
+    } else if (external) {
+      trackOutboundClick(href, `${label} - ${value}`);
+    }
+  };
+
   return (
     <Link
       href={href}
@@ -31,6 +46,7 @@ const ContactItem = ({
         "group flex items-center gap-4 overflow-hidden rounded-lg py-4 break-words sm:px-2",
         "hover:bg-forge-primary/5 focus:ring-forge-primary/50 focus:ring-2 focus:outline-none",
       )}
+      onClick={handleClick}
     >
       <div className="bg-forge-primary/10 text-forge-primary group-hover:bg-forge-primary/20 flex size-12 flex-shrink-0 items-center justify-center rounded-full">
         {icon}
