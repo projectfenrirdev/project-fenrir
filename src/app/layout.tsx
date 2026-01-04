@@ -1,15 +1,15 @@
 import { AnalyticsScripts } from "@/components/analytics-script";
+import { ClarityScript } from "@/components/clarity-script";
 import { GoogleConsentScript } from "@/components/google-consent-script";
 import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Suspense, type ReactNode } from "react";
 import "./globals.css";
 import { Loader2Icon } from "lucide-react";
-import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: process.env.GOOGLE_SITE_VERIFICATION || "",
   },
   keywords: [
     "web development",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     "custom software development",
   ],
   other: {
-    "google-site-verification": "your-google-verification-code",
+    "google-site-verification": process.env.GOOGLE_SITE_VERIFICATION || "",
   },
 };
 
@@ -89,28 +89,12 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-M6RBPP2J";
+
   return (
     <html lang="en">
-      <GoogleTagManager gtmId="GTM-M6RBPP2J" />
-      <Script
-        id="google-analytics-script"
-        strategy="beforeInteractive"
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-5LQ6L8L54J"
-      />
-      <Script
-        id="google-analytics"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-5LQ6L8L54J');
-      `,
-        }}
-      ></Script>
-
+      {/* GTM handles all tracking - GA4 should be configured inside GTM */}
+      <GoogleTagManager gtmId={gtmId} />
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
@@ -126,8 +110,9 @@ export default function RootLayout({
         >
           <AnalyticsScripts />
         </Suspense>
+        {/* Microsoft Clarity - loads after consent is handled */}
+        <ClarityScript />
       </body>
-      <GoogleAnalytics gaId="G-KJ79CHCSHZ" />
     </html>
   );
 }
