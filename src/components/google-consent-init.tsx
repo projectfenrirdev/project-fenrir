@@ -2,10 +2,10 @@ import Script from "next/script";
 
 /**
  * Google Consent Mode Initialization Script
- * 
+ *
  * This MUST run BEFORE GTM loads to set default consent state.
  * Consent Mode v2 requires default consent to be set before any Google tags fire.
- * 
+ *
  * This script runs synchronously in the <head> before GTM.
  */
 export function GoogleConsentInit() {
@@ -54,6 +54,6 @@ export function GoogleConsentInit() {
 declare global {
   interface Window {
     gtag: (...args: unknown[]) => void;
-    dataLayer?: Array<Record<string, unknown>>;
+    dataLayer?: Object[];
   }
 }
