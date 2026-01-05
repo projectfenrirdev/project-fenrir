@@ -11,6 +11,7 @@ import { Poppins } from "next/font/google";
 import { Suspense, type ReactNode } from "react";
 import "./globals.css";
 import { Loader2Icon } from "lucide-react";
+import { GoogleAnalyticsScript } from "@/components/google-analytics-script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -94,10 +95,9 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      {/* Initialize Consent Mode BEFORE GTM loads - critical for Consent Mode v2 */}
       <GoogleConsentInit />
-      {/* GTM handles all tracking - GA4 should be configured inside GTM */}
       <GoogleTagManager gtmId={gtmId} />
+      <GoogleAnalyticsScript />
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
