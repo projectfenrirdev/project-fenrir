@@ -5,13 +5,12 @@ import { GoogleConsentScript } from "@/components/google-consent-script";
 import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { Suspense, type ReactNode } from "react";
 import "./globals.css";
 import { Loader2Icon } from "lucide-react";
-import { GoogleAnalyticsScript } from "@/components/google-analytics-script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -92,6 +91,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-M6RBPP2J";
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-5LQ6L8L54J";
 
   return (
     <html lang="en">
@@ -101,7 +101,6 @@ export default function RootLayout({
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
         <GoogleConsentScript />
-        <GoogleAnalyticsScript />
         <Navbar />
         <div className="container mx-auto py-6 pt-24">{children}</div>
         <Footer />
@@ -116,6 +115,7 @@ export default function RootLayout({
         {/* Microsoft Clarity - loads after consent is handled */}
         <ClarityScript />
       </body>
+      <GoogleAnalytics gaId={gaId} />
     </html>
   );
 }
