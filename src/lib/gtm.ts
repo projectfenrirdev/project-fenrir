@@ -5,6 +5,8 @@
  * to trigger tags, track conversions, and send data to GA4.
  */
 
+import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
+
 /**
  * Push a custom event to the dataLayer
  * @param eventName - The name of the event (e.g., "contact_form_submit")
@@ -19,6 +21,9 @@ export const trackEvent = (
       event: eventName,
       ...params,
     });
+
+    sendGAEvent("event", eventName);
+    sendGTMEvent({ event: eventName });
   }
 };
 
