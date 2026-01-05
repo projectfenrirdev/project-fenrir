@@ -97,11 +97,11 @@ export default function RootLayout({
     <html lang="en">
       <GoogleConsentInit />
       <GoogleTagManager gtmId={gtmId} />
-      <GoogleAnalyticsScript />
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
         <GoogleConsentScript />
+        <GoogleAnalyticsScript />
         <Navbar />
         <div className="container mx-auto py-6 pt-24">{children}</div>
         <Footer />

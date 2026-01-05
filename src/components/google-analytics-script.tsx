@@ -1,43 +1,51 @@
 "use client";
 
 import Script from "next/script";
-import { useCookieConsent } from "@/lib/cookies/use-cookie-consent";
 
 /**
- * Microsoft Clarity Script Component
+ * Google Analytics Script Component
  *
- * Loads Clarity only when analytics consent is granted.
- * Clarity provides heatmaps, session recordings, and user behavior insights.
+ * Loads Google Analytics 4 (GA4) with Consent Mode v2 support.
+ * The script loads regardless of consent state, but respects consent mode settings.
  *
- * Alternative: You can also configure Clarity via GTM as a Custom HTML tag
- * which would respect consent mode automatically.
+ * When analytics_storage is denied, GA4 will send cookieless pings.
+ * When analytics_storage is granted, GA4 will use cookies for full tracking.
+ *
+ * IMPORTANT: This should load AFTER GoogleConsentInit sets default consent.
  */
 export function GoogleAnalyticsScript() {
-  const { consent, isLoaded } = useCookieConsent();
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
   // Don't load if no GA ID is configured
-  if (!gaId) return null;
-
-  // Only load if consent is granted for analytics
-  if (!isLoaded || !consent?.categories.analytics) return null;
+  if (!gaId) {
+    console.warn("Google Analytics: NEXT_PUBLIC_GA_ID is not configured");
+    return null;
+  }
 
   return (
-    <Script
-      id="google-analytics"
-      strategy="afterInteractive"
-      dangerouslySetInnerHTML={{
-        __html: `
-              <script async src="https://www.googletagmanager.com/gtag/js?id=${gaId}"></script>
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
+    <>
+      {/* Load the gtag.js library */}
+      <Script
+        src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+        strategy="afterInteractive"
+      />
 
-                gtag('config', '${gaId}');
-              </script>
-        `,
-      }}
-    />
+      {/* Initialize GA4 with the measurement ID */}
+      <Script
+        id="google-analytics-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gaId}', {
+              'anonymize_ip': true,
+              'cookie_flags': 'SameSite=None;Secure'
+            });
+          `,
+        }}
+      />
+    </>
   );
 }
