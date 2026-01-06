@@ -32,6 +32,7 @@ const ContactForm = (): React.ReactElement => {
       email: "",
       phone: "",
       message: "",
+      website: "",
     },
   });
 
@@ -63,7 +64,7 @@ const ContactForm = (): React.ReactElement => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="flex w-full flex-col gap-6"
+      className="relative flex w-full flex-col gap-6"
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div className="space-y-1.5">
@@ -122,6 +123,21 @@ const ContactForm = (): React.ReactElement => {
           {...register("message")}
           error={errors.message?.message}
           disabled={isSubmitting}
+        />
+      </div>
+
+      {/* Honeypot field - hidden from users but visible to bots */}
+      <div
+        style={{ position: "absolute", left: "-9999px", opacity: 0 }}
+        aria-hidden="true"
+      >
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          {...register("website")}
         />
       </div>
 

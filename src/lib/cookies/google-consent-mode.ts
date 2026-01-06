@@ -3,51 +3,6 @@
 import { CookieConsent } from "@/data/types";
 
 /**
- * Initialize Google Consent Mode (programmatic version)
- *
- * Note: This function is available for programmatic use if needed.
- * However, initialization is typically handled by GoogleConsentInit component
- * which runs synchronously before GTM loads (required for Consent Mode v2).
- *
- * Use this function if you need to reinitialize consent mode programmatically.
- */
-export const initGoogleConsentMode = (): void => {
-  if (typeof window === "undefined") return;
-
-  // Access window.dataLayer and window.gtag without type checking
-  // since we're working with the global Google Tag properties
-  const dataLayer = window.dataLayer || [];
-  window.dataLayer = dataLayer;
-
-  // Define gtag function if it doesn't exist
-  if (!window.gtag) {
-    const gtag = function (...args: unknown[]) {
-      // gtag pushes arguments as an array to dataLayer
-      (dataLayer as unknown[]).push(args);
-    };
-    window.gtag = gtag;
-  }
-
-  // Set default consent to denied for all features (per EU recommendations)
-  // security_storage is granted by default as security features don't require consent
-  window.gtag("consent", "default", {
-    ad_storage: "denied",
-    ad_user_data: "denied",
-    ad_personalization: "denied",
-    analytics_storage: "denied",
-    functionality_storage: "denied",
-    security_storage: "granted",
-    wait_for_update: 2000, // Wait for 2 seconds for consent to be determined
-  });
-
-  // Enable URL passthrough to preserve some measurement capabilities
-  window.gtag("set", "url_passthrough", true);
-
-  // Enable ads_data_redaction when ad_storage is denied
-  window.gtag("set", "ads_data_redaction", true);
-};
-
-/**
  * Update Google Consent Mode based on user consent selections
  * This should be called whenever user consent status changes
  */

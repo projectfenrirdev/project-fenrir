@@ -1,17 +1,24 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Add caching headers for static assets
   cacheComponents: true,
   async headers() {
     return [
       {
-        // Apply security headers to all routes
         source: "/:path*",
         headers: [
           {
             key: "Strict-Transport-Security",
-            value: "max-age=31536000; includeSubDomains; preload", // 1 year with subdomains and preload
+            value: "max-age=31536000; includeSubDomains; preload",
+          },
+          {
+            key: "Content-Security-Policy",
+            value:
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+          },
+          {
+            key: "Referrer-Policy",
+            value: "strict-origin-when-cross-origin",
           },
           {
             key: "X-Content-Type-Options",
@@ -29,15 +36,6 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/hero-illustration.svg",
-        headers: [
-          {
-            key: "Cache-Control",
-            value: "public, max-age=86400, stale-while-revalidate=31536000",
-          },
-        ],
-      },
-      {
-        source: "/projects/:path*",
         headers: [
           {
             key: "Cache-Control",
