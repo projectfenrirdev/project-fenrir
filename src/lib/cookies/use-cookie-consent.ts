@@ -6,7 +6,10 @@ import {
   CookieConsentStatus,
 } from "@/data/types";
 import { CONSENT_KEY } from "@/lib/constants";
-import { getStoredConsent } from "@/lib/cookies/cookie-consent";
+import {
+  CONSENT_CHANGED_EVENT,
+  getStoredConsent,
+} from "@/lib/cookies/cookie-consent";
 import { useEffect, useState } from "react";
 
 /**
@@ -33,8 +36,25 @@ export const useCookieConsent = () => {
       }
     };
 
+    // Handle same-tab consent changes via custom event
+    const handleConsentChanged = (event: Event) => {
+      const customEvent = event as CustomEvent<CookieConsent>;
+      setConsent(customEvent.detail);
+    };
+
     window.addEventListener("storage", handleStorageChange);
-    return () => window.removeEventListener("storage", handleStorageChange);
+    window.addEventListener(
+      CONSENT_CHANGED_EVENT,
+      handleConsentChanged as EventListener,
+    );
+
+    return () => {
+      window.removeEventListener("storage", handleStorageChange);
+      window.removeEventListener(
+        CONSENT_CHANGED_EVENT,
+        handleConsentChanged as EventListener,
+      );
+    };
   }, []);
 
   // Check if a specific cookie category is allowed

@@ -1,6 +1,12 @@
 import type { CookieCategories, CookieConsent } from "@/data/types";
 import { CONSENT_KEY } from "@/lib/constants";
 
+/**
+ * Custom event name for consent changes
+ * This event is dispatched when consent is updated in the same tab
+ */
+export const CONSENT_CHANGED_EVENT = "cookieConsentChanged";
+
 // Default consent configuration
 const defaultConsent: CookieConsent = {
   status: "pending",
@@ -49,6 +55,13 @@ export const saveConsent = (consent: CookieConsent): void => {
       JSON.stringify({
         ...consent,
         timestamp: Date.now(),
+      }),
+    );
+
+    // Dispatch custom event for same-tab listeners
+    window.dispatchEvent(
+      new CustomEvent(CONSENT_CHANGED_EVENT, {
+        detail: consent,
       }),
     );
   } catch (error) {
