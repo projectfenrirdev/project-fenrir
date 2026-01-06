@@ -5,19 +5,15 @@ import { FoldersIcon, MessageCircleMoreIcon } from "lucide-react";
 import Link from "next/link";
 import { itemVariants } from "./animation-variants";
 import { MotionDiv } from "@/components/motion/motion-tags";
-import { sendGAEvent, sendGTMEvent } from "@next/third-parties/google";
+import { trackEvent } from "@/lib/gtm";
 
 export const HeroCtaButtons = () => {
   const handleGetInTouchClick = () => {
-    sendGAEvent("event", "get_in_touch_button_click", {
-      value: "get_in_touch",
-    });
-    sendGTMEvent({ event: "get_in_touch_button_click", value: "get_in_touch" });
+    trackEvent("get_in_touch_button_click", { value: "get_in_touch" });
   };
 
   const handleViewServicesClick = () => {
-    sendGAEvent("event", "services_button_click", { value: "view_services" });
-    sendGTMEvent({ event: "services_button_click", value: "view_services" });
+    trackEvent("services_button_click", { value: "view_services" });
   };
 
   return (

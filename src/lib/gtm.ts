@@ -28,14 +28,6 @@ export const trackEvent = (
 };
 
 /**
- * Legacy function - kept for backward compatibility
- * @deprecated Use trackEvent instead
- */
-export const pushEvent = (event: string, data = {}) => {
-  trackEvent(event, data);
-};
-
-/**
  * Track form submissions
  * @param formName - Name/identifier of the form
  * @param formLocation - Where the form is located (e.g., "footer", "contact-page")
@@ -65,7 +57,7 @@ export const trackCTAClick = (
   buttonLocation?: string,
   linkUrl?: string,
 ): void => {
-  trackEvent("select_content", {
+  trackEvent("cta_button_click", {
     content_type: "cta_button",
     button_text: buttonText,
     button_location: buttonLocation,

@@ -53,7 +53,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
           className="mb-12"
         >
           <div className="mb-6 flex items-center gap-4">
-            <div className="from-forge-accent/20 to-forge-accent-dark/20 flex h-16 w-16 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg">
+            <div className="from-forge-accent/20 to-forge-accent-dark/20 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg">
               <DynamicIcon
                 name={service.icon}
                 className="text-forge-accent size-8"

@@ -92,8 +92,10 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <GoogleConsentInit />
-      <GoogleTagManager gtmId={gtmId} />
+      <head>
+        <GoogleConsentInit />
+        <GoogleTagManager gtmId={gtmId} />
+      </head>
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}
       >
