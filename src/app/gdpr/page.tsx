@@ -1,3 +1,4 @@
+import { COMPANY_INFO } from "@/lib/constants";
 import {
   gdprSchema,
   generateSchemaMetadata,
@@ -9,24 +10,22 @@ import { Metadata } from "next";
 import GDPRCompliance from "./components/gdpr-compliance";
 
 export const metadata: Metadata = {
-  title: "GDPR Compliance | Project Fenrir | Professional Web Development",
-  description:
-    "Learn about Project Fenrir's GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.",
+  title: `GDPR Compliance | ${COMPANY_INFO.name} | Professional Web Development`,
+  description: `Learn about ${COMPANY_INFO.name}'s GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.`,
   alternates: {
-    canonical: "https://www.projectfenrir.dev/gdpr",
+    canonical: `${COMPANY_INFO.baseUrl}/gdpr`,
   },
   openGraph: {
-    title: "GDPR Compliance | Project Fenrir",
-    description:
-      "Learn about Project Fenrir's GDPR compliance measures and how we protect your personal data.",
-    url: "https://www.projectfenrir.dev/gdpr",
-    siteName: "Project Fenrir",
+    title: `GDPR Compliance | ${COMPANY_INFO.name}`,
+    description: `Learn about ${COMPANY_INFO.name}'s GDPR compliance measures and how we protect your personal data.`,
+    url: `${COMPANY_INFO.baseUrl}/gdpr`,
+    siteName: COMPANY_INFO.name,
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "Project Fenrir - Professional Web Development",
+        alt: `${COMPANY_INFO.name} - Professional Web Development`,
       },
     ],
     locale: "en_US",

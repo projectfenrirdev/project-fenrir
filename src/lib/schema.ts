@@ -1,21 +1,29 @@
 import { type Metadata } from "next";
-import { CONTACT_INFO, FAQS, SERVICES } from "./constants";
+import {
+  ADDRESS_INFO,
+  BUSINESS_HOURS,
+  COMPANY_INFO,
+  CONTACT_INFO,
+  COORDINATES,
+  FAQS,
+  SERVICES,
+} from "./constants";
 
-export const baseUrl = "https://www.projectfenrir.dev";
+export const baseUrl = COMPANY_INFO.baseUrl;
 
 // Main organization schema
 export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  name: "Project Fenrir",
+  name: COMPANY_INFO.name,
   url: baseUrl,
   logo: `${baseUrl}/favicon.ico`,
   sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sibiu",
-    addressRegion: "Sibiu",
-    addressCountry: "Romania",
+    addressLocality: ADDRESS_INFO.locality,
+    addressRegion: ADDRESS_INFO.region,
+    addressCountry: ADDRESS_INFO.country,
   },
   contactPoint: {
     "@type": "ContactPoint",
@@ -23,15 +31,14 @@ export const organizationSchema = {
     email: CONTACT_INFO.email,
     contactType: "customer service",
   },
-  description:
-    "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
+  description: COMPANY_INFO.description,
 };
 
 // Professional service schema
 export const professionalServiceSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "Project Fenrir",
+  name: COMPANY_INFO.name,
   image: `${baseUrl}/favicon.ico`,
   "@id": baseUrl,
   url: baseUrl,
@@ -39,20 +46,20 @@ export const professionalServiceSchema = {
   email: CONTACT_INFO.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sibiu",
-    addressRegion: "Sibiu",
-    addressCountry: "Romania",
+    addressLocality: ADDRESS_INFO.locality,
+    addressRegion: ADDRESS_INFO.region,
+    addressCountry: ADDRESS_INFO.country,
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "45.7983",
-    longitude: "24.1256",
+    latitude: COORDINATES.latitude,
+    longitude: COORDINATES.longitude,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
+    dayOfWeek: BUSINESS_HOURS.daysOfWeek,
+    opens: BUSINESS_HOURS.opens,
+    closes: BUSINESS_HOURS.closes,
   },
   sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
   priceRange: "$$",
@@ -73,7 +80,7 @@ export const servicesSchema = {
       description: service.description,
       provider: {
         "@type": "Organization",
-        name: "Project Fenrir",
+        name: COMPANY_INFO.name,
       },
     },
   })),
@@ -83,7 +90,7 @@ export const servicesSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  name: "Project Fenrir",
+  name: COMPANY_INFO.name,
   image: `${baseUrl}/favicon.ico`,
   "@id": baseUrl,
   url: baseUrl,
@@ -91,20 +98,20 @@ export const localBusinessSchema = {
   email: CONTACT_INFO.email,
   address: {
     "@type": "PostalAddress",
-    addressLocality: "Sibiu",
-    addressRegion: "Sibiu",
-    addressCountry: "Romania",
+    addressLocality: ADDRESS_INFO.locality,
+    addressRegion: ADDRESS_INFO.region,
+    addressCountry: ADDRESS_INFO.country,
   },
   geo: {
     "@type": "GeoCoordinates",
-    latitude: "45.7983",
-    longitude: "24.1256",
+    latitude: COORDINATES.latitude,
+    longitude: COORDINATES.longitude,
   },
   openingHoursSpecification: {
     "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "09:00",
-    closes: "18:00",
+    dayOfWeek: BUSINESS_HOURS.daysOfWeek,
+    opens: BUSINESS_HOURS.opens,
+    closes: BUSINESS_HOURS.closes,
   },
   sameAs: [CONTACT_INFO.instagram, CONTACT_INFO.twitter, CONTACT_INFO.whatsapp],
   priceRange: "$$",
@@ -114,7 +121,7 @@ export const localBusinessSchema = {
 export const websiteSchema = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "Project Fenrir",
+  name: COMPANY_INFO.name,
   url: baseUrl,
   potentialAction: {
     "@type": "SearchAction",
@@ -204,26 +211,25 @@ export const faqSchema = {
 export const privacyPolicySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Privacy Policy | Project Fenrir",
-  description:
-    "Learn how Project Fenrir handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.",
+  name: `Privacy Policy | ${COMPANY_INFO.name}`,
+  description: `Learn how ${COMPANY_INFO.name} handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.`,
   url: `${baseUrl}/privacy-policy`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Privacy Policy for Project Fenrir",
+    mainContentOfPage: `Privacy Policy for ${COMPANY_INFO.name}`,
   },
 };
 
@@ -231,26 +237,25 @@ export const privacyPolicySchema = {
 export const termsOfServiceSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Terms of Service | Project Fenrir",
-  description:
-    "Read the terms and conditions governing the use of Project Fenrir's services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.",
+  name: `Terms of Service | ${COMPANY_INFO.name}`,
+  description: `Read the terms and conditions governing the use of ${COMPANY_INFO.name}'s services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.`,
   url: `${baseUrl}/terms-of-service`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Terms of Service for Project Fenrir",
+    mainContentOfPage: `Terms of Service for ${COMPANY_INFO.name}`,
   },
 };
 
@@ -258,26 +263,25 @@ export const termsOfServiceSchema = {
 export const gdprSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "GDPR Compliance | Project Fenrir",
-  description:
-    "Learn about Project Fenrir's GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.",
+  name: `GDPR Compliance | ${COMPANY_INFO.name}`,
+  description: `Learn about ${COMPANY_INFO.name}'s GDPR compliance measures and how we protect your personal data in accordance with EU regulations. Understand your rights and how to exercise them.`,
   url: `${baseUrl}/gdpr`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "GDPR Compliance Information for Project Fenrir",
+    mainContentOfPage: `GDPR Compliance Information for ${COMPANY_INFO.name}`,
   },
 };
 
@@ -285,26 +289,25 @@ export const gdprSchema = {
 export const cookiePolicySchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Cookie Policy | Project Fenrir",
-  description:
-    "Learn about how Project Fenrir uses cookies and similar technologies on our website. Understand what cookies we use, why we use them, and how you can control them.",
+  name: `Cookie Policy | ${COMPANY_INFO.name}`,
+  description: `Learn about how ${COMPANY_INFO.name} uses cookies and similar technologies on our website. Understand what cookies we use, why we use them, and how you can control them.`,
   url: `${baseUrl}/cookie-policy`,
   inLanguage: "en-US",
   datePublished: "2024-06-15T12:00:00+02:00",
   dateModified: "2024-06-15T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     url: baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Project Fenrir",
+    name: COMPANY_INFO.name,
     logo: `${baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Cookie Policy for Project Fenrir",
+    mainContentOfPage: `Cookie Policy for ${COMPANY_INFO.name}`,
   },
 };
 
@@ -318,7 +321,7 @@ export function generatePageTitle(
   pageTitle: string,
   includeBrand = true,
 ): string {
-  const brandName = "Project Fenrir";
+  const brandName = COMPANY_INFO.name;
   const separator = " | ";
 
   // Clean up the page title
@@ -403,13 +406,13 @@ export function generatePageMetadata(
       description,
       type: "website",
       url: canonicalUrl,
-      siteName: "Project Fenrir",
+      siteName: COMPANY_INFO.name,
       images: [
         {
           url: `${baseUrl}/favicon.ico`,
           width: 1200,
           height: 630,
-          alt: "Project Fenrir - Professional Web Development",
+          alt: `${COMPANY_INFO.name} - Professional Web Development`,
         },
       ],
     },

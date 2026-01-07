@@ -1,5 +1,6 @@
 "use client";
 
+import { COMPANY_INFO } from "@/lib/constants";
 import Link from "next/link";
 import { bottomVariants } from "./animation-variants";
 import { MotionDiv } from "@/components/motion/motion-tags";
@@ -15,7 +16,7 @@ export const FooterBottom = () => {
         viewport={{ once: true }}
       >
         <div className="text-center text-sm text-gray-400 md:text-left">
-          &copy; {new Date().getFullYear()} Project Fenrir. All rights reserved.
+          &copy; {new Date().getFullYear()} {COMPANY_INFO.name}. All rights reserved.
         </div>
         <div className="flex gap-6 text-xs text-gray-400">
           <MotionDiv

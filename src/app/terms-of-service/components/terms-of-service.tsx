@@ -1,6 +1,6 @@
 "use client";
 
-import { CONTACT_INFO } from "@/lib/constants";
+import { COMPANY_INFO, CONTACT_INFO } from "@/lib/constants";
 import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -64,7 +64,7 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Welcome to Project Fenrir. These Terms of Service
+            Welcome to {COMPANY_INFO.name}. These Terms of Service
             (&quot;Terms&quot;) govern your use of our website, services, and
             products. By accessing or using our services, you agree to be bound
             by these Terms and our Privacy Policy.
@@ -93,7 +93,7 @@ const TermsOfService = () => {
               transition={{ delay: 0.5, duration: 0.5 }}
             >
               <strong className="text-forge-primary">Company/We/Us:</strong>{" "}
-              Refers to Project Fenrir, our employees, contractors, and
+              Refers to {COMPANY_INFO.name}, our employees, contractors, and
               representatives.
             </motion.li>
             <motion.li
@@ -102,7 +102,7 @@ const TermsOfService = () => {
               transition={{ delay: 0.6, duration: 0.5 }}
             >
               <strong className="text-forge-primary">Services:</strong> Refers
-              to any services provided by Project Fenrir, including but not
+              to any services provided by {COMPANY_INFO.name}, including but not
               limited to web development, application development, e-commerce
               solutions, consultation, and maintenance.
             </motion.li>
@@ -135,7 +135,7 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Project Fenrir provides professional web and application development
+            {COMPANY_INFO.name} provides professional web and application development
             services, including but not limited to:
           </p>
           <ul className="space-y-2 text-gray-300">
@@ -148,7 +148,7 @@ const TermsOfService = () => {
           </ul>
           <p className="mt-4">
             The specific services to be provided will be detailed in a written
-            agreement or contract between you and Project Fenrir. These Terms
+            agreement or contract between you and {COMPANY_INFO.name}. These Terms
             apply in addition to any specific agreement.
           </p>
         </div>
@@ -201,7 +201,7 @@ const TermsOfService = () => {
           4. Client Responsibilities
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
-          <p>As a client of Project Fenrir, you agree to:</p>
+          <p>As a client of {COMPANY_INFO.name}, you agree to:</p>
           <ul className="space-y-2 text-gray-300">
             <li>
               Provide accurate and timely information as required for the
@@ -212,7 +212,7 @@ const TermsOfService = () => {
               timeframes
             </li>
             <li>
-              Pay all fees as set forth in your agreement with Project Fenrir
+              Pay all fees as set forth in your agreement with {COMPANY_INFO.name}
             </li>
             <li>
               Obtain and maintain any necessary licenses, permissions, or
@@ -240,16 +240,16 @@ const TermsOfService = () => {
               deliverables specifically created for you
             </li>
             <li>
-              Project Fenrir retains ownership of all pre-existing materials,
+              {COMPANY_INFO.name} retains ownership of all pre-existing materials,
               proprietary tools, methods, and processes used to create the
               deliverables
             </li>
             <li>
-              Project Fenrir may use general knowledge, skills, and experience
+              {COMPANY_INFO.name} may use general knowledge, skills, and experience
               acquired during the provision of services for other clients
             </li>
             <li>
-              Project Fenrir reserves the right to display and link to completed
+              {COMPANY_INFO.name} reserves the right to display and link to completed
               projects as part of our portfolio and promotional materials
             </li>
           </ul>
@@ -309,7 +309,7 @@ const TermsOfService = () => {
             </p>
             <ul className="ml-4 space-y-1 text-gray-300">
               <li>
-                <strong>Project Fenrir's breach:</strong> If we materially breach the agreement and fail to remedy it within 14 days of notice, you may be entitled to a full or partial refund.
+                <strong>{COMPANY_INFO.name}'s breach:</strong> If we materially breach the agreement and fail to remedy it within 14 days of notice, you may be entitled to a full or partial refund.
               </li>
               <li>
                 <strong>Force majeure:</strong> If the project cannot be completed due to circumstances beyond either party's control (natural disasters, pandemics, etc.), refunds will be calculated based on work completed.
@@ -366,7 +366,7 @@ const TermsOfService = () => {
           <p>To the maximum extent permitted by law:</p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              Project Fenrir will not be liable for any indirect, incidental,
+              {COMPANY_INFO.name} will not be liable for any indirect, incidental,
               special, consequential, or punitive damages resulting from your
               use of our services
             </li>
@@ -455,7 +455,7 @@ const TermsOfService = () => {
               <strong className="text-forge-primary">Force Majeure:</strong> Delays due to circumstances beyond reasonable control (natural disasters, pandemics, etc.) will not constitute a breach.
             </li>
             <li>
-              <strong className="text-forge-primary">Remedies:</strong> If delays are caused by Project Fenrir without reasonable excuse, we will work diligently to minimize the delay and may offer compensation such as extended support periods or reduced fees, as agreed between the parties.
+              <strong className="text-forge-primary">Remedies:</strong> If delays are caused by {COMPANY_INFO.name} without reasonable excuse, we will work diligently to minimize the delay and may offer compensation such as extended support periods or reduced fees, as agreed between the parties.
             </li>
           </ul>
         </div>
@@ -514,7 +514,7 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Project Fenrir reserves the right to modify these Terms at any time.
+            {COMPANY_INFO.name} reserves the right to modify these Terms at any time.
             We will provide notice of significant changes by updating the date
             at the top of these Terms and potentially by other means, such as
             email.

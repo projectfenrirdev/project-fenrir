@@ -1,5 +1,15 @@
 import type { FAQType, ServiceType } from "@/data/types";
 
+// Company Information
+export const COMPANY_INFO = {
+  name: "Project Fenrir",
+  shortName: "Project Fenrir",
+  description:
+    "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
+  baseUrl: "https://www.projectfenrir.dev",
+};
+
+// Contact Information
 export const CONTACT_INFO = {
   phone: "+40 727 892 022",
   email: "projectfenrir@yahoo.com",
@@ -7,6 +17,49 @@ export const CONTACT_INFO = {
   whatsapp: "https://wa.me/40727892022",
   twitter: "https://x.com/projectfenrirdv",
 };
+
+// Address Information
+export const ADDRESS_INFO = {
+  locality: "Sibiu",
+  region: "Sibiu County",
+  country: "Romania",
+  street: "[Street Address - To be completed]",
+  postalCode: "[Postal Code - To be completed]",
+};
+
+// Geographic Coordinates
+export const COORDINATES = {
+  latitude: "45.7983",
+  longitude: "24.1256",
+};
+
+// Business Hours
+export const BUSINESS_HOURS = {
+  daysOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+  opens: "09:00",
+  closes: "18:00",
+};
+
+// Legal Information
+export const LEGAL_INFO = {
+  legalForm: "[Legal Form - To be completed]",
+  registrationNumber: "[Company Registration Number - To be completed]",
+  tradeRegister: "[Trade Register Details - To be completed]",
+  vatNumber: "[VAT Number - To be completed if applicable]",
+  taxId: "[Tax ID - To be completed if applicable]",
+  jurisdiction: "Romania",
+  dataProtectionAuthority: "ANSPDCP (National Authority for Supervision of Personal Data Processing)",
+  dataProtectionAuthorityAddress: "B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, Romania",
+};
+
+// Legal Representative
+export const LEGAL_REPRESENTATIVE = {
+  name: "[Legal Representative Name - To be completed]",
+  title: "[Title - To be completed]",
+};
+
+// Cookie Consent Configuration
+export const COOKIE_CONSENT_PREFIX = "projectfenrir";
 
 export const SERVICES: ServiceType[] = [
   {
@@ -90,7 +143,7 @@ export const SERVICES: ServiceType[] = [
     description:
       "Comprehensive website audits for performance, security, and maintainability",
     longDescription:
-      "Project Fenrir evaluates your website or application through in-depth audits designed to ensure it is secure, high-performing, and maintainable. We review code quality, architecture, security, performance metrics, and compliance, then deliver clear, actionable recommendations to improve reliability and user experience.",
+      `${COMPANY_INFO.name} evaluates your website or application through in-depth audits designed to ensure it is secure, high-performing, and maintainable. We review code quality, architecture, security, performance metrics, and compliance, then deliver clear, actionable recommendations to improve reliability and user experience.`,
     features: [
       "Security vulnerability assessment",
       "Performance optimization review",
@@ -111,9 +164,9 @@ export const SERVICES: ServiceType[] = [
 
 export const FAQS: FAQType[] = [
   {
-    question: "What services does Project Fenrir offer?",
+    question: `What services does ${COMPANY_INFO.name} offer?`,
     answer:
-      "Project Fenrir provides custom web development, e-commerce solutions, and software applications designed to meet the unique needs of SaaS and e-commerce businesses. We deliver high-performance, scalable, and reliable digital solutions that enhance online presence, streamline operations, and support long-term growth.",
+      `${COMPANY_INFO.name} provides custom web development, e-commerce solutions, and software applications designed to meet the unique needs of SaaS and e-commerce businesses. We deliver high-performance, scalable, and reliable digital solutions that enhance online presence, streamline operations, and support long-term growth.`,
   },
   {
     question: "How long does it take to develop a website?",
@@ -128,7 +181,7 @@ export const FAQS: FAQType[] = [
   {
     question: "Do you provide ongoing maintenance and support?",
     answer:
-      "Yes. Project Fenrir offers ongoing maintenance and support to ensure your website or software remains secure, up-to-date, and high-performing. We provide regular updates, performance monitoring, and troubleshooting, giving you peace of mind and allowing your team to focus on growth while we handle the technical upkeep.",
+      `Yes. ${COMPANY_INFO.name} offers ongoing maintenance and support to ensure your website or software remains secure, up-to-date, and high-performing. We provide regular updates, performance monitoring, and troubleshooting, giving you peace of mind and allowing your team to focus on growth while we handle the technical upkeep.`,
   },
   {
     question: "How do you handle website security?",
@@ -161,7 +214,7 @@ export const FAQS: FAQType[] = [
       "While Shopify and WordPress are popular platforms, they often limit customization and scalability. We build custom software that is tailored to your business’s unique needs, providing full control over design, functionality, and future growth. Our solutions are built for reliability, performance, and long-term maintainability, ensuring your business can scale as it grows. No vendor lock-in, no hidden fees, no surprises or security risks.",
   },
   {
-    question: "How can I get started with Project Fenrir?",
+    question: `How can I get started with ${COMPANY_INFO.name}?`,
     answer:
       "Getting started is easy! Simply contact us through our website's contact form, email, or WhatsApp. We'll schedule an initial consultation to discuss your project, understand your goals, and determine how we can best help you achieve them.",
   },
@@ -182,8 +235,7 @@ export const NAVBAR_LINKS = [
   },
 ];
 
-export const CONSENT_KEY = "projectfenrir-cookie-consent";
-export const CONSENT_STATUS_COOKIE = "projectfenrir-cookie-consent-status";
-export const CONSENT_CATEGORIES_COOKIE =
-  "projectfenrir-cookie-consent-categories";
+export const CONSENT_KEY = `${COOKIE_CONSENT_PREFIX}-cookie-consent`;
+export const CONSENT_STATUS_COOKIE = `${COOKIE_CONSENT_PREFIX}-cookie-consent-status`;
+export const CONSENT_CATEGORIES_COOKIE = `${COOKIE_CONSENT_PREFIX}-cookie-consent-categories`;
 export const COOKIE_EXPIRY_DAYS = 365; // 1 year

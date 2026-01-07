@@ -1,6 +1,6 @@
 "use client";
 
-import { CONTACT_INFO } from "@/lib/constants";
+import { COMPANY_INFO, CONTACT_INFO } from "@/lib/constants";
 import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -64,7 +64,7 @@ const PrivacyPolicy = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            At Project Fenrir, we respect your privacy and are committed to
+            At {COMPANY_INFO.name}, we respect your privacy and are committed to
             protecting your personal data. This Privacy Policy explains how we
             collect, use, and safeguard your information when you visit our
             website or use our services.

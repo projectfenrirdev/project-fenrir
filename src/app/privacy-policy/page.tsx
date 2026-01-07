@@ -1,3 +1,4 @@
+import { COMPANY_INFO } from "@/lib/constants";
 import {
   generatePageMetadata,
   navigationSchema,
@@ -9,7 +10,7 @@ import PrivacyPolicy from "./components/privacy-policy";
 
 export const metadata = generatePageMetadata(
   "Privacy Policy",
-  "Learn how Project Fenrir handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.",
+  `Learn how ${COMPANY_INFO.name} handles your personal data and respects your privacy. Our privacy policy outlines our data collection, use, and protection practices.`,
   [organizationSchema, navigationSchema, websiteSchema, privacyPolicySchema],
   "/privacy-policy",
 );

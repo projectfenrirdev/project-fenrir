@@ -1,6 +1,12 @@
 "use client";
 
-import { CONTACT_INFO } from "@/lib/constants";
+import {
+  ADDRESS_INFO,
+  COMPANY_INFO,
+  CONTACT_INFO,
+  LEGAL_INFO,
+  LEGAL_REPRESENTATIVE,
+} from "@/lib/constants";
 import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -82,24 +88,21 @@ const LegalNotice = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p className="mb-4">
-            <strong className="text-forge-primary">Company Name:</strong> Project
-            Fenrir
+            <strong className="text-forge-primary">Company Name:</strong>{" "}
+            {COMPANY_INFO.name}
           </p>
           <p className="mb-4">
             <strong className="text-forge-primary">Legal Form:</strong>{" "}
-            {/* TODO: Add legal form (e.g., S.R.L., S.A., PFA) */}
-            [Legal Form - To be completed]
+            {LEGAL_INFO.legalForm}
           </p>
           <p className="mb-4">
             <strong className="text-forge-primary">Registered Address:</strong>
             <br />
-            {/* TODO: Add complete physical address */}
-            Sibiu, Sibiu County
+            {ADDRESS_INFO.street && `${ADDRESS_INFO.street}, `}
+            {ADDRESS_INFO.locality}, {ADDRESS_INFO.region}
             <br />
-            Romania
-            <br />
-            {/* TODO: Add street address and postal code */}
-            [Street Address, Postal Code - To be completed]
+            {ADDRESS_INFO.country}
+            {ADDRESS_INFO.postalCode && <><br />{ADDRESS_INFO.postalCode}</>}
           </p>
         </div>
       </motion.section>
@@ -114,25 +117,21 @@ const LegalNotice = () => {
             <strong className="text-forge-primary">
               Company Registration Number:
             </strong>{" "}
-            {/* TODO: Add company registration number (Număr de înregistrare) */}
-            [Company Registration Number - To be completed]
+            {LEGAL_INFO.registrationNumber}
           </p>
           <p className="mb-4">
             <strong className="text-forge-primary">
               Trade Register (Registrul Comerțului):
             </strong>{" "}
-            {/* TODO: Add trade register details */}
-            [Trade Register Details - To be completed]
+            {LEGAL_INFO.tradeRegister}
           </p>
           <p className="mb-4">
             <strong className="text-forge-primary">VAT Number (CUI/CIF):</strong>{" "}
-            {/* TODO: Add VAT number if applicable */}
-            [VAT Number - To be completed if applicable]
+            {LEGAL_INFO.vatNumber}
           </p>
           <p className="mb-4">
             <strong className="text-forge-primary">Tax ID:</strong>{" "}
-            {/* TODO: Add tax identification number if different from VAT */}
-            [Tax ID - To be completed if applicable]
+            {LEGAL_INFO.taxId}
           </p>
         </div>
       </motion.section>
@@ -148,13 +147,11 @@ const LegalNotice = () => {
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p className="mb-4">
             <strong className="text-forge-primary">Name:</strong>{" "}
-            {/* TODO: Add legal representative name */}
-            [Legal Representative Name - To be completed]
+            {LEGAL_REPRESENTATIVE.name}
           </p>
           <p className="mb-4">
             <strong className="text-forge-primary">Title:</strong>{" "}
-            {/* TODO: Add title (e.g., Administrator, Director, Owner) */}
-            [Title - To be completed]
+            {LEGAL_REPRESENTATIVE.title}
           </p>
         </div>
       </motion.section>
@@ -292,10 +289,11 @@ const LegalNotice = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            The content of this website is the responsibility of Project Fenrir
-            as stated above. We make every effort to ensure that the information
-            provided is accurate and up-to-date. However, we cannot guarantee
-            the completeness, accuracy, or timeliness of all information.
+            The content of this website is the responsibility of{" "}
+            {COMPANY_INFO.name} as stated above. We make every effort to ensure
+            that the information provided is accurate and up-to-date. However,
+            we cannot guarantee the completeness, accuracy, or timeliness of all
+            information.
           </p>
           <p className="mt-4">
             External links to third-party websites are provided for convenience
@@ -351,14 +349,14 @@ const LegalNotice = () => {
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
             All content on this website, including text, graphics, logos, images,
-            and software, is the property of Project Fenrir or its content
+            and software, is the property of {COMPANY_INFO.name} or its content
             providers and is protected by Romanian and international copyright
             laws.
           </p>
           <p className="mt-4">
             Unauthorized reproduction, distribution, or use of any content from
-            this website is prohibited without prior written permission from
-            Project Fenrir.
+            this website is prohibited without prior written permission from{" "}
+            {COMPANY_INFO.name}.
           </p>
         </div>
       </motion.section>

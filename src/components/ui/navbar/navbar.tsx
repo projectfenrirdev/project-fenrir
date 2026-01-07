@@ -1,5 +1,6 @@
 "use client";
 
+import { COMPANY_INFO } from "@/lib/constants";
 import ClosedIcon from "@/components/ui/navbar/closed-icon";
 import DesktopNavbar from "@/components/ui/navbar/desktop-navbar";
 import MobileNavbar from "@/components/ui/navbar/mobile-navbar";
@@ -139,13 +140,13 @@ const Navbar = () => {
               <Image
                 onClick={handleLogoClick}
                 src={logo}
-                alt="Project Fenrir"
+                alt={COMPANY_INFO.name}
                 width={32}
                 height={32}
                 className="h-8 w-12 rounded-sm object-cover object-center"
               />
               <span className="to-forge-accent bg-linear-to-r from-white bg-clip-text text-xl font-bold text-transparent">
-                Project Fenrir
+                {COMPANY_INFO.name}
               </span>
             </Link>
 

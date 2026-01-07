@@ -1,3 +1,4 @@
+import { COMPANY_INFO } from "@/lib/constants";
 import {
   MotionDiv,
   MotionH2,
@@ -50,7 +51,7 @@ export const AboutHeader = () => {
           >
             At{" "}
             <span className="text-forge-accent font-medium">
-              Project Fenrir
+              {COMPANY_INFO.name}
             </span>
             , we create high-performance, custom software and websites tailored
             to the unique needs of businesses and e-commerce stores. We deliver

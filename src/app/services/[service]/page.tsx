@@ -1,5 +1,5 @@
 import ServiceDetail from "@/app/services/[service]/components/service-detail";
-import { SERVICES } from "@/lib/constants";
+import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 import { generatePageMetadata, organizationSchema, websiteSchema } from "@/lib/schema";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -20,12 +20,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!service) {
     return {
-      title: "Service Not Found | Project Fenrir",
+      title: `Service Not Found | ${COMPANY_INFO.name}`,
     };
   }
 
   return generatePageMetadata(
-    `${service.text} | Project Fenrir`,
+    `${service.text} | ${COMPANY_INFO.name}`,
     service.longDescription || service.description || `Professional ${service.text.toLowerCase()} services`,
     [organizationSchema, websiteSchema],
     `/services/${service.slug}`,

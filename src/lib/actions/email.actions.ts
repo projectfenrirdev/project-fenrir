@@ -1,6 +1,10 @@
 "use server";
 
 import {
+  COMPANY_INFO,
+  CONTACT_INFO,
+} from "@/lib/constants";
+import {
   contactFormSchema,
   ContactFormValues,
 } from "@/lib/validation/contact-schema";
@@ -81,8 +85,8 @@ export async function sendContactEmail(formData: ContactFormValues) {
 
     // Send the email
     const result = await resend.emails.send({
-      from: `Project Fenrir <onboarding@resend.dev>`,
-      to: process.env.CONTACT_EMAIL_TO || "projectfenrir@yahoo.com",
+      from: `${COMPANY_INFO.name} <onboarding@resend.dev>`,
+      to: process.env.CONTACT_EMAIL_TO || CONTACT_INFO.email,
       subject: `New contact form submission from ${sanitizedSubject}`,
       replyTo: sanitizedEmail,
       text: `

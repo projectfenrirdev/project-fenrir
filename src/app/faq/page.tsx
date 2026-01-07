@@ -1,4 +1,5 @@
 import FAQ from "@/app/faq/components/faq";
+import { COMPANY_INFO } from "@/lib/constants";
 import {
   faqSchema,
   generateSchemaMetadata,
@@ -9,24 +10,23 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FAQs | Project Fenrir | Professional Web Development",
-  description:
-    "Find answers to frequently asked questions about our web development, e-commerce, and software development services at Project Fenrir.",
+  title: `FAQs | ${COMPANY_INFO.name} | Professional Web Development`,
+  description: `Find answers to frequently asked questions about our web development, e-commerce, and software development services at ${COMPANY_INFO.name}.`,
   alternates: {
-    canonical: "https://www.projectfenrir.dev/faq",
+    canonical: `${COMPANY_INFO.baseUrl}/faq`,
   },
   openGraph: {
-    title: "Frequently Asked Questions | Project Fenrir",
+    title: `Frequently Asked Questions | ${COMPANY_INFO.name}`,
     description:
       "Get answers to common questions about our web development, e-commerce, and software development services.",
-    url: "https://www.projectfenrir.dev/faq",
-    siteName: "Project Fenrir",
+    url: `${COMPANY_INFO.baseUrl}/faq`,
+    siteName: COMPANY_INFO.name,
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "Project Fenrir - Professional Web Development",
+        alt: `${COMPANY_INFO.name} - Professional Web Development`,
       },
     ],
     locale: "en_US",

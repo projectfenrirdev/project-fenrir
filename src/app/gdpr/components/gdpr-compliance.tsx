@@ -1,6 +1,11 @@
 "use client";
 
-import { CONTACT_INFO } from "@/lib/constants";
+import {
+  ADDRESS_INFO,
+  COMPANY_INFO,
+  CONTACT_INFO,
+  LEGAL_INFO,
+} from "@/lib/constants";
 import { trackEmailClick, trackPhoneClick } from "@/lib/gtm";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -64,7 +69,7 @@ const GDPRCompliance = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            At Project Fenrir, we are committed to protecting and respecting
+            At {COMPANY_INFO.name}, we are committed to protecting and respecting
             your privacy in compliance with the EU General Data Protection
             Regulation (GDPR). This GDPR Compliance Policy outlines how we
             collect, use, and protect your personal data.
@@ -88,7 +93,7 @@ const GDPRCompliance = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            Project Fenrir acts as the Data Controller for personal data
+            {COMPANY_INFO.name} acts as the Data Controller for personal data
             collected through our website and services. As the Data Controller,
             we determine the purposes and means of processing your personal
             data.
@@ -97,19 +102,20 @@ const GDPRCompliance = () => {
           <ul className="space-y-2 text-gray-300">
             <li>
               <strong className="text-forge-primary">Company Name:</strong>{" "}
-              Project Fenrir
+              {COMPANY_INFO.name}
             </li>
             <li>
               <strong className="text-forge-primary">Legal Form:</strong>{" "}
-              {/* TODO: Add legal form (e.g., S.R.L., S.A., PFA) */}
-              [Legal Form - To be completed]
+              {LEGAL_INFO.legalForm}
             </li>
             <li>
               <strong className="text-forge-primary">Registered Address:</strong>
               <br />
-              Sibiu, Sibiu County
+              {ADDRESS_INFO.street && `${ADDRESS_INFO.street}, `}
+              {ADDRESS_INFO.locality}, {ADDRESS_INFO.region}
               <br />
-              Romania
+              {ADDRESS_INFO.country}
+              {ADDRESS_INFO.postalCode && <><br />{ADDRESS_INFO.postalCode}</>}
               <br />
               {/* TODO: Add street address and postal code */}
               [Street Address, Postal Code - To be completed]
@@ -416,7 +422,7 @@ const GDPRCompliance = () => {
               </strong>
             </p>
             <p className="text-gray-300 mb-2">
-              B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, Romania
+              {LEGAL_INFO.dataProtectionAuthorityAddress}
             </p>
             <p className="text-gray-300">
               Website:{" "}
@@ -640,7 +646,7 @@ const GDPRCompliance = () => {
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
             {/* TODO: Update based on company size - DPO required if >250 employees or core activity is processing */}
-            Project Fenrir does not currently have a designated Data Protection Officer (DPO) as we are not required to appoint one under GDPR Article 37. However, if you have any questions or concerns about data protection, please contact us using the information provided in Section 11.
+            {COMPANY_INFO.name} does not currently have a designated Data Protection Officer (DPO) as we are not required to appoint one under GDPR Article 37. However, if you have any questions or concerns about data protection, please contact us using the information provided in Section 11.
           </p>
           <p className="mt-4">
             If we are required to appoint a DPO in the future due to changes in our operations or legal requirements, we will update this section accordingly.
@@ -700,7 +706,7 @@ const GDPRCompliance = () => {
           </p>
           <p className="mt-4">
             You also have the right to lodge a complaint with your local data
-            protection authority. In Romania, this is the National Authority for
+            protection authority. In {LEGAL_INFO.jurisdiction}, this is the {LEGAL_INFO.dataProtectionAuthority}
             the Supervision of Personal Data Processing (ANSPDCP).
           </p>
           <div className="mt-4">

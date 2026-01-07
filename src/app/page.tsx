@@ -3,6 +3,7 @@ import Contact from "@/components/sections/contact/contact";
 import Hero from "@/components/sections/hero/hero";
 import Process from "@/components/sections/process/process";
 import ServiceBadges from "@/components/sections/service-badges/service-badges";
+import { COMPANY_INFO } from "@/lib/constants";
 import {
   generatePageMetadata,
   organizationSchema,
@@ -11,8 +12,8 @@ import {
 import { Metadata } from "next";
 
 export const metadata: Metadata = generatePageMetadata(
-  "Project Fenrir | Professional Web Development",
-  "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
+  `${COMPANY_INFO.name} | Professional Web Development`,
+  COMPANY_INFO.description,
   [organizationSchema, websiteSchema],
   "/",
 );

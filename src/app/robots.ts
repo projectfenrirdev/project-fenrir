@@ -1,3 +1,4 @@
+import { COMPANY_INFO } from "@/lib/constants";
 import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://www.projectfenrir.dev/sitemap.xml",
+    sitemap: `${COMPANY_INFO.baseUrl}/sitemap.xml`,
   };
 }

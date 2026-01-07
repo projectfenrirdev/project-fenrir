@@ -1,3 +1,4 @@
+import { COMPANY_INFO } from "@/lib/constants";
 import { MotionDiv } from "@/components/motion/motion-tags";
 import Image from "next/image";
 import Link from "next/link";
@@ -29,14 +30,14 @@ const Logo = ({ variants, onClick }: Props) => {
         <div className="from-forge-accent/80 to-forge-accent-DEFAULT/80 flex h-8 w-12 items-center justify-center rounded-md bg-gradient-to-br shadow-lg">
           <Image
             src={logo}
-            alt="Project Fenrir"
+            alt={COMPANY_INFO.name}
             width={32}
             height={32}
             className="h-8 w-12 rounded-sm object-cover object-center"
           />
         </div>
         <span className="bg-linear-to-r from-white to-neutral-400 bg-clip-text text-xl font-bold text-transparent">
-          Project Fenrir
+          {COMPANY_INFO.name}
         </span>
       </Link>
     </MotionDiv>

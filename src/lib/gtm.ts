@@ -83,25 +83,6 @@ export const trackServiceView = (
 };
 
 /**
- * Track file downloads
- * @param fileName - Name of the downloaded file
- * @param fileType - Type/extension of the file (e.g., "pdf", "zip")
- * @param linkUrl - URL of the downloaded file
- */
-export const trackDownload = (
-  fileName: string,
-  fileType?: string,
-  linkUrl?: string,
-): void => {
-  trackEvent("file_download", {
-    file_name: fileName,
-    file_type: fileType,
-    link_url: linkUrl,
-    page_location: typeof window !== "undefined" ? window.location.href : "",
-  });
-};
-
-/**
  * Track outbound link clicks
  * @param linkUrl - The external URL being clicked
  * @param linkText - The text of the link
@@ -138,75 +119,6 @@ export const trackPhoneClick = (phoneNumber: string): void => {
     phone_number: phoneNumber,
     page_location: typeof window !== "undefined" ? window.location.href : "",
   });
-};
-
-/**
- * Track scroll depth
- * @param percentage - Percentage of page scrolled (e.g., 25, 50, 75, 100)
- */
-export const trackScrollDepth = (percentage: number): void => {
-  trackEvent("scroll", {
-    scroll_depth: percentage,
-    page_location: typeof window !== "undefined" ? window.location.href : "",
-  });
-};
-
-/**
- * Track video interactions
- * @param action - Video action (e.g., "play", "pause", "complete")
- * @param videoTitle - Title of the video
- * @param videoUrl - URL of the video
- */
-export const trackVideoInteraction = (
-  action: "play" | "pause" | "complete" | "progress",
-  videoTitle?: string,
-  videoUrl?: string,
-): void => {
-  trackEvent("video_interaction", {
-    video_action: action,
-    video_title: videoTitle,
-    video_url: videoUrl,
-    page_location: typeof window !== "undefined" ? window.location.href : "",
-  });
-};
-
-/**
- * Track search queries
- * @param searchTerm - The search query
- * @param resultCount - Number of results returned
- */
-export const trackSearch = (searchTerm: string, resultCount?: number): void => {
-  trackEvent("search", {
-    search_term: searchTerm,
-    result_count: resultCount,
-    page_location: typeof window !== "undefined" ? window.location.href : "",
-  });
-};
-
-/**
- * Track user engagement time
- * @param engagementTime - Time in milliseconds
- */
-export const trackEngagementTime = (engagementTime: number): void => {
-  trackEvent("user_engagement", {
-    engagement_time_msec: engagementTime,
-    page_location: typeof window !== "undefined" ? window.location.href : "",
-  });
-};
-
-/**
- * Set user properties (for GA4 user-scoped custom dimensions)
- * @param properties - Object with user property key-value pairs
- */
-export const setUserProperties = (
-  properties: Record<string, unknown>,
-): void => {
-  if (typeof window !== "undefined" && window.dataLayer) {
-    window.dataLayer.push({
-      event: "set_user_properties",
-      user_properties: properties,
-    });
-  }
 };
 
 // Type declarations for window.dataLayer

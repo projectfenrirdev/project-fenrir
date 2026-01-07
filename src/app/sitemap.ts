@@ -1,8 +1,8 @@
-import { SERVICES } from "@/lib/constants";
+import { COMPANY_INFO, SERVICES } from "@/lib/constants";
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.projectfenrir.dev";
+  const baseUrl = COMPANY_INFO.baseUrl;
   const date = new Date();
 
   // Main page with highest priority

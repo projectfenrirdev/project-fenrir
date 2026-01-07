@@ -1,14 +1,10 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { CONTACT_INFO } from "@/lib/constants";
 import type { ServiceType } from "@/data/types";
-import { trackCTAClick, trackPhoneClick } from "@/lib/gtm";
-import { ServicePageTracker } from "@/components/service-page-tracker";
-import { motion } from "framer-motion";
 import { DynamicIcon } from "lucide-react/dynamic";
 import { ArrowLeftIcon, CheckIcon, MessageCircleMoreIcon } from "lucide-react";
 import Link from "next/link";
+import { MotionDiv } from "@/components/motion/motion-tags";
 
 type ServiceDetailProps = {
   service: ServiceType;
@@ -17,18 +13,14 @@ type ServiceDetailProps = {
 const ServiceDetail = ({ service }: ServiceDetailProps) => {
   return (
     <>
-      <ServicePageTracker
-        serviceSlug={service.slug}
-        serviceCategory="services"
-      />
-      <motion.div
+      <MotionDiv
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8"
       >
         {/* Back Button */}
-        <motion.div
+        <MotionDiv
           initial={{ x: -20, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
@@ -43,17 +35,17 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
               Back to Services
             </Button>
           </Link>
-        </motion.div>
+        </MotionDiv>
 
         {/* Header Section */}
-        <motion.div
+        <MotionDiv
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           className="mb-12"
         >
-          <div className="mb-6 flex items-center gap-4">
-            <div className="from-forge-accent/20 to-forge-accent-dark/20 flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg">
+          <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-center">
+            <div className="from-forge-accent/20 to-forge-accent-dark/20 flex size-16 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br shadow-lg">
               <DynamicIcon
                 name={service.icon}
                 className="text-forge-accent size-8"
@@ -62,7 +54,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
               />
             </div>
             <div>
-              <h1 className="text-4xl font-bold text-white sm:text-5xl">
+              <h1 className="text-3xl font-bold text-white md:text-4xl lg:text-5xl">
                 {service.text}
               </h1>
               {service.description && (
@@ -72,11 +64,11 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
               )}
             </div>
           </div>
-        </motion.div>
+        </MotionDiv>
 
         {/* Long Description */}
         {service.longDescription && (
-          <motion.div
+          <MotionDiv
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
@@ -87,12 +79,12 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                 {service.longDescription}
               </p>
             </div>
-          </motion.div>
+          </MotionDiv>
         )}
 
         {/* Features Section */}
         {service.features && service.features.length > 0 && (
-          <motion.div
+          <MotionDiv
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -101,7 +93,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
             <h2 className="mb-6 text-3xl font-bold text-white">Key Features</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {service.features.map((feature, index) => (
-                <motion.div
+                <MotionDiv
                   key={index}
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
@@ -112,15 +104,15 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                     <CheckIcon className="size-4 text-white" />
                   </div>
                   <p className="text-gray-300">{feature}</p>
-                </motion.div>
+                </MotionDiv>
               ))}
             </div>
-          </motion.div>
+          </MotionDiv>
         )}
 
         {/* Use Cases Section */}
         {service.useCases && service.useCases.length > 0 && (
-          <motion.div
+          <MotionDiv
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -129,7 +121,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
             <h2 className="mb-6 text-3xl font-bold text-white">Use Cases</h2>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {service.useCases.map((useCase, index) => (
-                <motion.div
+                <MotionDiv
                   key={index}
                   initial={{ scale: 0.9, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
@@ -137,14 +129,14 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                   className="hover:border-forge-accent/30 rounded-lg border border-white/10 bg-white/5 p-6 backdrop-blur-sm hover:bg-white/8"
                 >
                   <p className="text-gray-300">{useCase}</p>
-                </motion.div>
+                </MotionDiv>
               ))}
             </div>
-          </motion.div>
+          </MotionDiv>
         )}
 
         {/* CTA Section */}
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
@@ -158,16 +150,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
             {service.text.toLowerCase()} services.
           </p>
           <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href={{ pathname: "/", hash: "#contact" }}
-              onClick={() =>
-                trackCTAClick(
-                  "Get in Touch",
-                  `service-${service.slug}`,
-                  "/#contact",
-                )
-              }
-            >
+            <Link href={{ pathname: "/", hash: "#contact" }}>
               <Button className="border-forge-primary bg-forge-primary hover:bg-forge-primary/90 shadow-forge-primary/20 hover:shadow-forge-primary/40 w-full border-2 py-5 text-base font-medium text-white shadow-lg focus:ring-2 focus:outline-none sm:w-auto">
                 Get in Touch
                 <MessageCircleMoreIcon
@@ -177,10 +160,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
                 />
               </Button>
             </Link>
-            <a
-              href={`tel:${CONTACT_INFO.phone}`}
-              onClick={() => trackPhoneClick(CONTACT_INFO.phone)}
-            >
+            <a href={`tel:${CONTACT_INFO.phone}`}>
               <Button
                 variant="outline"
                 className="border-forge-primary bg-forge-primary/10 hover:bg-forge-primary/20 w-full border-2 py-5 text-base font-medium text-white hover:border-white/40 hover:text-white sm:w-auto"
@@ -189,8 +169,8 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
               </Button>
             </a>
           </div>
-        </motion.div>
-      </motion.div>
+        </MotionDiv>
+      </MotionDiv>
     </>
   );
 };

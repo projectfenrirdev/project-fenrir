@@ -1,3 +1,4 @@
+import { COMPANY_INFO } from "@/lib/constants";
 import {
   generatePageMetadata,
   navigationSchema,
@@ -9,32 +10,31 @@ import LegalNotice from "./components/legal-notice";
 const legalNoticeSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  name: "Legal Notice | Project Fenrir",
-  description:
-    "Legal notice and company information for Project Fenrir. Find our company registration details, contact information, and legal representative information.",
-  url: "https://www.projectfenrir.dev/legal-notice",
+  name: `Legal Notice | ${COMPANY_INFO.name}`,
+  description: `Legal notice and company information for ${COMPANY_INFO.name}. Find our company registration details, contact information, and legal representative information.`,
+  url: `${COMPANY_INFO.baseUrl}/legal-notice`,
   inLanguage: "en-US",
   datePublished: "2026-01-07T12:00:00+02:00",
   dateModified: "2026-01-07T12:00:00+02:00",
   isPartOf: {
     "@type": "WebSite",
-    name: "Project Fenrir",
-    url: "https://www.projectfenrir.dev",
+    name: COMPANY_INFO.name,
+    url: COMPANY_INFO.baseUrl,
   },
   publisher: {
     "@type": "Organization",
-    name: "Project Fenrir",
-    logo: "https://www.projectfenrir.dev/favicon.ico",
+    name: COMPANY_INFO.name,
+    logo: `${COMPANY_INFO.baseUrl}/favicon.ico`,
   },
   mainEntity: {
     "@type": "WebPage",
-    mainContentOfPage: "Legal Notice and Company Information for Project Fenrir",
+    mainContentOfPage: `Legal Notice and Company Information for ${COMPANY_INFO.name}`,
   },
 };
 
 export const metadata = generatePageMetadata(
   "Legal Notice",
-  "Legal notice and company information for Project Fenrir. Find our company registration details, contact information, and legal representative information.",
+  `Legal notice and company information for ${COMPANY_INFO.name}. Find our company registration details, contact information, and legal representative information.`,
   [organizationSchema, navigationSchema, websiteSchema, legalNoticeSchema],
   "/legal-notice",
 );

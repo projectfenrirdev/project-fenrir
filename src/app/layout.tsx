@@ -3,6 +3,7 @@ import { GoogleConsentScript } from "@/components/google-consent-script";
 import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
+import { COMPANY_INFO } from "@/lib/constants";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
@@ -17,25 +18,23 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Project Fenrir | Professional Web Development",
-  description:
-    "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
-  metadataBase: new URL("https://www.projectfenrir.dev"),
+  title: `${COMPANY_INFO.name} | Professional Web Development`,
+  description: COMPANY_INFO.description,
+  metadataBase: new URL(COMPANY_INFO.baseUrl),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Project Fenrir | Professional Web Development",
-    description:
-      "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
-    url: "https://www.projectfenrir.dev",
-    siteName: "Project Fenrir",
+    title: `${COMPANY_INFO.name} | Professional Web Development`,
+    description: COMPANY_INFO.description,
+    url: COMPANY_INFO.baseUrl,
+    siteName: COMPANY_INFO.name,
     images: [
       {
         url: "/favicon.ico",
         width: 1200,
         height: 630,
-        alt: "Project Fenrir - Professional Web Development",
+        alt: `${COMPANY_INFO.name} - Professional Web Development`,
       },
     ],
     locale: "en_US",
@@ -43,9 +42,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Project Fenrir | Professional Web Development",
-    description:
-      "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
+    title: `${COMPANY_INFO.name} | Professional Web Development`,
+    description: COMPANY_INFO.description,
     images: ["/favicon.ico"],
   },
   robots: {
