@@ -54,7 +54,7 @@ const GDPRCompliance = () => {
         <h1 className="from-forge-primary to-forge-accent-DEFAULT mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           GDPR Compliance
         </h1>
-        <p className="text-gray-400">Last updated: June 15, 2024</p>
+        <p className="text-gray-400">Last updated: January 7, 2026</p>
       </motion.div>
 
       {/* Introduction */}
@@ -100,16 +100,51 @@ const GDPRCompliance = () => {
               Project Fenrir
             </li>
             <li>
-              <strong className="text-forge-primary">Address:</strong>
+              <strong className="text-forge-primary">Legal Form:</strong>{" "}
+              {/* TODO: Add legal form (e.g., S.R.L., S.A., PFA) */}
+              [Legal Form - To be completed]
+            </li>
+            <li>
+              <strong className="text-forge-primary">Registered Address:</strong>
+              <br />
+              Sibiu, Sibiu County
+              <br />
               Romania
+              <br />
+              {/* TODO: Add street address and postal code */}
+              [Street Address, Postal Code - To be completed]
+            </li>
+            <li>
+              <strong className="text-forge-primary">
+                Company Registration Number:
+              </strong>{" "}
+              {/* TODO: Add company registration number */}
+              [Company Registration Number - To be completed]
+            </li>
+            <li>
+              <strong className="text-forge-primary">VAT Number (CUI/CIF):</strong>{" "}
+              {/* TODO: Add VAT number if applicable */}
+              [VAT Number - To be completed if applicable]
             </li>
             <li>
               <strong className="text-forge-primary">Email:</strong>{" "}
-              {CONTACT_INFO.email}
+              <Link
+                href={`mailto:${CONTACT_INFO.email}`}
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
+                onClick={() => trackEmailClick(CONTACT_INFO.email)}
+              >
+                {CONTACT_INFO.email}
+              </Link>
             </li>
             <li>
               <strong className="text-forge-primary">Phone:</strong>{" "}
-              {CONTACT_INFO.phone}
+              <Link
+                href={`tel:${CONTACT_INFO.phone}`}
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
+                onClick={() => trackPhoneClick(CONTACT_INFO.phone)}
+              >
+                {CONTACT_INFO.phone}
+              </Link>
             </li>
           </ul>
         </div>
@@ -367,6 +402,34 @@ const GDPRCompliance = () => {
             or charge a reasonable fee if your request is manifestly unfounded
             or excessive.
           </p>
+          
+          <div className="mt-6 rounded-lg border border-forge-accent/10 bg-forge-surface/30 p-4">
+            <h3 className="text-forge-primary mb-2 text-lg font-medium">
+              Right to Lodge a Complaint
+            </h3>
+            <p className="text-gray-300 mb-2">
+              You have the right to lodge a complaint with a supervisory authority if you believe that our processing of your personal data violates the GDPR.
+            </p>
+            <p className="text-gray-300 mb-2">
+              <strong className="text-forge-primary">
+                National Authority for the Supervision of Personal Data Processing (ANSPDCP)
+              </strong>
+            </p>
+            <p className="text-gray-300 mb-2">
+              B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, Romania
+            </p>
+            <p className="text-gray-300">
+              Website:{" "}
+              <Link
+                href="https://www.dataprotection.ro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-forge-primary hover:text-forge-secondary transition-colors"
+              >
+                www.dataprotection.ro
+              </Link>
+            </p>
+          </div>
         </div>
       </motion.section>
 
@@ -431,6 +494,54 @@ const GDPRCompliance = () => {
               Implementing appropriate supplementary measures where necessary
             </li>
           </ul>
+          
+          <div className="mt-6">
+            <h3 className="text-forge-primary mb-3 text-lg font-medium">
+              Third-Party Services Processing Data Outside the EEA
+            </h3>
+            <p className="mb-4 text-gray-300">
+              The following third-party services may process your personal data outside the EEA:
+            </p>
+            <ul className="space-y-3 text-gray-300">
+              <li>
+                <strong className="text-forge-primary">Google Analytics & Google Tag Manager</strong>
+                <br />
+                Provider: Google LLC (United States)
+                <br />
+                Data Processing Agreement:{" "}
+                <Link
+                  href="https://privacy.google.com/businesses/processorterms/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forge-primary hover:text-forge-secondary transition-colors"
+                >
+                  Google Data Processing Amendment
+                </Link>
+                <br />
+                Safeguards: Standard Contractual Clauses (SCCs) approved by the European Commission
+              </li>
+              <li>
+                <strong className="text-forge-primary">Vercel (Hosting Provider)</strong>
+                <br />
+                Provider: Vercel Inc. (United States)
+                <br />
+                Data Processing Agreement:{" "}
+                <Link
+                  href="https://vercel.com/legal/dpa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-forge-primary hover:text-forge-secondary transition-colors"
+                >
+                  Vercel Data Processing Agreement
+                </Link>
+                <br />
+                Safeguards: Standard Contractual Clauses (SCCs) and Data Processing Agreement
+              </li>
+            </ul>
+            <p className="mt-4 text-gray-300">
+              All data processors have signed Data Processing Agreements (DPAs) with us, ensuring compliance with GDPR requirements for international data transfers.
+            </p>
+          </div>
         </div>
       </motion.section>
 
@@ -467,6 +578,73 @@ const GDPRCompliance = () => {
             it can no longer be associated with you, in which case we may use
             such information without further notice to you.
           </p>
+          
+          <div className="mt-6">
+            <h3 className="text-forge-primary mb-3 text-lg font-medium">
+              Specific Data Retention Periods
+            </h3>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <strong className="text-forge-primary">Contact Form Data:</strong> Retained for 2 years from the date of last contact, unless a longer retention period is required by law or for legitimate business purposes.
+              </li>
+              <li>
+                <strong className="text-forge-primary">Email Communications:</strong> Retained for 3 years from the date of last communication, unless required longer for legal or contractual purposes.
+              </li>
+              <li>
+                <strong className="text-forge-primary">Analytics Data:</strong> Google Analytics data is retained according to Google's data retention settings (default: 14 months). We may configure longer retention periods up to 50 months for aggregated analytics.
+              </li>
+              <li>
+                <strong className="text-forge-primary">Cookie Consent Data:</strong> Retained for 1 year from the date of consent, after which consent will be requested again.
+              </li>
+              <li>
+                <strong className="text-forge-primary">Legal and Accounting Records:</strong> Retained for 7 years as required by Romanian tax and accounting laws.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Data Breach Notification */}
+      <motion.section variants={{ sectionVariants }} className="mb-10">
+        <h2 className="mb-4 text-2xl font-semibold text-white">
+          9. Data Breach Notification
+        </h2>
+        <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
+          <p>
+            In the event of a personal data breach that is likely to result in a high risk to your rights and freedoms, we will notify you and the relevant supervisory authority without undue delay, and in any event within 72 hours of becoming aware of the breach, where feasible.
+          </p>
+          <p className="mt-4">
+            Our notification will include:
+          </p>
+          <ul className="space-y-2 text-gray-300">
+            <li>A description of the nature of the breach</li>
+            <li>The categories and approximate number of individuals concerned</li>
+            <li>The likely consequences of the breach</li>
+            <li>The measures we have taken or propose to take to address the breach</li>
+            <li>Recommendations for you to mitigate potential adverse effects</li>
+          </ul>
+          <p className="mt-4">
+            We will notify you via email using the contact information you have provided, or through a prominent notice on our website if email notification is not possible.
+          </p>
+        </div>
+      </motion.section>
+
+      {/* Data Protection Officer */}
+      <motion.section
+        variants={{ sectionVariants }}
+        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
+      >
+        <h2 className="mb-4 text-2xl font-semibold text-white">
+          10. Data Protection Officer
+        </h2>
+        <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
+          <p>
+            {/* TODO: Update based on company size - DPO required if >250 employees or core activity is processing */}
+            Project Fenrir does not currently have a designated Data Protection Officer (DPO) as we are not required to appoint one under GDPR Article 37. However, if you have any questions or concerns about data protection, please contact us using the information provided in Section 11.
+          </p>
+          <p className="mt-4">
+            If we are required to appoint a DPO in the future due to changes in our operations or legal requirements, we will update this section accordingly.
+          </p>
         </div>
       </motion.section>
 
@@ -476,7 +654,7 @@ const GDPRCompliance = () => {
         className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
       >
         <h2 className="mb-4 text-2xl font-semibold text-white">
-          9. Contact Us
+          11. Contact Us
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
@@ -512,7 +690,7 @@ const GDPRCompliance = () => {
       {/* Complaints */}
       <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
-          10. Complaints
+          12. Complaints
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>

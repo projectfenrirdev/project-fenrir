@@ -59,7 +59,7 @@ const CookiePolicy = () => {
         <h1 className="from-forge-primary to-forge-accent-DEFAULT mb-4 bg-linear-to-r bg-clip-text text-4xl font-bold text-transparent">
           Cookie Policy
         </h1>
-        <p className="text-gray-400">Last updated: June 15, 2024</p>
+        <p className="text-gray-400">Last updated: January 7, 2026</p>
       </MotionDiv>
 
       {/* Introduction */}
@@ -308,7 +308,7 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* Add Cookie Preferences Component */}
-      <MotionSection variants={{ sectionVariants }} className="mb-10">
+      <MotionSection variants={{ sectionVariants }} className="mb-10" id="cookie-preferences">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Manage Your Cookie Preferences
         </h2>

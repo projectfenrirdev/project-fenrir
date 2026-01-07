@@ -27,6 +27,16 @@ export const FooterLegal = () => {
         <li>
           <MotionDiv variants={linkHoverVariants} whileHover="hover">
             <Link
+              href="/legal-notice"
+              className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
+            >
+              Legal Notice
+            </Link>
+          </MotionDiv>
+        </li>
+        <li>
+          <MotionDiv variants={linkHoverVariants} whileHover="hover">
+            <Link
               href="/privacy-policy"
               className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
             >
@@ -51,6 +61,16 @@ export const FooterLegal = () => {
           >
             <MotionDiv variants={linkHoverVariants} whileHover="hover">
               Cookie Policy
+            </MotionDiv>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/cookie-policy#cookie-preferences"
+            className="hover:text-forge-accent inline-block text-gray-300 transition-colors"
+          >
+            <MotionDiv variants={linkHoverVariants} whileHover="hover">
+              Cookie Settings
             </MotionDiv>
           </Link>
         </li>
