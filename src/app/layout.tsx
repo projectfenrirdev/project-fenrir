@@ -1,5 +1,6 @@
 import { GoogleConsentInit } from "@/components/google-consent-init";
 import { GoogleConsentScript } from "@/components/google-consent-script";
+import ScrollToTop from "@/components/scroll-to-top";
 import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
@@ -106,6 +107,7 @@ export default function RootLayout({
           Skip to main content
         </a>
         <Navbar />
+        <ScrollToTop />
         <main id="main-content" className="container mx-auto py-6 pt-24">
           {children}
         </main>

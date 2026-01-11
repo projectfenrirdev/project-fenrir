@@ -2,9 +2,9 @@
 
 import { Button } from "@/components/ui/button";
 import { trackCTAClick } from "@/lib/gtm";
+import { scrollToSection } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { ArrowRightIcon } from "lucide-react";
-import Link from "next/link";
 
 type Props = {
   variants: {
@@ -21,7 +21,9 @@ type Props = {
 
 const ContactButton = ({ variants }: Props) => {
   const handleClick = () => {
-    trackCTAClick("Let's Talk", "navbar", "/#contact");
+    trackCTAClick("Let's Talk", "navbar", "contact");
+
+    scrollToSection("contact");
   };
 
   return (
@@ -33,10 +35,9 @@ const ContactButton = ({ variants }: Props) => {
       <Button
         type="button"
         asChild
-        className="from-forge-accent shadow-forge-accent/20 hover:shadow-forge-accent/40 relative border-none bg-linear-to-r to-forge-accent-DEFAULT py-5 text-base text-white shadow-lg"
+        className="from-forge-accent shadow-forge-accent/20 hover:shadow-forge-accent/40 to-forge-accent-DEFAULT relative border-none bg-linear-to-r py-5 text-base text-white shadow-lg"
       >
-        <Link
-          href="/#contact"
+        <Button
           role="menuitem"
           aria-label="Contact us"
           className="relative z-10 flex items-center"
@@ -45,7 +46,7 @@ const ContactButton = ({ variants }: Props) => {
           Let&apos;s Talk{" "}
           <ArrowRightIcon className="ml-2 size-4" aria-hidden="true" />
           <span className="absolute inset-0 rounded-md bg-black opacity-0 transition-opacity duration-300 hover:opacity-20"></span>
-        </Link>
+        </Button>
       </Button>
     </motion.div>
   );

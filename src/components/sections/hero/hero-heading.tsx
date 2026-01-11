@@ -39,9 +39,8 @@ export const HeroHeading = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="mt-6 max-w-xl leading-relaxed text-neutral-300 sm:text-lg"
       >
-        Bring your business to the next level with modern, high-performance
-        software that enhances user experience, and drives growth. Your success
-        is our mission.
+        We design and build high-performance websites, software, and eCommerce
+        experiences that convert customers and scale with you.
       </MotionH2>
     </>
   );

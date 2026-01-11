@@ -1,7 +1,7 @@
+import { MotionDiv } from "@/components/motion/motion-tags";
 import ContactButton from "@/components/ui/navbar/contact-button";
 import NavbarLink from "@/components/ui/navbar/navbar-link";
 import { NAVBAR_LINKS } from "@/lib/constants";
-import { motion } from "framer-motion";
 
 type Props = {
   itemVariants: {
@@ -19,18 +19,18 @@ type Props = {
 const DesktopNavbar = ({ itemVariants }: Props) => {
   return (
     <div className="hidden items-center gap-8 lg:flex">
-      <motion.div
+      <MotionDiv
         variants={itemVariants}
         className="hidden items-center gap-8 lg:flex"
         role="menubar"
         aria-label="Desktop navigation"
       >
         {NAVBAR_LINKS.map((link) => (
-          <NavbarLink key={link.href} href={link.href} role="menuitem">
+          <NavbarLink key={link.text} id={link.text}>
             {link.text}
           </NavbarLink>
         ))}
-      </motion.div>
+      </MotionDiv>
 
       <ContactButton variants={itemVariants} />
     </div>

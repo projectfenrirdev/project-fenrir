@@ -33,3 +33,7 @@ export const MotionSection = (props: HTMLMotionProps<"section">) => {
 export const MotionLi = (props: HTMLMotionProps<"li">) => {
   return <motion.li {...props}>{props.children}</motion.li>;
 };
+
+export const MotionNav = (props: HTMLMotionProps<"nav">) => {
+  return <motion.nav {...props}>{props.children}</motion.nav>;
+};

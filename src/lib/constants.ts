@@ -5,7 +5,7 @@ export const COMPANY_INFO = {
   name: "Project Fenrir",
   shortName: "Project Fenrir",
   description:
-    "Bring your business to the next level with modern, high-performance software that enhances user experience, and drives growth. Your success is our mission.",
+    "We design and build high-performance websites, software, and eCommerce experiences that convert customers and scale with you.",
   baseUrl: "https://www.projectfenrir.dev",
 };
 
@@ -48,8 +48,10 @@ export const LEGAL_INFO = {
   vatNumber: "[VAT Number - To be completed if applicable]",
   taxId: "[Tax ID - To be completed if applicable]",
   jurisdiction: "Romania",
-  dataProtectionAuthority: "ANSPDCP (National Authority for Supervision of Personal Data Processing)",
-  dataProtectionAuthorityAddress: "B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, Romania",
+  dataProtectionAuthority:
+    "ANSPDCP (National Authority for Supervision of Personal Data Processing)",
+  dataProtectionAuthorityAddress:
+    "B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, Romania",
 };
 
 // Legal Representative
@@ -142,8 +144,7 @@ export const SERVICES: ServiceType[] = [
     icon: "file-text",
     description:
       "Comprehensive website audits for performance, security, and maintainability",
-    longDescription:
-      `${COMPANY_INFO.name} evaluates your website or application through in-depth audits designed to ensure it is secure, high-performing, and maintainable. We review code quality, architecture, security, performance metrics, and compliance, then deliver clear, actionable recommendations to improve reliability and user experience.`,
+    longDescription: `${COMPANY_INFO.name} evaluates your website or application through in-depth audits designed to ensure it is secure, high-performing, and maintainable. We review code quality, architecture, security, performance metrics, and compliance, then deliver clear, actionable recommendations to improve reliability and user experience.`,
     features: [
       "Security vulnerability assessment",
       "Performance optimization review",
@@ -165,8 +166,7 @@ export const SERVICES: ServiceType[] = [
 export const FAQS: FAQType[] = [
   {
     question: `What services does ${COMPANY_INFO.name} offer?`,
-    answer:
-      `${COMPANY_INFO.name} provides custom web development, e-commerce solutions, and software applications designed to meet the unique needs of SaaS and e-commerce businesses. We deliver high-performance, scalable, and reliable digital solutions that enhance online presence, streamline operations, and support long-term growth.`,
+    answer: `${COMPANY_INFO.name} provides custom web development, e-commerce solutions, and software applications designed to meet the unique needs of SaaS and e-commerce businesses. We deliver high-performance, scalable, and reliable digital solutions that enhance online presence, streamline operations, and support long-term growth.`,
   },
   {
     question: "How long does it take to develop a website?",
@@ -180,8 +180,7 @@ export const FAQS: FAQType[] = [
   },
   {
     question: "Do you provide ongoing maintenance and support?",
-    answer:
-      `Yes. ${COMPANY_INFO.name} offers ongoing maintenance and support to ensure your website or software remains secure, up-to-date, and high-performing. We provide regular updates, performance monitoring, and troubleshooting, giving you peace of mind and allowing your team to focus on growth while we handle the technical upkeep.`,
+    answer: `Yes. ${COMPANY_INFO.name} offers ongoing maintenance and support to ensure your website or software remains secure, up-to-date, and high-performing. We provide regular updates, performance monitoring, and troubleshooting, giving you peace of mind and allowing your team to focus on growth while we handle the technical upkeep.`,
   },
   {
     question: "How do you handle website security?",
@@ -227,11 +226,11 @@ export const NAVBAR_LINKS = [
   },
   {
     text: "Services",
-    href: "/#services",
+    href: "services",
   },
   {
     text: "About",
-    href: "/#about",
+    href: "about",
   },
 ];
 

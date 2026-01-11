@@ -1,6 +1,5 @@
 import { AboutBackground } from "@/components/sections/about/about-background";
 import { AboutHeader } from "@/components/sections/about/about-header";
-import { AboutStats } from "@/components/sections/about/about-stats";
 import { AboutValues } from "@/components/sections/about/about-values";
 import { MotionSection } from "@/components/motion/motion-tags";
 
@@ -20,7 +19,6 @@ const About = () => {
       <div className="relative">
         <AboutHeader />
         <AboutValues />
-        <AboutStats />
       </div>
     </MotionSection>
   );

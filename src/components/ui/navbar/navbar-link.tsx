@@ -1,29 +1,39 @@
-import { cn } from "@/lib/utils";
-import Link from "next/link";
+"use client";
+
+import { cn, scrollToSection, scrollToTop } from "@/lib/utils";
 
 const NavbarLink = ({
-  href,
+  id,
   children,
-  role,
   className,
 }: {
-  href: string;
+  id: string;
   children: React.ReactNode;
-  role?: string;
   className?: string;
 }) => {
+  const handleClick = () => {
+    if (id.toLowerCase() === "home") {
+      scrollToTop();
+    } else {
+      scrollToSection(id.toLowerCase());
+    }
+  };
+
   return (
-    <Link
-      href={href}
+    <div
+      id={`navbar-link-${id}`}
+      aria-label={children?.toString()}
+      role="menuitem"
+      itemType="link"
+      itemRef={`navbar-link-${id}`}
+      onClick={handleClick}
       className={cn(
-        "transform text-neutral-300 transition-transform hover:translate-y-[-2px] hover:text-white",
+        "transform cursor-pointer text-neutral-300 no-underline transition-transform hover:translate-y-[-2px] hover:text-white",
         className,
       )}
-      aria-label={children?.toString()}
-      role={role}
     >
       {children}
-    </Link>
+    </div>
   );
 };
 

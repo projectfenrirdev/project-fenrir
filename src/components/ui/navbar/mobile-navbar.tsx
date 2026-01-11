@@ -1,9 +1,10 @@
 "use client";
 
+import { MotionDiv } from "@/components/motion/motion-tags";
 import ContactButton from "@/components/ui/navbar/contact-button";
 import NavbarLink from "@/components/ui/navbar/navbar-link";
 import { NAVBAR_LINKS } from "@/lib/constants";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 type Props = {
   isMenuOpen: boolean;
@@ -47,7 +48,7 @@ const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
   return (
     <AnimatePresence>
       {isMenuOpen && (
-        <motion.div
+        <MotionDiv
           id="mobile-menu"
           initial="hidden"
           animate="visible"
@@ -57,35 +58,31 @@ const MobileNavbar = ({ isMenuOpen, toggleMenu }: Props) => {
           aria-hidden={!isMenuOpen}
           onClick={toggleMenu}
         >
-          <motion.div
+          <MotionDiv
             className="flex h-full flex-col items-center justify-center gap-10 p-6"
             role="menu"
             aria-label="Mobile navigation"
           >
             {NAVBAR_LINKS.map((link) => (
-              <motion.div
+              <MotionDiv
                 variants={mobileItemVariants}
                 whileTap={{ scale: 0.95 }}
                 className="relative"
-                key={link.href}
+                key={link.text}
               >
-                <NavbarLink
-                  href={link.href}
-                  role="menuitem"
-                  className="text-2xl font-medium"
-                >
+                <NavbarLink id={link.text} className="text-2xl font-medium">
                   {link.text}
                 </NavbarLink>
-                <motion.div
+                <MotionDiv
                   className="bg-forge-accent absolute -bottom-2 left-1/2 h-px w-0 -translate-x-1/2"
                   whileHover={{ width: "80%" }}
                 />
-              </motion.div>
+              </MotionDiv>
             ))}
 
             <ContactButton variants={mobileItemVariants} />
-          </motion.div>
-        </motion.div>
+          </MotionDiv>
+        </MotionDiv>
       )}
     </AnimatePresence>
   );

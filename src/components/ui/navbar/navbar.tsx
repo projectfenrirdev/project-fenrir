@@ -12,6 +12,7 @@ import Script from "next/script";
 import { useCallback, useEffect, useState } from "react";
 import logo from "../../../../public/logo.png";
 import Link from "next/link";
+import { MotionDiv, MotionNav } from "@/components/motion/motion-tags";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -101,14 +102,14 @@ const Navbar = () => {
       />
 
       <header className="fixed top-0 right-0 left-0 z-40 w-full">
-        <motion.nav
+        <MotionNav
           initial="hidden"
           animate="visible"
           variants={navVariants}
           className={cn(
             "w-full",
-            !isMenuOpen && "backdrop-blur-lg",
-            isElevated ? "py-3" : "py-5",
+            !isMenuOpen && "backdrop-blur-lg transition-all duration-500",
+            isElevated ? "py-2.5" : "py-4",
           )}
           style={{
             borderBottom: isElevated
@@ -118,7 +119,7 @@ const Navbar = () => {
           }}
           aria-label="Main Navigation"
         >
-          <motion.div
+          <MotionDiv
             className="absolute inset-0 -z-10"
             animate={{
               opacity: isElevated ? 1 : 0,
@@ -127,7 +128,7 @@ const Navbar = () => {
           />
 
           {/* Accent line */}
-          <motion.div
+          <MotionDiv
             className="from-forge-accent/70 via-forge-accent-DEFAULT/50 absolute bottom-0 left-0 h-[1px] bg-linear-to-r to-transparent"
             animate={{
               width: isElevated ? "100%" : "0%",
@@ -172,7 +173,7 @@ const Navbar = () => {
 
             <MobileNavbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
           </div>
-        </motion.nav>
+        </MotionNav>
       </header>
     </>
   );

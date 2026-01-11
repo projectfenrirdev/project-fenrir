@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
 import { CONTACT_INFO } from "@/lib/constants";
 import type { ServiceType } from "@/data/types";
 import { DynamicIcon } from "lucide-react/dynamic";
-import { ArrowLeftIcon, CheckIcon, MessageCircleMoreIcon } from "lucide-react";
+import { CheckIcon, MessageCircleMoreIcon } from "lucide-react";
 import Link from "next/link";
 import { MotionDiv } from "@/components/motion/motion-tags";
+import { Button } from "@/components/ui/button";
 
 type ServiceDetailProps = {
   service: ServiceType;
@@ -19,24 +19,6 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-5xl px-4 pb-12 sm:px-6 lg:px-8"
       >
-        {/* Back Button */}
-        <MotionDiv
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.5 }}
-          className="mb-8"
-        >
-          <Link href="/#services">
-            <Button
-              variant="ghost"
-              className="group border-forge-primary hover:bg-forge-primary/10 text-white hover:text-white"
-            >
-              <ArrowLeftIcon className="mr-2 size-4 transition-transform group-hover:-translate-x-1" />
-              Back to Services
-            </Button>
-          </Link>
-        </MotionDiv>
-
         {/* Header Section */}
         <MotionDiv
           initial={{ y: -20, opacity: 0 }}
