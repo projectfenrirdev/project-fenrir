@@ -56,7 +56,7 @@ const ServiceDetail = ({ service }: ServiceDetailProps) => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-12"
           >
-            <div className="rounded-xl border border-white/10 bg-white/5 p-8 backdrop-blur-sm">
+            <div className="mb-8">
               <p className="text-lg leading-relaxed text-gray-300">
                 {service.longDescription}
               </p>

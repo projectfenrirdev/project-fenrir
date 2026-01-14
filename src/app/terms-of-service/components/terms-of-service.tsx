@@ -78,10 +78,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Definitions */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           2. Definitions
         </h2>
@@ -135,8 +132,8 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            {COMPANY_INFO.name} provides professional web and application development
-            services, including but not limited to:
+            {COMPANY_INFO.name} provides professional web and application
+            development services, including but not limited to:
           </p>
           <ul className="space-y-2 text-gray-300">
             <li>Custom website design and development</li>
@@ -148,55 +145,67 @@ const TermsOfService = () => {
           </ul>
           <p className="mt-4">
             The specific services to be provided will be detailed in a written
-            agreement or contract between you and {COMPANY_INFO.name}. These Terms
-            apply in addition to any specific agreement.
+            agreement or contract between you and {COMPANY_INFO.name}. These
+            Terms apply in addition to any specific agreement.
           </p>
         </div>
       </motion.section>
 
       {/* Pre-Contract Information */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           3.1. Pre-Contract Information
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            In accordance with EU consumer protection laws, before entering into a contract, we will provide you with the following information:
+            In accordance with EU consumer protection laws, before entering into
+            a contract, we will provide you with the following information:
           </p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <strong className="text-forge-primary">Total Price:</strong> The total price of the services, including all taxes and fees, will be clearly stated in our proposal or quotation.
+              <strong className="text-forge-primary">Total Price:</strong> The
+              total price of the services, including all taxes and fees, will be
+              clearly stated in our proposal or quotation.
             </li>
             <li>
-              <strong className="text-forge-primary">Payment Terms:</strong> Payment schedule, accepted payment methods, and any deposit requirements will be outlined in the agreement.
+              <strong className="text-forge-primary">Payment Terms:</strong>{" "}
+              Payment schedule, accepted payment methods, and any deposit
+              requirements will be outlined in the agreement.
             </li>
             <li>
-              <strong className="text-forge-primary">Delivery Timeline:</strong> Estimated completion date and key milestones will be provided in the project proposal.
+              <strong className="text-forge-primary">Delivery Timeline:</strong>{" "}
+              Estimated completion date and key milestones will be provided in
+              the project proposal.
             </li>
             <li>
-              <strong className="text-forge-primary">Cancellation Policy:</strong> Your rights to cancel the contract, including any applicable withdrawal periods, will be explained in the agreement.
+              <strong className="text-forge-primary">
+                Cancellation Policy:
+              </strong>{" "}
+              Your rights to cancel the contract, including any applicable
+              withdrawal periods, will be explained in the agreement.
             </li>
             <li>
-              <strong className="text-forge-primary">Contract Duration:</strong> For ongoing services, the duration and renewal terms will be clearly stated.
+              <strong className="text-forge-primary">Contract Duration:</strong>{" "}
+              For ongoing services, the duration and renewal terms will be
+              clearly stated.
             </li>
             <li>
-              <strong className="text-forge-primary">Digital Content Restrictions:</strong> If applicable, any restrictions on the use of digital content (licensing, usage rights, etc.) will be specified.
+              <strong className="text-forge-primary">
+                Digital Content Restrictions:
+              </strong>{" "}
+              If applicable, any restrictions on the use of digital content
+              (licensing, usage rights, etc.) will be specified.
             </li>
           </ul>
           <p className="mt-4">
-            All proposals and quotations are valid for 30 days from the date of issue, unless otherwise specified.
+            All proposals and quotations are valid for 30 days from the date of
+            issue, unless otherwise specified.
           </p>
         </div>
       </motion.section>
 
       {/* Client Responsibilities */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           4. Client Responsibilities
         </h2>
@@ -212,7 +221,8 @@ const TermsOfService = () => {
               timeframes
             </li>
             <li>
-              Pay all fees as set forth in your agreement with {COMPANY_INFO.name}
+              Pay all fees as set forth in your agreement with{" "}
+              {COMPANY_INFO.name}
             </li>
             <li>
               Obtain and maintain any necessary licenses, permissions, or
@@ -240,17 +250,19 @@ const TermsOfService = () => {
               deliverables specifically created for you
             </li>
             <li>
-              {COMPANY_INFO.name} retains ownership of all pre-existing materials,
-              proprietary tools, methods, and processes used to create the
-              deliverables
+              {COMPANY_INFO.name} retains ownership of all pre-existing
+              materials, proprietary tools, methods, and processes used to
+              create the deliverables
             </li>
             <li>
-              {COMPANY_INFO.name} may use general knowledge, skills, and experience
-              acquired during the provision of services for other clients
+              {COMPANY_INFO.name} may use general knowledge, skills, and
+              experience acquired during the provision of services for other
+              clients
             </li>
             <li>
-              {COMPANY_INFO.name} reserves the right to display and link to completed
-              projects as part of our portfolio and promotional materials
+              {COMPANY_INFO.name} reserves the right to display and link to
+              completed projects as part of our portfolio and promotional
+              materials
             </li>
           </ul>
           <p className="mt-4">
@@ -262,10 +274,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Payment Terms */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           6. Payment Terms
         </h2>
@@ -299,30 +308,43 @@ const TermsOfService = () => {
             will be quoted separately and requires your approval before
             commencement.
           </p>
-          
-          <div className="mt-6 rounded-lg border border-forge-accent/10 bg-forge-surface/30 p-4">
+
+          <div className="border-forge-accent/10 bg-forge-surface/30 mt-6 rounded-lg border p-4">
             <h3 className="text-forge-primary mb-3 text-lg font-medium">
               Refund Policy
             </h3>
             <p className="mb-2 text-gray-300">
-              Deposits are generally non-refundable as they secure our commitment to your project and cover initial planning and resource allocation. However, refunds may be available in the following circumstances:
+              Deposits are generally non-refundable as they secure our
+              commitment to your project and cover initial planning and resource
+              allocation. However, refunds may be available in the following
+              circumstances:
             </p>
             <ul className="ml-4 space-y-1 text-gray-300">
               <li>
-                <strong>{COMPANY_INFO.name}'s breach:</strong> If we materially breach the agreement and fail to remedy it within 14 days of notice, you may be entitled to a full or partial refund.
+                <strong>{COMPANY_INFO.name}'s breach:</strong> If we materially
+                breach the agreement and fail to remedy it within 14 days of
+                notice, you may be entitled to a full or partial refund.
               </li>
               <li>
-                <strong>Force majeure:</strong> If the project cannot be completed due to circumstances beyond either party's control (natural disasters, pandemics, etc.), refunds will be calculated based on work completed.
+                <strong>Force majeure:</strong> If the project cannot be
+                completed due to circumstances beyond either party's control
+                (natural disasters, pandemics, etc.), refunds will be calculated
+                based on work completed.
               </li>
               <li>
-                <strong>Mutual agreement:</strong> If both parties agree to terminate the project early, refunds will be negotiated based on work completed and expenses incurred.
+                <strong>Mutual agreement:</strong> If both parties agree to
+                terminate the project early, refunds will be negotiated based on
+                work completed and expenses incurred.
               </li>
               <li>
-                <strong>Legal requirements:</strong> If required by applicable consumer protection laws, refunds will be provided in accordance with such laws.
+                <strong>Legal requirements:</strong> If required by applicable
+                consumer protection laws, refunds will be provided in accordance
+                with such laws.
               </li>
             </ul>
             <p className="mt-4 text-gray-300">
-              All refund requests must be made in writing and will be processed within 30 days of approval.
+              All refund requests must be made in writing and will be processed
+              within 30 days of approval.
             </p>
           </div>
         </div>
@@ -335,23 +357,38 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            We understand that project requirements may evolve during development. The following procedures apply to scope changes:
+            We understand that project requirements may evolve during
+            development. The following procedures apply to scope changes:
           </p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <strong className="text-forge-primary">Change Request Process:</strong> All scope changes must be requested in writing and will be evaluated for impact on timeline, budget, and technical feasibility.
+              <strong className="text-forge-primary">
+                Change Request Process:
+              </strong>{" "}
+              All scope changes must be requested in writing and will be
+              evaluated for impact on timeline, budget, and technical
+              feasibility.
             </li>
             <li>
-              <strong className="text-forge-primary">Approval Required:</strong> No work on scope changes will commence until both parties have agreed in writing to the revised scope, timeline, and pricing.
+              <strong className="text-forge-primary">Approval Required:</strong>{" "}
+              No work on scope changes will commence until both parties have
+              agreed in writing to the revised scope, timeline, and pricing.
             </li>
             <li>
-              <strong className="text-forge-primary">Impact Assessment:</strong> We will provide a detailed impact assessment within 5 business days of receiving a change request, including estimated additional costs and timeline adjustments.
+              <strong className="text-forge-primary">Impact Assessment:</strong>{" "}
+              We will provide a detailed impact assessment within 5 business
+              days of receiving a change request, including estimated additional
+              costs and timeline adjustments.
             </li>
             <li>
-              <strong className="text-forge-primary">Minor Changes:</strong> Minor adjustments that do not affect timeline or budget may be accommodated without formal change orders, at our discretion.
+              <strong className="text-forge-primary">Minor Changes:</strong>{" "}
+              Minor adjustments that do not affect timeline or budget may be
+              accommodated without formal change orders, at our discretion.
             </li>
             <li>
-              <strong className="text-forge-primary">Change Orders:</strong> Approved changes will be documented in a written change order that becomes part of the original agreement.
+              <strong className="text-forge-primary">Change Orders:</strong>{" "}
+              Approved changes will be documented in a written change order that
+              becomes part of the original agreement.
             </li>
           </ul>
         </div>
@@ -366,9 +403,9 @@ const TermsOfService = () => {
           <p>To the maximum extent permitted by law:</p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              {COMPANY_INFO.name} will not be liable for any indirect, incidental,
-              special, consequential, or punitive damages resulting from your
-              use of our services
+              {COMPANY_INFO.name} will not be liable for any indirect,
+              incidental, special, consequential, or punitive damages resulting
+              from your use of our services
             </li>
             <li>
               Our total liability for any claims arising from or related to our
@@ -392,10 +429,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Termination */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           8. Termination
         </h2>
@@ -422,14 +456,17 @@ const TermsOfService = () => {
               termination
             </li>
             <li>
-              Refunds for advance payments will be calculated based on work completed and expenses incurred, unless specified otherwise in our agreement or required by applicable law
+              Refunds for advance payments will be calculated based on work
+              completed and expenses incurred, unless specified otherwise in our
+              agreement or required by applicable law
             </li>
             <li>
               All rights and licenses granted will terminate, except as
               otherwise expressly stated in these Terms
             </li>
             <li>
-              Each party will return or destroy confidential information belonging to the other party
+              Each party will return or destroy confidential information
+              belonging to the other party
             </li>
           </ul>
         </div>
@@ -442,20 +479,37 @@ const TermsOfService = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            While we strive to meet all project deadlines, delays may occur due to various factors:
+            While we strive to meet all project deadlines, delays may occur due
+            to various factors:
           </p>
           <ul className="space-y-2 text-gray-300">
             <li>
-              <strong className="text-forge-primary">Client-Caused Delays:</strong> Delays caused by late provision of materials, delayed approvals, or scope changes requested by the client will extend the project timeline accordingly.
+              <strong className="text-forge-primary">
+                Client-Caused Delays:
+              </strong>{" "}
+              Delays caused by late provision of materials, delayed approvals,
+              or scope changes requested by the client will extend the project
+              timeline accordingly.
             </li>
             <li>
-              <strong className="text-forge-primary">Third-Party Delays:</strong> Delays caused by third-party services (hosting, domain registration, etc.) are beyond our control and will extend the timeline.
+              <strong className="text-forge-primary">
+                Third-Party Delays:
+              </strong>{" "}
+              Delays caused by third-party services (hosting, domain
+              registration, etc.) are beyond our control and will extend the
+              timeline.
             </li>
             <li>
-              <strong className="text-forge-primary">Force Majeure:</strong> Delays due to circumstances beyond reasonable control (natural disasters, pandemics, etc.) will not constitute a breach.
+              <strong className="text-forge-primary">Force Majeure:</strong>{" "}
+              Delays due to circumstances beyond reasonable control (natural
+              disasters, pandemics, etc.) will not constitute a breach.
             </li>
             <li>
-              <strong className="text-forge-primary">Remedies:</strong> If delays are caused by {COMPANY_INFO.name} without reasonable excuse, we will work diligently to minimize the delay and may offer compensation such as extended support periods or reduced fees, as agreed between the parties.
+              <strong className="text-forge-primary">Remedies:</strong> If
+              delays are caused by {COMPANY_INFO.name} without reasonable
+              excuse, we will work diligently to minimize the delay and may
+              offer compensation such as extended support periods or reduced
+              fees, as agreed between the parties.
             </li>
           </ul>
         </div>
@@ -476,15 +530,19 @@ const TermsOfService = () => {
             Any dispute arising out of or relating to these Terms or our
             services shall first be attempted to be resolved through good faith
             negotiations. If such negotiations fail, both parties agree to
-            submit to the exclusive jurisdiction of the courts of Bucharest, Romania.
+            submit to the exclusive jurisdiction of the courts of Bucharest,
+            Romania.
           </p>
-          
-          <div className="mt-6 rounded-lg border border-forge-accent/10 bg-forge-surface/30 p-4">
+
+          <div className="border-forge-accent/10 bg-forge-surface/30 mt-6 rounded-lg border p-4">
             <h3 className="text-forge-primary mb-3 text-lg font-medium">
               EU Online Dispute Resolution
             </h3>
             <p className="mb-2 text-gray-300">
-              If you are a consumer or business located in the European Union, you may use the EU Online Dispute Resolution (ODR) platform to resolve disputes. The ODR platform is a web-based tool that allows consumers and traders to resolve disputes out-of-court.
+              If you are a consumer or business located in the European Union,
+              you may use the EU Online Dispute Resolution (ODR) platform to
+              resolve disputes. The ODR platform is a web-based tool that allows
+              consumers and traders to resolve disputes out-of-court.
             </p>
             <p className="mb-2 text-gray-300">
               You can access the ODR platform at:{" "}
@@ -505,19 +563,16 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Modifications */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Modifications to Terms
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            {COMPANY_INFO.name} reserves the right to modify these Terms at any time.
-            We will provide notice of significant changes by updating the date
-            at the top of these Terms and potentially by other means, such as
-            email.
+            {COMPANY_INFO.name} reserves the right to modify these Terms at any
+            time. We will provide notice of significant changes by updating the
+            date at the top of these Terms and potentially by other means, such
+            as email.
           </p>
           <p className="mt-4">
             Your continued use of our services after such modifications
@@ -611,10 +666,7 @@ const TermsOfService = () => {
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           12. Contact Us
         </h2>

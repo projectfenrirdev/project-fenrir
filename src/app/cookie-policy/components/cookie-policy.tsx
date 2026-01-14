@@ -85,10 +85,7 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* What Are Cookies */}
-      <MotionSection
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           2. What Are Cookies
         </h2>
@@ -234,10 +231,7 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* Specific Cookies We Use */}
-      <MotionSection
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           4. Specific Cookies We Use
         </h2>
@@ -308,7 +302,11 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* Add Cookie Preferences Component */}
-      <MotionSection variants={{ sectionVariants }} className="mb-10" id="cookie-preferences">
+      <MotionSection
+        variants={{ sectionVariants }}
+        className="mb-10"
+        id="cookie-preferences"
+      >
         <h2 className="mb-4 text-2xl font-semibold text-white">
           5. Manage Your Cookie Preferences
         </h2>
@@ -370,10 +368,7 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* Managing Cookies */}
-      <MotionSection
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           7. Managing Your Cookie Preferences
         </h2>
@@ -443,10 +438,7 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* Updates to Policy */}
-      <MotionSection
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           9. Changes to This Cookie Policy
         </h2>
@@ -464,10 +456,7 @@ const CookiePolicy = () => {
       </MotionSection>
 
       {/* Contact Section */}
-      <MotionSection
-        variants={{ sectionVariants }}
-        className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
-      >
+      <MotionSection variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Contact Us
         </h2>

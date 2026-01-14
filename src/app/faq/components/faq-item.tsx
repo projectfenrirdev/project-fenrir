@@ -14,7 +14,7 @@ export const FAQItem = ({ faq, index, isOpen, toggle }: FAQItemProps) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.2 }}
+      transition={{ duration: 0.15, delay: index * 0.1 }}
       className="bg-forge-surface border-forge-accent/20 overflow-hidden rounded-lg border p-0"
     >
       <motion.button

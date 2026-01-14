@@ -79,10 +79,7 @@ const LegalNotice = () => {
       </motion.section>
 
       {/* Company Information */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           2. Company Information
         </h2>
@@ -102,7 +99,12 @@ const LegalNotice = () => {
             {ADDRESS_INFO.locality}, {ADDRESS_INFO.region}
             <br />
             {ADDRESS_INFO.country}
-            {ADDRESS_INFO.postalCode && <><br />{ADDRESS_INFO.postalCode}</>}
+            {ADDRESS_INFO.postalCode && (
+              <>
+                <br />
+                {ADDRESS_INFO.postalCode}
+              </>
+            )}
           </p>
         </div>
       </motion.section>
@@ -126,7 +128,9 @@ const LegalNotice = () => {
             {LEGAL_INFO.tradeRegister}
           </p>
           <p className="mb-4">
-            <strong className="text-forge-primary">VAT Number (CUI/CIF):</strong>{" "}
+            <strong className="text-forge-primary">
+              VAT Number (CUI/CIF):
+            </strong>{" "}
             {LEGAL_INFO.vatNumber}
           </p>
           <p className="mb-4">
@@ -137,10 +141,7 @@ const LegalNotice = () => {
       </motion.section>
 
       {/* Legal Representative */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           4. Legal Representative
         </h2>
@@ -214,17 +215,12 @@ const LegalNotice = () => {
       </motion.section>
 
       {/* Hosting Provider */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           6. Hosting Provider
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
-          <p className="mb-4">
-            This website is hosted by:
-          </p>
+          <p className="mb-4">This website is hosted by:</p>
           <p className="mb-2">
             <strong className="text-forge-primary">Vercel Inc.</strong>
           </p>
@@ -280,10 +276,7 @@ const LegalNotice = () => {
       </motion.section>
 
       {/* Responsible for Content */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           8. Responsible for Content
         </h2>
@@ -298,8 +291,8 @@ const LegalNotice = () => {
           <p className="mt-4">
             External links to third-party websites are provided for convenience
             only. We have no control over the content of these external sites
-            and assume no responsibility for their content, privacy practices, or
-            availability.
+            and assume no responsibility for their content, privacy practices,
+            or availability.
           </p>
         </div>
       </motion.section>
@@ -339,19 +332,16 @@ const LegalNotice = () => {
       </motion.section>
 
       {/* Copyright */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Copyright and Intellectual Property
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            All content on this website, including text, graphics, logos, images,
-            and software, is the property of {COMPANY_INFO.name} or its content
-            providers and is protected by Romanian and international copyright
-            laws.
+            All content on this website, including text, graphics, logos,
+            images, and software, is the property of {COMPANY_INFO.name} or its
+            content providers and is protected by Romanian and international
+            copyright laws.
           </p>
           <p className="mt-4">
             Unauthorized reproduction, distribution, or use of any content from
@@ -362,17 +352,14 @@ const LegalNotice = () => {
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           11. Questions About This Legal Notice
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            If you have any questions about this Legal Notice, please contact
-            us at:
+            If you have any questions about this Legal Notice, please contact us
+            at:
           </p>
           <div className="mt-4 flex flex-col gap-2">
             <p className="flex items-center">
