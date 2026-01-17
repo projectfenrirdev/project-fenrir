@@ -20,15 +20,15 @@ export const HeroHeading = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className="text-4xl font-bold tracking-tight md:text-6xl"
+        className="text-4xl font-bold tracking-tight md:text-5xl py-1.5"
         id="hero-title"
       >
         <span className="block">
-          Premium websites, <br /> software and eCommerce
+          Custom Built Digital Solutions
         </span>
         <span className="mt-2 block">
           <span className="from-forge-accent to-forge-accent-DEFAULT bg-linear-to-r bg-clip-text text-transparent">
-            For your business
+            Designed for Success
           </span>
         </span>
       </MotionH1>
@@ -40,7 +40,7 @@ export const HeroHeading = () => {
         className="mt-6 max-w-xl leading-relaxed text-neutral-300 sm:text-lg"
       >
         We design and build high-performance websites, software, and eCommerce
-        experiences that convert customers and scale with you.
+        experiences that convert customers and grow your business.
       </MotionH2>
     </>
   );

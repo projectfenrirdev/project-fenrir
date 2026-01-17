@@ -8,14 +8,14 @@ export const AboutValues = () => {
     {
       title: "The Approach",
       description:
-        "Our focus on performance, usability, and scalable architecture sets us apart. Whether you need a custom website, e-commerce store, or software solution, we act as a trusted partner.",
+        "Define your business objectives and strategic goals to drive meaningfulgrowth and impact. Whether you need a custom website, e-commerce store, or software solution, we act as a trusted partner.",
       icon: Compass,
       delay: 0.3,
     },
     {
       title: "Our Mission",
       description:
-        "We aim to cultivate lasting partnerships by combining exceptional service with clear, open communication. We emphasize security, maintainability, and scalability.",
+        "We aim to provide a solution designed to exceed your expectations with clear and open communication, while emphasizing security, maintainability, and scalability.",
       icon: Rocket,
       delay: 0.4,
     },

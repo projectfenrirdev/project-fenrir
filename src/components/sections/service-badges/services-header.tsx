@@ -40,7 +40,7 @@ export const ServicesHeader = () => {
         transition={{ duration: 0.5, delay: 0.3 }}
       >
         You focus on the business. We take care of the website, from planning to
-        a reliable, high-performance launch and ongoing support.
+        a reliable launch and ongoing support.
       </MotionP>
     </MotionDiv>
   );
