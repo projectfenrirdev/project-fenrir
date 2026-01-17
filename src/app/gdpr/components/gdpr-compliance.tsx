@@ -69,10 +69,10 @@ const GDPRCompliance = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            At {COMPANY_INFO.name}, we are committed to protecting and respecting
-            your privacy in compliance with the EU General Data Protection
-            Regulation (GDPR). This GDPR Compliance Policy outlines how we
-            collect, use, and protect your personal data.
+            At {COMPANY_INFO.name}, we are committed to protecting and
+            respecting your privacy in compliance with the EU General Data
+            Protection Regulation (GDPR). This GDPR Compliance Policy outlines
+            how we collect, use, and protect your personal data.
           </p>
           <p>
             We have implemented appropriate technical and organizational
@@ -84,10 +84,7 @@ const GDPRCompliance = () => {
       </motion.section>
 
       {/* Data Controller */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           2. Data Controller
         </h2>
@@ -109,13 +106,20 @@ const GDPRCompliance = () => {
               {LEGAL_INFO.legalForm}
             </li>
             <li>
-              <strong className="text-forge-primary">Registered Address:</strong>
+              <strong className="text-forge-primary">
+                Registered Address:
+              </strong>
               <br />
               {ADDRESS_INFO.street && `${ADDRESS_INFO.street}, `}
               {ADDRESS_INFO.locality}, {ADDRESS_INFO.region}
               <br />
               {ADDRESS_INFO.country}
-              {ADDRESS_INFO.postalCode && <><br />{ADDRESS_INFO.postalCode}</>}
+              {ADDRESS_INFO.postalCode && (
+                <>
+                  <br />
+                  {ADDRESS_INFO.postalCode}
+                </>
+              )}
               <br />
               {/* TODO: Add street address and postal code */}
               [Street Address, Postal Code - To be completed]
@@ -128,7 +132,9 @@ const GDPRCompliance = () => {
               [Company Registration Number - To be completed]
             </li>
             <li>
-              <strong className="text-forge-primary">VAT Number (CUI/CIF):</strong>{" "}
+              <strong className="text-forge-primary">
+                VAT Number (CUI/CIF):
+              </strong>{" "}
               {/* TODO: Add VAT number if applicable */}
               [VAT Number - To be completed if applicable]
             </li>
@@ -205,10 +211,7 @@ const GDPRCompliance = () => {
       </motion.section>
 
       {/* Purpose and Legal Basis */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           4. Purpose and Legal Basis for Processing
         </h2>
@@ -408,20 +411,23 @@ const GDPRCompliance = () => {
             or charge a reasonable fee if your request is manifestly unfounded
             or excessive.
           </p>
-          
-          <div className="mt-6 rounded-lg border border-forge-accent/10 bg-forge-surface/30 p-4">
+
+          <div className="border-forge-accent/10 bg-forge-surface/30 mt-6 rounded-lg border p-4">
             <h3 className="text-forge-primary mb-2 text-lg font-medium">
               Right to Lodge a Complaint
             </h3>
-            <p className="text-gray-300 mb-2">
-              You have the right to lodge a complaint with a supervisory authority if you believe that our processing of your personal data violates the GDPR.
+            <p className="mb-2 text-gray-300">
+              You have the right to lodge a complaint with a supervisory
+              authority if you believe that our processing of your personal data
+              violates the GDPR.
             </p>
-            <p className="text-gray-300 mb-2">
+            <p className="mb-2 text-gray-300">
               <strong className="text-forge-primary">
-                National Authority for the Supervision of Personal Data Processing (ANSPDCP)
+                National Authority for the Supervision of Personal Data
+                Processing (ANSPDCP)
               </strong>
             </p>
-            <p className="text-gray-300 mb-2">
+            <p className="mb-2 text-gray-300">
               {LEGAL_INFO.dataProtectionAuthorityAddress}
             </p>
             <p className="text-gray-300">
@@ -440,10 +446,7 @@ const GDPRCompliance = () => {
       </motion.section>
 
       {/* Data Security */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           6. Data Security
         </h2>
@@ -500,17 +503,20 @@ const GDPRCompliance = () => {
               Implementing appropriate supplementary measures where necessary
             </li>
           </ul>
-          
+
           <div className="mt-6">
             <h3 className="text-forge-primary mb-3 text-lg font-medium">
               Third-Party Services Processing Data Outside the EEA
             </h3>
             <p className="mb-4 text-gray-300">
-              The following third-party services may process your personal data outside the EEA:
+              The following third-party services may process your personal data
+              outside the EEA:
             </p>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <strong className="text-forge-primary">Google Analytics & Google Tag Manager</strong>
+                <strong className="text-forge-primary">
+                  Google Analytics & Google Tag Manager
+                </strong>
                 <br />
                 Provider: Google LLC (United States)
                 <br />
@@ -524,10 +530,13 @@ const GDPRCompliance = () => {
                   Google Data Processing Amendment
                 </Link>
                 <br />
-                Safeguards: Standard Contractual Clauses (SCCs) approved by the European Commission
+                Safeguards: Standard Contractual Clauses (SCCs) approved by the
+                European Commission
               </li>
               <li>
-                <strong className="text-forge-primary">Vercel (Hosting Provider)</strong>
+                <strong className="text-forge-primary">
+                  Vercel (Hosting Provider)
+                </strong>
                 <br />
                 Provider: Vercel Inc. (United States)
                 <br />
@@ -541,21 +550,21 @@ const GDPRCompliance = () => {
                   Vercel Data Processing Agreement
                 </Link>
                 <br />
-                Safeguards: Standard Contractual Clauses (SCCs) and Data Processing Agreement
+                Safeguards: Standard Contractual Clauses (SCCs) and Data
+                Processing Agreement
               </li>
             </ul>
             <p className="mt-4 text-gray-300">
-              All data processors have signed Data Processing Agreements (DPAs) with us, ensuring compliance with GDPR requirements for international data transfers.
+              All data processors have signed Data Processing Agreements (DPAs)
+              with us, ensuring compliance with GDPR requirements for
+              international data transfers.
             </p>
           </div>
         </div>
       </motion.section>
 
       {/* Data Retention */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           8. Data Retention
         </h2>
@@ -584,26 +593,46 @@ const GDPRCompliance = () => {
             it can no longer be associated with you, in which case we may use
             such information without further notice to you.
           </p>
-          
+
           <div className="mt-6">
             <h3 className="text-forge-primary mb-3 text-lg font-medium">
               Specific Data Retention Periods
             </h3>
             <ul className="space-y-2 text-gray-300">
               <li>
-                <strong className="text-forge-primary">Contact Form Data:</strong> Retained for 2 years from the date of last contact, unless a longer retention period is required by law or for legitimate business purposes.
+                <strong className="text-forge-primary">
+                  Contact Form Data:
+                </strong>{" "}
+                Retained for 2 years from the date of last contact, unless a
+                longer retention period is required by law or for legitimate
+                business purposes.
               </li>
               <li>
-                <strong className="text-forge-primary">Email Communications:</strong> Retained for 3 years from the date of last communication, unless required longer for legal or contractual purposes.
+                <strong className="text-forge-primary">
+                  Email Communications:
+                </strong>{" "}
+                Retained for 3 years from the date of last communication, unless
+                required longer for legal or contractual purposes.
               </li>
               <li>
-                <strong className="text-forge-primary">Analytics Data:</strong> Google Analytics data is retained according to Google's data retention settings (default: 14 months). We may configure longer retention periods up to 50 months for aggregated analytics.
+                <strong className="text-forge-primary">Analytics Data:</strong>{" "}
+                Google Analytics data is retained according to Google's data
+                retention settings (default: 14 months). We may configure longer
+                retention periods up to 50 months for aggregated analytics.
               </li>
               <li>
-                <strong className="text-forge-primary">Cookie Consent Data:</strong> Retained for 1 year from the date of consent, after which consent will be requested again.
+                <strong className="text-forge-primary">
+                  Cookie Consent Data:
+                </strong>{" "}
+                Retained for 1 year from the date of consent, after which
+                consent will be requested again.
               </li>
               <li>
-                <strong className="text-forge-primary">Legal and Accounting Records:</strong> Retained for 7 years as required by Romanian tax and accounting laws.
+                <strong className="text-forge-primary">
+                  Legal and Accounting Records:
+                </strong>{" "}
+                Retained for 7 years as required by Romanian tax and accounting
+                laws.
               </li>
             </ul>
           </div>
@@ -617,48 +646,58 @@ const GDPRCompliance = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            In the event of a personal data breach that is likely to result in a high risk to your rights and freedoms, we will notify you and the relevant supervisory authority without undue delay, and in any event within 72 hours of becoming aware of the breach, where feasible.
+            In the event of a personal data breach that is likely to result in a
+            high risk to your rights and freedoms, we will notify you and the
+            relevant supervisory authority without undue delay, and in any event
+            within 72 hours of becoming aware of the breach, where feasible.
           </p>
-          <p className="mt-4">
-            Our notification will include:
-          </p>
+          <p className="mt-4">Our notification will include:</p>
           <ul className="space-y-2 text-gray-300">
             <li>A description of the nature of the breach</li>
-            <li>The categories and approximate number of individuals concerned</li>
+            <li>
+              The categories and approximate number of individuals concerned
+            </li>
             <li>The likely consequences of the breach</li>
-            <li>The measures we have taken or propose to take to address the breach</li>
-            <li>Recommendations for you to mitigate potential adverse effects</li>
+            <li>
+              The measures we have taken or propose to take to address the
+              breach
+            </li>
+            <li>
+              Recommendations for you to mitigate potential adverse effects
+            </li>
           </ul>
           <p className="mt-4">
-            We will notify you via email using the contact information you have provided, or through a prominent notice on our website if email notification is not possible.
+            We will notify you via email using the contact information you have
+            provided, or through a prominent notice on our website if email
+            notification is not possible.
           </p>
         </div>
       </motion.section>
 
       {/* Data Protection Officer */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Data Protection Officer
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
             {/* TODO: Update based on company size - DPO required if >250 employees or core activity is processing */}
-            {COMPANY_INFO.name} does not currently have a designated Data Protection Officer (DPO) as we are not required to appoint one under GDPR Article 37. However, if you have any questions or concerns about data protection, please contact us using the information provided in Section 11.
+            {COMPANY_INFO.name} does not currently have a designated Data
+            Protection Officer (DPO) as we are not required to appoint one under
+            GDPR Article 37. However, if you have any questions or concerns
+            about data protection, please contact us using the information
+            provided in Section 11.
           </p>
           <p className="mt-4">
-            If we are required to appoint a DPO in the future due to changes in our operations or legal requirements, we will update this section accordingly.
+            If we are required to appoint a DPO in the future due to changes in
+            our operations or legal requirements, we will update this section
+            accordingly.
           </p>
         </div>
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           11. Contact Us
         </h2>
@@ -706,7 +745,8 @@ const GDPRCompliance = () => {
           </p>
           <p className="mt-4">
             You also have the right to lodge a complaint with your local data
-            protection authority. In {LEGAL_INFO.jurisdiction}, this is the {LEGAL_INFO.dataProtectionAuthority}
+            protection authority. In {LEGAL_INFO.jurisdiction}, this is the{" "}
+            {LEGAL_INFO.dataProtectionAuthority}
             the Supervision of Personal Data Processing (ANSPDCP).
           </p>
           <div className="mt-4">

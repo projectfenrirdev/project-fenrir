@@ -78,10 +78,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* Data Collection */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           2. Information We Collect
         </h2>
@@ -147,10 +144,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* Data Sharing */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           4. Sharing Your Information
         </h2>
@@ -169,17 +163,21 @@ const PrivacyPolicy = () => {
             </li>
             <li>Authorities when required by law or to protect our rights</li>
           </ul>
-          
+
           <div className="mt-6">
             <h3 className="text-forge-primary mb-3 text-lg font-medium">
               Data Processors
             </h3>
             <p className="mb-4 text-gray-300">
-              In accordance with GDPR Article 28, we have Data Processing Agreements (DPAs) in place with the following third-party service providers who process personal data on our behalf:
+              In accordance with GDPR Article 28, we have Data Processing
+              Agreements (DPAs) in place with the following third-party service
+              providers who process personal data on our behalf:
             </p>
             <ul className="space-y-3 text-gray-300">
               <li>
-                <strong className="text-forge-primary">Google Analytics & Google Tag Manager</strong>
+                <strong className="text-forge-primary">
+                  Google Analytics & Google Tag Manager
+                </strong>
                 <br />
                 Provider: Google LLC (United States)
                 <br />
@@ -206,7 +204,9 @@ const PrivacyPolicy = () => {
                 </Link>
               </li>
               <li>
-                <strong className="text-forge-primary">Vercel (Hosting Provider)</strong>
+                <strong className="text-forge-primary">
+                  Vercel (Hosting Provider)
+                </strong>
                 <br />
                 Provider: Vercel Inc. (United States)
                 <br />
@@ -234,7 +234,10 @@ const PrivacyPolicy = () => {
               </li>
             </ul>
             <p className="mt-4 text-gray-300">
-              All data processors are contractually bound to process personal data only in accordance with our instructions and GDPR requirements. We regularly review our data processors to ensure continued compliance.
+              All data processors are contractually bound to process personal
+              data only in accordance with our instructions and GDPR
+              requirements. We regularly review our data processors to ensure
+              continued compliance.
             </p>
           </div>
         </div>
@@ -273,7 +276,10 @@ const PrivacyPolicy = () => {
         </h2>
         <div className="prose prose-invert prose-p:text-gray-300 max-w-none">
           <p>
-            We retain your personal data only for as long as necessary to fulfill the purposes for which we collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+            We retain your personal data only for as long as necessary to
+            fulfill the purposes for which we collected it, including for the
+            purposes of satisfying any legal, accounting, or reporting
+            requirements.
           </p>
           <p className="mt-4">
             The following are our specific data retention periods:
@@ -284,58 +290,80 @@ const PrivacyPolicy = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <strong className="text-forge-primary">Contact Form Data:</strong> Retained for 2 years from the date of last contact, unless a longer retention period is required by law or for legitimate business purposes.
+              <strong className="text-forge-primary">Contact Form Data:</strong>{" "}
+              Retained for 2 years from the date of last contact, unless a
+              longer retention period is required by law or for legitimate
+              business purposes.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
             >
-              <strong className="text-forge-primary">Email Communications:</strong> Retained for 3 years from the date of last communication, unless required longer for legal or contractual purposes.
+              <strong className="text-forge-primary">
+                Email Communications:
+              </strong>{" "}
+              Retained for 3 years from the date of last communication, unless
+              required longer for legal or contractual purposes.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
             >
-              <strong className="text-forge-primary">Analytics Data:</strong> Google Analytics data is retained according to Google's data retention settings (default: 14 months). We may configure longer retention periods up to 50 months for aggregated analytics.
+              <strong className="text-forge-primary">Analytics Data:</strong>{" "}
+              Google Analytics data is retained according to Google's data
+              retention settings (default: 14 months). We may configure longer
+              retention periods up to 50 months for aggregated analytics.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              <strong className="text-forge-primary">Cookie Consent Data:</strong> Retained for 1 year from the date of consent, after which consent will be requested again.
+              <strong className="text-forge-primary">
+                Cookie Consent Data:
+              </strong>{" "}
+              Retained for 1 year from the date of consent, after which consent
+              will be requested again.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.9, duration: 0.5 }}
             >
-              <strong className="text-forge-primary">Technical Data (IP addresses, browser info):</strong> Retained for 90 days for security and fraud prevention purposes.
+              <strong className="text-forge-primary">
+                Technical Data (IP addresses, browser info):
+              </strong>{" "}
+              Retained for 90 days for security and fraud prevention purposes.
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1.0, duration: 0.5 }}
             >
-              <strong className="text-forge-primary">Legal and Accounting Records:</strong> Retained for 7 years as required by Romanian tax and accounting laws.
+              <strong className="text-forge-primary">
+                Legal and Accounting Records:
+              </strong>{" "}
+              Retained for 7 years as required by Romanian tax and accounting
+              laws.
             </motion.li>
           </ul>
           <p className="mt-4">
-            In some circumstances, we may anonymize your personal data so that it can no longer be associated with you, in which case we may use such information indefinitely without further notice to you.
+            In some circumstances, we may anonymize your personal data so that
+            it can no longer be associated with you, in which case we may use
+            such information indefinitely without further notice to you.
           </p>
           <p className="mt-4">
-            If you request deletion of your personal data, we will delete it within 30 days of your request, unless we are required to retain it for legal or legitimate business purposes.
+            If you request deletion of your personal data, we will delete it
+            within 30 days of your request, unless we are required to retain it
+            for legal or legitimate business purposes.
           </p>
         </div>
       </motion.section>
 
       {/* Cookie Policy */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="bg-forge-surface/50 border-forge-accent/10 mb-10 rounded-lg border p-6"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           7. Cookies and Similar Technologies
         </h2>
@@ -449,19 +477,22 @@ const PrivacyPolicy = () => {
             To exercise any of these rights, please contact us using the
             information provided in the &quot;Contact Us&quot; section below.
           </p>
-          <div className="mt-6 rounded-lg border border-forge-accent/10 bg-forge-surface/30 p-4">
+          <div className="border-forge-accent/10 bg-forge-surface/30 mt-6 rounded-lg border p-4">
             <h3 className="text-forge-primary mb-2 text-lg font-medium">
               Right to Lodge a Complaint
             </h3>
-            <p className="text-gray-300 mb-2">
-              You have the right to lodge a complaint with a supervisory authority if you believe that our processing of your personal data violates data protection laws.
+            <p className="mb-2 text-gray-300">
+              You have the right to lodge a complaint with a supervisory
+              authority if you believe that our processing of your personal data
+              violates data protection laws.
             </p>
-            <p className="text-gray-300 mb-2">
+            <p className="mb-2 text-gray-300">
               <strong className="text-forge-primary">
-                National Authority for the Supervision of Personal Data Processing (ANSPDCP)
+                National Authority for the Supervision of Personal Data
+                Processing (ANSPDCP)
               </strong>
             </p>
-            <p className="text-gray-300 mb-2">
+            <p className="mb-2 text-gray-300">
               B-dul G-ral. Gheorghe Magheru 28-30, Sector 1, București, Romania
             </p>
             <p className="text-gray-300">
@@ -499,10 +530,7 @@ const PrivacyPolicy = () => {
       </motion.section>
 
       {/* Contact Section */}
-      <motion.section
-        variants={{ sectionVariants }}
-        className="border-forge-primary/20 from-forge-primary/10 to-forge-accent-DEFAULT/10 mb-10 rounded-xl border bg-gradient-to-br p-8"
-      >
+      <motion.section variants={{ sectionVariants }} className="mb-10">
         <h2 className="mb-4 text-2xl font-semibold text-white">
           10. Contact Us
         </h2>
