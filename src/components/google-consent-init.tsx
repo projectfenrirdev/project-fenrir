@@ -6,13 +6,14 @@ import Script from "next/script";
  * This MUST run BEFORE GTM loads to set default consent state.
  * Consent Mode v2 requires default consent to be set before any Google tags fire.
  *
- * This script runs synchronously in the <head> before GTM.
+ * Using afterInteractive strategy to avoid blocking critical rendering path.
+ * This still runs before GoogleAnalytics component fires.
  */
 export function GoogleConsentInit() {
   return (
     <Script
       id="google-consent-init"
-      strategy="beforeInteractive"
+      strategy="afterInteractive"
       dangerouslySetInnerHTML={{
         __html: `
           (function() {

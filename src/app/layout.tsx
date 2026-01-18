@@ -14,7 +14,8 @@ import "./globals.css";
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  display: "swap",
+  display: "optional",
+  preload: true,
   weight: ["400", "500", "600", "700"],
 });
 
@@ -86,14 +87,18 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-M6RBPP2J";
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-5LQ6L8L54J";
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-M6RBPP2J";
 
   return (
     <html lang="en">
       <head>
-        <GoogleConsentInit />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <GoogleTagManager gtmId={gtmId} />
+        <GoogleConsentInit />
       </head>
       <body
         className={`${poppins.className} font-roboto-mono bg-forge-base overflow-x-hidden text-white antialiased`}

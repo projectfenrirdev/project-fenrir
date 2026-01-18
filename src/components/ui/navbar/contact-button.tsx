@@ -10,11 +10,9 @@ type Props = {
   variants: {
     hidden: {
       opacity: number;
-      y: number;
     };
     visible: {
       opacity: number;
-      y: number;
     };
   };
 };

@@ -36,7 +36,7 @@ export const HeroHeading = () => {
       <MotionH2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.4 }}
+        transition={{ duration: 0.2, delay: 0.4 }}
         className="mt-6 max-w-xl leading-relaxed text-neutral-300 sm:text-lg"
       >
         We design and build high-performance websites, software, and eCommerce

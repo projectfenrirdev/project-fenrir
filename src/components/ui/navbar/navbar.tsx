@@ -62,24 +62,23 @@ const Navbar = () => {
     };
   }, [handleResize]);
 
-  // Animation variants
+  // Animation variants - simplified for faster initial render
   const navVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        duration: 0.5,
-        staggerChildren: 0.3,
+        duration: 0.2,
+        staggerChildren: 0.05,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: -10 },
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.3, staggerChildren: 0.1 },
+      transition: { duration: 0.4 },
     },
   };
 
@@ -108,7 +107,7 @@ const Navbar = () => {
           variants={navVariants}
           className={cn(
             "w-full",
-            !isMenuOpen && "backdrop-blur-lg transition-all duration-500",
+            !isMenuOpen && "backdrop-blur-lg",
             isElevated ? "py-2.5" : "py-4",
           )}
           style={{
@@ -129,7 +128,7 @@ const Navbar = () => {
 
           {/* Accent line */}
           <MotionDiv
-            className="from-forge-accent/70 via-forge-accent-DEFAULT/50 absolute bottom-0 left-0 h-[1px] bg-linear-to-r to-transparent"
+            className="from-forge-accent/70 via-forge-accent-DEFAULT/50 absolute bottom-0 left-0 h-px bg-linear-to-r to-transparent"
             animate={{
               width: isElevated ? "100%" : "0%",
             }}
