@@ -96,7 +96,7 @@ export const SERVICES: ServiceType[] = [
     icon: "shopping-cart",
     description: "Complete online store solutions — built to sell and scale",
     longDescription:
-      "Launch and grow your online business with end-to-end e-commerce solutions designed for performance and conversion. We build secure, scalable, and easy-to-manage online stores that turn visitors into customers. From product catalogs and checkout flows to payments and integrations, everything is handled — so you can focus on growth, not technical complexity.",
+      "Grow your online business with e-commerce solutions designed for performance and conversion. We build secure, scalable, and easy-to-manage online stores that turn visitors into customers. We handle everything from product catalogs and checkout flows to payments and integrations, so you can focus on growth.",
     features: [
       "Custom e-commerce platforms",
       "Payment gateway integration",
@@ -120,7 +120,7 @@ export const SERVICES: ServiceType[] = [
     icon: "code",
     description: "Tailored software solutions that streamline your business",
     longDescription:
-      "We develop custom software designed to solve your business's unique challenges and improve operational efficiency. Every solution is built for reliability, scalability, and long-term maintainability, so it grows alongside your business. From desktop applications to cloud-based tools, we automate processes, reduce manual work, and enable teams to focus on what matters most — driving results.",
+      "We develop custom software designed to solve your business's unique challenges. Every solution is built for reliability, scalability, and long-term maintainability, so it grows alongside your business. We automate processes, reduce manual work, and enable teams to focus on what matters most — driving results.",
     features: [
       "Custom application development",
       "API integration and development",

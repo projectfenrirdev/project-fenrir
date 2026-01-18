@@ -10,7 +10,7 @@ import { Metadata } from "next";
 import TermsOfService from "./components/terms-of-service";
 
 export const metadata: Metadata = {
-  title: `Terms of Service | ${COMPANY_INFO.name} | Professional Web Development`,
+  title: `Terms of Service | ${COMPANY_INFO.name}`,
   description: `Read the terms and conditions governing the use of ${COMPANY_INFO.name}'s services. Our terms of service outline the rules, guidelines, and legal agreements between you and our company.`,
   alternates: {
     canonical: `${COMPANY_INFO.baseUrl}/terms-of-service`,
