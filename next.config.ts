@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   cacheComponents: true,
   experimental: {
     optimizeCss: true, // Enable CSS optimization
+    optimizePackageImports: ['lucide-react', 'framer-motion']
   },
   async headers() {
     return [
