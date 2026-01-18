@@ -19,7 +19,7 @@ export const HeroHeading = () => {
       <MotionH1
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
         className="text-4xl font-bold tracking-tight md:text-5xl py-1.5"
         id="hero-title"
       >
@@ -33,10 +33,11 @@ export const HeroHeading = () => {
         </span>
       </MotionH1>
 
+      {/* LCP Element: Render immediately without animation delay */}
       <MotionH2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.2, delay: 0.4 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
         className="mt-6 max-w-xl leading-relaxed text-neutral-300 sm:text-lg"
       >
         We design and build high-performance websites, software, and eCommerce

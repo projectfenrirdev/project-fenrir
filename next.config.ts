@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   cacheComponents: true,
+  experimental: {
+    optimizeCss: true, // Enable CSS optimization
+  },
   async headers() {
     return [
       {
