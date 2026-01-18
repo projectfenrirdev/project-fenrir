@@ -5,7 +5,7 @@ import CookieBanner from "@/components/ui/cookie-banner";
 import Footer from "@/components/ui/footer/footer";
 import Navbar from "@/components/ui/navbar/navbar";
 import { COMPANY_INFO } from "@/lib/constants";
-import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { type ReactNode } from "react";
@@ -14,8 +14,7 @@ import "./globals.css";
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
-  display: "optional",
-  preload: true,
+  display: "swap",
   weight: ["400", "500", "600", "700"],
 });
 
@@ -88,16 +87,10 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-5LQ6L8L54J";
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || "GTM-M6RBPP2J";
 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        <GoogleTagManager gtmId={gtmId} />
         <GoogleConsentInit />
       </head>
       <body
